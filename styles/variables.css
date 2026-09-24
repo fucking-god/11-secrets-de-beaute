@@ -1,0 +1,81 @@
+/**
+ * 11 Secrets de Beauté — Système de Design Tokens
+ * Direction artistique : Spa suisse de luxe, nude, crème, rose poudré, or champagne
+ */
+:root {
+  /* Palette de couleurs primaires */
+  --color-cream-light: #FBF8F3;
+  --color-cream: #F5EFEB;
+  --color-cream-deep: #ECE3D8;
+  --color-nude: #EFE6DD;
+  --color-cipria: #E9DDD2;
+  --color-powder-rose: #E2CFBF;
+  
+  /* Accents métaux nobles */
+  --color-champagne: #C2A97C;
+  --color-champagne-light: #DFCEAB;
+  --color-gold: #9C8250;
+  --color-gold-deep: #7D673C;
+
+  /* Typographie & Encre */
+  --color-ink: #26261F;
+  --color-ink-soft: #3E3E34;
+  --color-muted: #6E6E56;
+  --color-muted-light: #8E8E74;
+  --color-border: rgba(38, 38, 31, 0.12);
+  --color-border-light: rgba(38, 38, 31, 0.06);
+
+  /* Contrastes sombres pour ambiances nocturnes / privées */
+  --color-dark-bg: #2B2D21;
+  --color-dark-card: #343729;
+  --color-dark-text: #F7F4EB;
+  --color-dark-muted: #B8B59E;
+
+  /* Surfaces & cartes */
+  --color-surface: #FFFFFF;
+  --color-surface-glass: rgba(255, 255, 255, 0.85);
+
+  /* Typographies */
+  --font-serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Instrument Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-script: 'Arizonia', cursive;
+
+  /* Échelles typographiques fluides */
+  --text-xs: clamp(0.72rem, 0.7rem + 0.2vw, 0.8rem);
+  --text-sm: clamp(0.85rem, 0.82rem + 0.2vw, 0.95rem);
+  --text-base: clamp(1rem, 0.96rem + 0.25vw, 1.1rem);
+  --text-lg: clamp(1.15rem, 1.08rem + 0.4vw, 1.35rem);
+  --text-xl: clamp(1.4rem, 1.25rem + 0.8vw, 1.85rem);
+  --text-2xl: clamp(1.9rem, 1.6rem + 1.4vw, 2.75rem);
+  --text-3xl: clamp(2.5rem, 2.1rem + 2.2vw, 4.2rem);
+  --text-hero: clamp(3rem, 2.4rem + 3.8vw, 6.2rem);
+
+  /* Espacements */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5.5rem;
+  --space-3xl: 8rem;
+
+  /* Rayons de courbure & ombres feutrées */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+
+  --shadow-subtle: 0 4px 20px -2px rgba(38, 38, 31, 0.05);
+  --shadow-card: 0 10px 30px -4px rgba(38, 38, 31, 0.07);
+  --shadow-elevated: 0 20px 45px -8px rgba(38, 38, 31, 0.12);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Conteneur */
+  --container-max: 1280px;
+  --container-pad: clamp(1.25rem, 4vw, 3.5rem);
+}

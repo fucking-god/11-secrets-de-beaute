@@ -1,0 +1,140 @@
+/**
+ * 11 Secrets de Beauté — Responsive Design & Mobile Adaptations
+ */
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .hero-media-wrap {
+    max-width: 580px;
+    margin-inline: auto;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .nav-menu,
+  .header-actions .btn {
+    display: none;
+  }
+
+  .burger-btn {
+    display: flex;
+  }
+
+  /* Menu Tiroir Mobile */
+  .mobile-drawer {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-cream-light);
+    z-index: 999;
+    padding: 2.5rem var(--container-pad);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    clip-path: inset(0 0 100% 0);
+    visibility: hidden;
+    transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s 0.5s;
+  }
+
+  .mobile-drawer.is-open {
+    clip-path: inset(0 0 0% 0);
+    visibility: visible;
+    transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mobile-nav-link {
+    font-family: var(--font-serif);
+    font-size: 1.85rem;
+    color: var(--color-ink);
+    text-transform: capitalize;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mobile-nav-link span.num {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--color-gold);
+  }
+
+  .mobile-drawer-footer {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .mobile-drawer-contact {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    line-height: 1.6;
+  }
+
+  .hero-features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-group-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .header-container {
+    height: 70px;
+  }
+
+  .site-header.is-scrolled .header-container {
+    height: 62px;
+  }
+
+  .hero-floating-card {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .marques-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
