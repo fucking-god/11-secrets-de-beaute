@@ -3,33 +3,42 @@
  * Direction artistique : Spa suisse de luxe, nude, crème, rose poudré, or champagne
  */
 :root {
+  /* Palette éditoriale — 11 Secrets de Beauté */
+  --cream: #F1ECE0;
+  --cream2: #EDE6D6;
+  --ink: #26261F;
+  --olive: #77775C;
+  --olive-deep: #3F412F;
+  --gold: #9C8250;
+  --gold-l: #C2A97C;
+
   /* Palette de couleurs primaires */
-  --color-cream-light: #FBF8F3;
-  --color-cream: #F5EFEB;
-  --color-cream-deep: #ECE3D8;
-  --color-nude: #EFE6DD;
-  --color-cipria: #E9DDD2;
-  --color-powder-rose: #E2CFBF;
+  --color-cream-light: #F1ECE0;
+  --color-cream: #EDE6D6;
+  --color-cream-deep: #E4DCBF;
+  --color-nude: #EDE6D6;
+  --color-cipria: #E5DDCD;
+  --color-powder-rose: #D8CCB8;
   
   /* Accents métaux nobles */
   --color-champagne: #C2A97C;
-  --color-champagne-light: #DFCEAB;
+  --color-champagne-light: #DFCFAA;
   --color-gold: #9C8250;
   --color-gold-deep: #7D673C;
 
   /* Typographie & Encre */
   --color-ink: #26261F;
-  --color-ink-soft: #3E3E34;
+  --color-ink-soft: #3F412F;
   --color-muted: #6E6E56;
-  --color-muted-light: #8E8E74;
-  --color-border: rgba(38, 38, 31, 0.12);
-  --color-border-light: rgba(38, 38, 31, 0.06);
+  --color-muted-light: #77775C;
+  --color-border: rgba(38, 38, 31, 0.18);
+  --color-border-light: rgba(38, 38, 31, 0.08);
 
   /* Contrastes sombres pour ambiances nocturnes / privées */
-  --color-dark-bg: #2B2D21;
-  --color-dark-card: #343729;
-  --color-dark-text: #F7F4EB;
-  --color-dark-muted: #B8B59E;
+  --color-dark-bg: #3F412F;
+  --color-dark-card: #23231E;
+  --color-dark-text: #F1ECE0;
+  --color-dark-muted: #C6C1A8;
 
   /* Surfaces & cartes */
   --color-surface: #FFFFFF;
