@@ -1,866 +1,1028 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="theme-cream">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grille des Tarifs — 11 Secrets de Beauté · Renens (Prix en CHF)</title>
-  <meta name="description" content="Consultez tous les tarifs officiels de l'institut 11 Secrets de Beauté à Renens en Francs Suisses (CHF). Onglerie, coiffure, soins visage Ella Baché et massages.">
-  <meta name="theme-color" content="#F5EFEB">
+  <meta name="description" content="Consultez l'ensemble des tarifs officiels de l'institut 11 Secrets de Beauté à Renens en Francs Suisses (CHF). Onglerie haute précision, rituels Ybera, soins visage Ella Baché et massages du monde.">
+  <meta name="theme-color" content="#F1ECE0">
+  <link rel="canonical" href="https://11secretsdebeaute.ch/tarifs.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F1ECE0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%233F412F'%3E11%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/variables.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/components.css">
-  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/editorial.css">
 </head>
-<body>
+<body class="theme-cream">
 
-  <a href="#contenu-principal" class="skip-to-content">Aller au contenu principal</a>
-  <div id="site-header-mount"></div>
+<a class="skip" href="#tarifs-content">Aller au contenu</a>
 
-  <main id="contenu-principal">
+<!-- Curseur éditorial (desktop) -->
+<div id="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><span class="cursor-label"></span></div>
+</div>
 
-    <!-- En-tête de page -->
-    <header class="section" style="padding-top: calc(80px + var(--space-2xl)); padding-bottom: var(--space-lg); background: radial-gradient(circle at 50% 0%, var(--color-cream-deep) 0%, var(--color-cream-light) 70%); text-align: center;">
-      <div class="container-narrow">
-        <span class="section-eyebrow">Transparence &amp; Clarté</span>
-        <h1 class="section-title" style="font-size: var(--text-hero); margin-bottom: 1.25rem;">
-          Nos <span class="script-accent">Tarifs</span>
-        </h1>
-        <p class="section-subtitle" style="font-size: var(--text-lg); line-height: 1.8;">
-          Tous les prix de nos prestations sont exprimés en Francs Suisses (CHF). Prestations sur rendez-vous à l'institut Rue de Lausanne 11, Renens.
-        </p>
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="index.html" aria-label="11 Secrets de Beauté — accueil">
+    <span class="nl-11">11</span><span class="nl-rest">Secrets de beauté</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="institut.html">L'institut</a></li>
+    <li><a href="soins.html">Soins</a></li>
+    <li><a href="onglerie.html">Onglerie</a></li>
+    <li><a href="tarifs.html" class="is-active">Tarifs</a></li>
+    <li><a href="marques.html">Marques</a></li>
+    <li><a href="partenariat.html">Partenariat</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button type="button" class="nav-cta open-booking-btn" data-soin="" id="navCtaBtn" aria-label="Prendre rendez-vous en ligne">
+    Prendre rendez-vous
+  </button>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- Menu overlay — plein écran -->
+<nav class="menu" id="menu" aria-hidden="true">
+  <span class="oframe oframe--lg menu-frame" aria-hidden="true"></span>
+  <ul class="menu-links">
+    <li><a href="index.html"><span class="m-idx">01</span>Accueil</a></li>
+    <li><a href="institut.html"><span class="m-idx">02</span>L'institut</a></li>
+    <li><a href="index.html#secrets"><span class="m-idx">03</span>Les 11 Secrets</a></li>
+    <li><a href="soins.html"><span class="m-idx">04</span>Soins &amp; Rituels</a></li>
+    <li><a href="onglerie.html"><span class="m-idx">05</span>Onglerie &amp; Mains</a></li>
+    <li><a href="tarifs.html"><span class="m-idx">06</span>Grille des Tarifs (CHF)</a></li>
+    <li><a href="marques.html"><span class="m-idx">07</span>Marques Partenaires</a></li>
+    <li><a href="partenariat.html"><span class="m-idx">08</span>Espace Partenariat</a></li>
+    <li><a href="index.html#galerie"><span class="m-idx">09</span>Galerie Photos</a></li>
+    <li><a href="contact.html"><span class="m-idx">10</span>Contact &amp; Accès</a></li>
+  </ul>
+  <button type="button" class="menu-cta open-booking-btn" data-soin="" id="menuCtaBtn" aria-label="Prendre rendez-vous">
+    prendre rendez-vous
+  </button>
+  <div class="menu-foot">
+    Rue de Lausanne 11 — 1020 Renens, Suisse<br>
+    Tél. <a href="tel:+41766606026" style="color:inherit;text-decoration:underline;">+41 76 660 60 26</a> · Mar. – Sam. 9h00 – 19h00
+  </div>
+</nav>
+
+<main id="tarifs-content">
+
+  <!-- ============ SUBPAGE HERO ============ -->
+  <header class="sub-hero">
+    <div class="sub-hero-inner">
+      <div class="sub-hero-tagline" data-reveal="fade">
+        <span>Transparence &amp; Clarté</span><span class="dot"></span><span>Prix Officiels en CHF</span>
       </div>
-    </header>
-
-    <!-- Navigation par Onglets de Filtrage -->
-    <section class="section-sm" style="background-color: var(--color-cream-light); position: sticky; top: 70px; z-index: 90; backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border-light);">
-      <div class="container">
-        <div class="pricing-tabs-nav" role="tablist" aria-label="Filtrer par catégorie">
-          <button type="button" class="pricing-tab-btn is-active" data-category="all">Toutes les catégories</button>
-          <button type="button" class="pricing-tab-btn" data-category="onglerie">Onglerie &amp; Mains</button>
-          <button type="button" class="pricing-tab-btn" data-category="coiffure">Coiffure &amp; Ybera</button>
-          <button type="button" class="pricing-tab-btn" data-category="esthetique">Visage &amp; Dermo-Esthétique</button>
-          <button type="button" class="pricing-tab-btn" data-category="massages">Massages &amp; Corps</button>
-          <button type="button" class="pricing-tab-btn" data-category="regard">Regard &amp; Épilation</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Conteneur des Grilles Tarifaires -->
-    <section class="section">
-      <div class="container">
-
-        <!-- ==========================================
-             1. ONGLERIE & MAINS
-             ========================================== -->
-        <div class="pricing-category-section pricing-section-wrap" data-category="onglerie" id="onglerie">
-          <div class="section-header text-left">
-            <span class="section-eyebrow">Prestations Onglerie</span>
-            <h2 class="section-title">Onglerie &amp; Soins des Mains / Pieds</h2>
-            <p class="section-subtitle">
-              Protocoles réalisés avec des marques professionnelles renommées (Peggy Sage, Kiara Sky).
-            </p>
-          </div>
-
-          <div class="pricing-group-grid">
-            
-            <!-- Carte Ongles en Gel -->
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Ongles en gel</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep); text-transform: uppercase;">Mains</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Supplément longueur</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">10 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Pose complète avec chablon</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">120 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Pose complète avec tips</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">109 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Renforcement ongles naturels</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">79 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Remplissage gel</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">69 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Carte Ongles en Acrygel -->
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Ongles en acrygel</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep); text-transform: uppercase;">Mains</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Pose complète avec chablon</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">120 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Pose complète avec tips</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">109 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Renforcement ongles naturels</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">79 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Remplissage acrygel</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">69 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Carte Ongles Porcelaine (Kiara Sky) -->
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Ongles porcelaine</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep); text-transform: uppercase;">Dipping Powder</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Pose complète avec tips</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">89 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Renforcement ongles naturels</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">65 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Remplissage porcelaine</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">75 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Réparation par ongle</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">8 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Strass et Paillettes (plus de 3)</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">1 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Carte Soins des Mains -->
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Soins des mains</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep); text-transform: uppercase;">Peggy Sage</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Dépose : Gel, Acryl</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">25 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Dépose + manucure express</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Vernis semi-permanent + manucure</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">59 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Vernis semi-permanent</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">39 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Dépose : Gel, Porcelaine, Acryl</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">15 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Dépose + pose vernis semi-permanent</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">49 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Dépose semi-permanent</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">10 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Manucure express</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">25 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Manucure brésilienne ou à l'eau</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">35 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Manucure tiède</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Bain de paraffine mains</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">19 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Carte Soins des Pieds -->
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Soins des pieds</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep); text-transform: uppercase;">Pédicure</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Bain de paraffine pieds</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">29 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Pose de gel classique ou couleur (pieds)</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">59 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Pose de vernis semi-permanent (pieds)</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">49 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Beauté des pieds express
-                    <span class="pricing-item-duration">Durée : 30 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">69 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Calluspeeling (anti-callosités)</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">49 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Beauté des pieds complète (vernis classique offert)
-                    <span class="pricing-item-duration">Durée : 60 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">89 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Supplément vernis classique</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">15 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Supplément vernis permanent</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">39 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Supplément vernis french</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">25 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ==========================================
-             2. COIFFURE & RITUELS CAPILLAIRES
-             ========================================== -->
-        <div class="pricing-category-section pricing-section-wrap" data-category="coiffure" id="coiffure">
-          <div class="section-header text-left">
-            <span class="section-eyebrow">Prestations Coiffure</span>
-            <h2 class="section-title">Coiffure &amp; Rituels Ybera Paris</h2>
-            <p class="section-subtitle">
-              Coupes, colorations respectueuses et lissages brésiliens de haute technologie.
-            </p>
-          </div>
-
-          <div class="pricing-group-grid">
-            
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Coupe &amp; Brushing</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep);">Court / Moyen / Long</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Coupe entretien avec services</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">38 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Coupe frange</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">19 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Coupe transformation</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Brushing</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">35 à 55 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Boucles au fer</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">29 à 49 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Enfants (jusqu'à 12 ans) : Shampoing + Coupe + Séchage</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">18 à 38 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Technique &amp; Rituels Ybera</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep);">Sans Formol</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Couleur sans ammoniaque</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">55 à 75 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Racines (3 cm maximum)</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Mèches et balayage</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">75 à 105 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Soin à la vapeur</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">29 à 49 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Botox express Ybera</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">79 à 99 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Botox profond Ybera</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">139 à 159 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Lissage brésilien Ybera Paris</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">189 à 319 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Coiffure mariée (essai compris)</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">189 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Forfaits &amp; Abonnements</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep);">Shampoing inclus</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Coupe + Séchage</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">55 à 75 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Coupe + Brushing</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">79 à 99 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Couleur + Brushing</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">85 à 105 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Balayage ou Mèches + Coupe + Brushing</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">149 à 209 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Lissage + Botox Ybera</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">259 à 379 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Abonnement 7 brushings + masque hydratant</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">249 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ==========================================
-             3. SOINS VISAGE & DERMO-ESTHÉTIQUE
-             ========================================== -->
-        <div class="pricing-category-section pricing-section-wrap" data-category="esthetique" id="esthetique">
-          <div class="section-header text-left">
-            <span class="section-eyebrow">Dermo-Esthétique</span>
-            <h2 class="section-title">Soins du Visage &amp; Technologies</h2>
-            <p class="section-subtitle">
-              Ella Baché Paris, Radiofréquence remodelante, Mésothérapie sans aiguille et Microdermabrasion.
-            </p>
-          </div>
-
-          <div class="pricing-group-grid">
-            
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Rituels Visage Ella Baché</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep);">Actifs Purs</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Soin du visage express
-                    <span class="pricing-item-duration">Durée : 30 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Soin visage Ella Perfect coup d'éclat
-                    <span class="pricing-item-duration">Durée : 40 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">99 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Soin classique avec extraction comédons
-                    <span class="pricing-item-duration">Durée : 45 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">120 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Soin repulpant hyaluronique intensif
-                    <span class="pricing-item-duration">Durée : 60 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">129 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Soin lifting green rides fermeté
-                    <span class="pricing-item-duration">Durée : 60 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">130 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Peeling sal-exfo visage
-                    <span class="pricing-item-duration">Durée : 60 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">129 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Technologies Cutanées</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep);">Haute Précision</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Microdermabrasion + soin visage
-                    <span class="pricing-item-duration">Durée : 60 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">119 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Microdermabrasion + masque hydra collagène
-                    <span class="pricing-item-duration">Durée : 30 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">79 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Électro-mésothérapie visage sans aiguille
-                    <span class="pricing-item-duration">Durée : 45 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">129 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Mésothérapie visage complet + cou + décolleté
-                    <span class="pricing-item-duration">Durée : 90 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">169 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Radiofréquence visage complet raffermissante
-                    <span class="pricing-item-duration">Durée : 100 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">229 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Radiofréquence haut du visage + yeux
-                    <span class="pricing-item-duration">Durée : 60 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">149 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Radiofréquence bas du visage (ovale)
-                    <span class="pricing-item-duration">Durée : 60 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">139 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Radiofréquence lèvres repulpant
-                    <span class="pricing-item-duration">Durée : 30 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">99 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ==========================================
-             4. MASSAGES & BIEN-ÊTRE CORPOREL
-             ========================================== -->
-        <div class="pricing-category-section pricing-section-wrap" data-category="massages" id="massages">
-          <div class="section-header text-left">
-            <span class="section-eyebrow">Détente Corporelle</span>
-            <h2 class="section-title">Massages du Monde &amp; Soins Minceur</h2>
-            <p class="section-subtitle">
-              Des rituels enveloppants pour relâcher les tensions musculaires et rééquilibrer le corps.
-            </p>
-          </div>
-
-          <div class="pricing-group-grid">
-            
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Massages Signature</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep);">Huiles Chauffées</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Massage relaxant sérénité
-                    <span class="pricing-item-duration">Durée : 45 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">89 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Massage du dos décontracturant
-                    <span class="pricing-item-duration">Durée : 35 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">69 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Massage aux pierres chaudes volcaniques
-                    <span class="pricing-item-duration">Durée : 45 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">99 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Massage ayurvédique traditionnel
-                    <span class="pricing-item-duration">Durée : 60 min / 80 min</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">110 / 130 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Massage californien enveloppant
-                    <span class="pricing-item-duration">Durée : 60 min / 80 min</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">110 / 130 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Massage Lomi-Lomi hawaïen
-                    <span class="pricing-item-duration">Durée : 60 min / 80 min</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">110 / 120 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Massage anti-cellulite drainant
-                    <span class="pricing-item-duration">Durée : 35 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">79 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Soins Corps Spécifiques</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep);">Minceur &amp; Tonus</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Gommage du corps aux sels délicats
-                    <span class="pricing-item-duration">Durée : 40 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">89 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Gommage + massage du dos
-                    <span class="pricing-item-duration">Durée : 75 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">175 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Pressothérapie infrarouge drainante
-                    <span class="pricing-item-duration">Durée : 30 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">79 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Électrostimulation tonifiante (une zone)
-                    <span class="pricing-item-duration">Durée : 30 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">89 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">
-                    Radiofréquence corps + électrostimulation
-                    <span class="pricing-item-duration">Durée : 75 minutes</span>
-                  </span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">179 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ==========================================
-             5. REGARD & ÉPILATION
-             ========================================== -->
-        <div class="pricing-category-section pricing-section-wrap" data-category="regard" id="regard">
-          <div class="section-header text-left">
-            <span class="section-eyebrow">Précision Esthétique</span>
-            <h2 class="section-title">Regard, Maquillage &amp; Épilations</h2>
-            <p class="section-subtitle">
-              Lignes de sourcils précises, browlift et cires douces basse température.
-            </p>
-          </div>
-
-          <div class="pricing-group-grid">
-            
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Cils, Sourcils &amp; Maquillage</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep);">Regard</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Teinture des sourcils</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">25 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Teinture des cils</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">25 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Teinture duo cils et sourcils</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Browlift des sourcils + soin mascara</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">89 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Maquillage flash jour</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Maquillage libanais / soirée sophistiquée</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">85 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Cours de maquillage (afterwork)</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">149 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pricing-card">
-              <div class="pricing-card-header">
-                <h3 class="pricing-card-title">Épilation Douceur</h3>
-                <span style="font-size: 0.75rem; color: var(--color-gold-deep);">Visage &amp; Corps</span>
-              </div>
-              <div class="pricing-list">
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Ligne de sourcils</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">20 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Nez, lèvres, oreilles ou menton</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">15 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Visage complet</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Aisselles</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">19 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Demi-bras / Bras complets</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">35 / 45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Maillot classique / Maillot intégral</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">25 / 45 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Demi-jambes / Jambes complètes</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">39 / 69 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Pack Maillot classique + Aisselles + Demi-jambes</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">89 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Pack Maillot classique + Aisselles + Jambes complètes</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">119 <span class="pricing-currency">CHF</span></span>
-                </div>
-                <div class="pricing-row">
-                  <span class="pricing-item-name">Corps complet</span>
-                  <span class="pricing-leader-dots"></span>
-                  <span class="pricing-item-price">249 <span class="pricing-currency">CHF</span></span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Bannière de réservation -->
-    <section class="section" style="background-color: var(--color-cream-deep);">
-      <div class="container-narrow" style="text-align: center;">
-        <span class="section-eyebrow">Prise de Rendez-vous</span>
-        <h2 class="section-title">Envie de réserver votre <span class="script-accent">parenthèse</span> ?</h2>
-        <p style="color: var(--color-muted); font-size: var(--text-base); margin-bottom: 2rem;">
-          Nos professionnelles vous accueillent du mardi au samedi. Choisissez votre soin et réservez votre créneau en quelques clics.
-        </p>
-        <button type="button" class="btn btn-champagne btn-lg open-booking-btn" data-soin="">
+      <h1 class="sub-hero-title" data-reveal="fade">
+        La Carte des <span class="script">Tarifs</span>
+      </h1>
+      <p class="sub-hero-desc" data-reveal="fade">
+        Chaque soin est une création sur-mesure combinant l'art du geste et les technologies dermocosmétiques les plus exigeantes. Tarifs transparents, sans surprise, établis en Francs Suisses (CHF). Prestations sur rendez-vous à notre adresse confidentielle de Renens.
+      </p>
+      <div class="sub-hero-actions" data-reveal="fade">
+        <button type="button" class="btn-champagne open-booking-btn" data-soin="">
           Prendre rendez-vous
         </button>
+        <a href="#onglerie-sec" class="btn-outline">
+          Explorer la carte ↓
+        </a>
       </div>
-    </section>
+    </div>
+    <div class="sub-hero-frame">
+      <div class="media-inner">
+        <img src="public/images/salon/ambiance-1.jpg" alt="Ambiance raffinée et poudrée à l'institut 11 Secrets de Beauté" width="400" height="500">
+      </div>
+      <span class="oframe"></span>
+    </div>
+  </header>
 
-  </main>
+  <!-- ============ FILTRE PAR ONGLETS (STICKY) ============ -->
+  <nav class="filter-sticky-bar" aria-label="Filtrer les tarifs par univers">
+    <div class="filter-tabs-wrapper">
+      <button type="button" class="filter-tab-btn is-active" data-filter="all">Toutes les prestations</button>
+      <button type="button" class="filter-tab-btn" data-filter="onglerie">Onglerie &amp; Mains</button>
+      <button type="button" class="filter-tab-btn" data-filter="coiffure">Coiffure &amp; Ybera</button>
+      <button type="button" class="filter-tab-btn" data-filter="visage">Visage Ella Baché</button>
+      <button type="button" class="filter-tab-btn" data-filter="massages">Massages &amp; Corps</button>
+      <button type="button" class="filter-tab-btn" data-filter="regard">Regard &amp; Épilation</button>
+    </div>
+  </nav>
 
-  <div id="site-footer-mount"></div>
-  <div id="booking-modal-mount"></div>
-  <script type="module" src="js/main.js"></script>
+  <!-- ============================================================
+       01. ONGLERIE & MAINS / PIEDS
+       ============================================================ -->
+  <section class="pricing-category-block theme-cream" id="onglerie-sec" data-cat="onglerie">
+    <div class="pricing-block-inner">
+      <header class="sec-head">
+        <span class="sec-index">( 01 )</span><span class="sec-tick"></span>
+        <span class="sec-name">Onglerie &amp; Soins des Mains</span><span class="sec-rule" data-draw></span>
+      </header>
+
+      <div class="pricing-cards-grid">
+
+        <!-- Carte Ongles en Gel -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Ongles en Gel</h3>
+              <span class="ed-card-badge">Gel UV</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Supplément longueur</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">10<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec chablon</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">120<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec tips</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">109<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Renforcement ongles naturels</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">79<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Remplissage gel</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">69<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Ongles en gel" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+        <!-- Carte Ongles en Acrygel -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Ongles en Acrygel</h3>
+              <span class="ed-card-badge">Hybride Haute Tenue</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec chablon</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">120<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec tips</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">109<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Renforcement ongles naturels</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">79<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Remplissage acrygel</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">69<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Ongles en acrygel" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+        <!-- Carte Porcelaine Kiara Sky -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Porcelaine (Dipping Powder)</h3>
+              <span class="ed-card-badge">Kiara Sky · Sans UV</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec tips</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">89<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Renforcement ongles naturels</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">65<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Remplissage porcelaine</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">75<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Réparation par ongle</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">8<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Strass &amp; Paillettes (dès 3 ongles)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">1<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Ongles porcelaine dipping (Kiara Sky)" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+        <!-- Carte Soins des Mains Peggy Sage -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Soins des Mains</h3>
+              <span class="ed-card-badge">Peggy Sage</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Dépose complète : Gel / Acryl</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">25<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Dépose + Manucure express</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Vernis semi-permanent + Manucure</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">59<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Vernis semi-permanent seul</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">39<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Dépose + Pose vernis semi-permanent</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">49<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Dépose semi-permanent seule</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">10<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Manucure express</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">25<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Manucure brésilienne ou à l'eau</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">35<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Manucure tiède régénérante</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Bain de paraffine velours mains</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">19<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Vernis semi-permanent + manucure" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+        <!-- Carte Beauté des Pieds & Calluspeeling -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Pédicure &amp; Pieds</h3>
+              <span class="ed-card-badge">Calluspeeling</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Bain de paraffine pieds</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">29<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose de gel classique ou couleur pieds</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">59<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose de vernis semi-permanent pieds</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">49<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Beauté des pieds express (30 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">69<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Traitement Calluspeeling anti-callosités</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">49<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Beauté des pieds complète (vernis offert, 60 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">89<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Supplément vernis semi-permanent pieds</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">39<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Supplément finition french</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">25<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Beauté des pieds & Calluspeeling" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       02. COIFFURE & RITUELS CAPILLAIRES (YBERA PARIS)
+       ============================================================ -->
+  <section class="pricing-category-block theme-cream2" id="coiffure-sec" data-cat="coiffure">
+    <div class="pricing-block-inner">
+      <header class="sec-head">
+        <span class="sec-index">( 02 )</span><span class="sec-tick"></span>
+        <span class="sec-name">Coiffure &amp; Rituels Capillaires</span><span class="sec-rule" data-draw></span>
+      </header>
+
+      <div class="pricing-cards-grid">
+
+        <!-- Coupe & Brushing -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Coupe &amp; Styling</h3>
+              <span class="ed-card-badge">Coupe Précision</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Coupe entretien avec services</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">38<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Coupe frange</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">19<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Coupe transformation silhouette</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Brushing (selon longueur)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">35 – 55<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Boucles au fer &amp; coiffage glamour</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">29 – 49<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Enfants (–12 ans) : Shampoing + Coupe + Séchage</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">18 – 38<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Coupe, Couleur & Brushing" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+        <!-- Ybera Paris & Couleur -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Rituels Ybera Paris</h3>
+              <span class="ed-card-badge">Sans Formol</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Couleur soin sans ammoniaque</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">55 – 75<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Racines (3 cm maximum)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Mèches &amp; Balayage lumière</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">75 – 105<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Soin vapeur hydratant</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">29 – 49<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Botox capillaire express Ybera</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">79 – 99<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Botox capillaire profond régénérant</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">139 – 159<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Lissage brésilien haute brillance</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">189 – 319<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Coiffure mariée prestige (essai inclus)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">189<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Lissage brésilien Ybera Paris" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+        <!-- Forfaits & Abonnements -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Forfaits &amp; Abonnements</h3>
+              <span class="ed-card-badge">Privilège</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Coupe + Séchage</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">55 – 75<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Coupe + Brushing signature</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">79 – 99<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Couleur + Brushing</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">85 – 105<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Balayage ou Mèches + Coupe + Brushing</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">149 – 209<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Duo Lissage + Botox Ybera</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">259 – 379<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Abonnement 7 brushings + masque profond offert</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">249<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Botox capillaire régénérant" style="width: 100%;">
+              Souscrire ou réserver
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       03. SOINS VISAGE & TECHNOLOGIES DERMO-ESTHÉTIQUES
+       ============================================================ -->
+  <section class="pricing-category-block theme-cream" id="visage-sec" data-cat="visage">
+    <div class="pricing-block-inner">
+      <header class="sec-head">
+        <span class="sec-index">( 03 )</span><span class="sec-tick"></span>
+        <span class="sec-name">Soins Visage &amp; Dermo-Esthétique</span><span class="sec-rule" data-draw></span>
+      </header>
+
+      <div class="pricing-cards-grid">
+
+        <!-- Rituels Ella Baché -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Rituels Visage Ella Baché</h3>
+              <span class="ed-card-badge">Paris · 1936</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Soin visage express coup d'éclat (30 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Soin Ella Perfect révélateur de pureté (40 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">99<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Soin classique avec extraction comédons (45 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">120<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Soin repulpant hyaluronique intensif (60 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">129<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Soin lifting green rides fermeté (60 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">130<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Peeling dermo-rénovateur Sal-Exfo (60 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">129<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Soin visage Ella Baché" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+        <!-- Technologies Cutanées Avancées -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Technologies Cutanées</h3>
+              <span class="ed-card-badge">Anti-Âge &amp; Remodelage</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Microdermabrasion diamant + soin (60 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">119<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Microdermabrasion + masque hydra collagène (30 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">79<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Électro-mésothérapie sans aiguille (45 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">129<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Mésothérapie visage complet + cou + décolleté (90 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">169<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Radiofréquence visage complet raffermissante (100 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">229<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Radiofréquence haut du visage + regard (60 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">149<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Radiofréquence ovale &amp; bas du visage (60 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">139<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Radiofréquence lèvres repulpant (30 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">99<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Radiofréquence visage & cou" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       04. MASSAGES DU MONDE & SOINS DU CORPS
+       ============================================================ -->
+  <section class="pricing-category-block theme-cream2" id="massages-sec" data-cat="massages">
+    <div class="pricing-block-inner">
+      <header class="sec-head">
+        <span class="sec-index">( 04 )</span><span class="sec-tick"></span>
+        <span class="sec-name">Massages &amp; Rituels Corporels</span><span class="sec-rule" data-draw></span>
+      </header>
+
+      <div class="pricing-cards-grid">
+
+        <!-- Massages Signature -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Massages Signature</h3>
+              <span class="ed-card-badge">Huiles Chaudes</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Massage relaxant sérénité (45 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">89<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Massage du dos décontracturant (35 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">69<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Massage aux pierres volcaniques (45 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">99<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Massage ayurvédique traditionnel (60 min / 80 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">110 / 130<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Massage californien enveloppant (60 min / 80 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">110 / 130<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Massage Lomi-Lomi hawaïen (60 min / 80 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">110 / 120<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Massage anti-cellulite drainant (35 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">79<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Massage relaxant signature (45/60 min)" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+        <!-- Soins Corps Minceur & Tonus -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Soins Corps Minceur</h3>
+              <span class="ed-card-badge">Fermeté &amp; Détox</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Gommage du corps aux sels délicats (40 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">89<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Gommage satin + massage du dos (75 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">175<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pressothérapie infrarouge drainante (30 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">79<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Électrostimulation tonifiante ciblée (30 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">89<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Radiofréquence corps + électrostimulation (75 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">179<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Massage aux pierres chaudes" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       05. REGARD, MAQUILLAGE & ÉPILATION PRÉCISION
+       ============================================================ -->
+  <section class="pricing-category-block theme-cream" id="regard-sec" data-cat="regard">
+    <div class="pricing-block-inner">
+      <header class="sec-head">
+        <span class="sec-index">( 05 )</span><span class="sec-tick"></span>
+        <span class="sec-name">Regard, Maquillage &amp; Épilation</span><span class="sec-rule" data-draw></span>
+      </header>
+
+      <div class="pricing-cards-grid">
+
+        <!-- Cils & Sourcils -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Cils, Sourcils &amp; Beauté</h3>
+              <span class="ed-card-badge">Mise en Beauté</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Teinture des sourcils</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">25<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Teinture des cils</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">25<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Teinture duo cils et sourcils</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Browlift restructurant + soin mascara</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">89<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Maquillage flash jour</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Maquillage libanais / soirée haute couture</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">85<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Cours de maquillage personnalisé (afterwork)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">149<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Épilation précision & regard" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+        <!-- Épilation Douceur -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Épilation Douceur</h3>
+              <span class="ed-card-badge">Cire Basse Température</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Ligne de sourcils</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">20<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Nez, lèvres, oreilles ou menton</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">15<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Visage complet</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Aisselles</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">19<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Demi-bras / Bras complets</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">35 / 45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Maillot classique / Maillot intégral</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">25 / 45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Demi-jambes / Jambes complètes</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">39 / 69<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pack Maillot classique + Aisselles + Demi-jambes</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">89<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pack Maillot classique + Aisselles + Jambes complètes</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">119<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Corps complet haute précision</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">249<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Épilation précision & regard" style="width: 100%;">
+              Réserver ce rituel
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LE RENDEZ-VOUS — CTA ÉDITORIAL HAUTE COUTURE
+       ============================================================ -->
+  <section id="rdv" class="theme-cream">
+    <button type="button" class="rdv-link open-booking-btn" data-soin="" aria-label="Prendre rendez-vous" style="background: none; border: none; font-family: inherit;">
+      <span class="oframe oframe--lg rdv-frame" aria-hidden="true"></span>
+      <span class="rdv-top">Votre parenthèse commence</span>
+      <span class="rdv-script">ici</span>
+      <svg class="rdv-arrow" viewBox="0 0 140 24" aria-hidden="true">
+        <line x1="0" y1="12" x2="128" y2="12"></line>
+        <path d="M120 4 L128 12 L120 20"></path>
+      </svg>
+    </button>
+    <p class="rdv-note">Du mardi au samedi — de 9h00 à 19h00, sur rendez-vous.</p>
+    <div class="rdv-meta">
+      <span>Rue de Lausanne 11, 1020 Renens</span>
+      <a href="tel:+41766606026">+41 76 660 60 26</a>
+      <a href="contact.html">Plan &amp; Accès</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER HAUTE COUTURE
+     ============================================================ -->
+<footer class="footer">
+  <div class="f-head">
+    <div class="f-title">
+      <span class="f-11">11</span>
+      <span class="f-script">Secrets de beauté</span>
+    </div>
+    <div class="f-cols">
+      <div class="f-col">
+        <h4>L'institut</h4>
+        <address>Rue de Lausanne 11<br>1020 Renens (VD)<br>Suisse</address>
+        <a href="tel:+41766606026">+41 76 660 60 26</a>
+      </div>
+      <div class="f-col">
+        <h4>Horaires</h4>
+        <p>Mardi — Vendredi<br>09h00 – 19h00</p>
+        <p style="margin-top: 8px;">Samedi<br>09h00 – 17h00</p>
+      </div>
+      <div class="f-col">
+        <h4>Navigation</h4>
+        <p><a href="soins.html">Soins &amp; Rituels</a></p>
+        <p><a href="onglerie.html">Onglerie</a></p>
+        <p><a href="tarifs.html">Grille des Tarifs</a></p>
+        <p><a href="marques.html">Marques Partenaires</a></p>
+        <p><a href="partenariat.html">Espace Partenariat</a></p>
+        <p><a href="contact.html">Contact &amp; Accès</a></p>
+      </div>
+      <div class="f-col">
+        <h4>Réservations</h4>
+        <p><button type="button" class="open-booking-btn" style="background: none; border: none; padding: 0; color: inherit; font: inherit; cursor: pointer; text-decoration: underline;">Prendre rendez-vous en ligne</button></p>
+        <p style="margin-top: 6px;"><a href="https://wa.me/41766606026" target="_blank" rel="noopener">WhatsApp Direct</a></p>
+      </div>
+    </div>
+  </div>
+
+  <p class="f-line">« Onze secrets, un seul institut — <span class="script">l'élégance</span> à fleur de peau »</p>
+
+  <div class="f-legal">
+    <span>© 11 Secrets de Beauté</span>
+    <span>Renens — Suisse</span>
+    <span><a href="contact.html" style="color:inherit;text-decoration:none;">Contact direct</a></span>
+  </div>
+</footer>
+
+<!-- Point de montage Modale de Réservation Universelle -->
+<div id="booking-modal-mount"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="module" src="js/editorial.js"></script>
+
+<script>
+  // Script de filtrage fluide des catégories tarifaires
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-tab-btn');
+    const sections = document.querySelectorAll('.pricing-category-block');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.filter;
+        filterBtns.forEach(b => b.classList.toggle('is-active', b === btn));
+
+        sections.forEach(sec => {
+          if (cat === 'all' || sec.dataset.cat === cat) {
+            sec.style.display = 'block';
+            if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+          } else {
+            sec.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
 
 </body>
 </html>

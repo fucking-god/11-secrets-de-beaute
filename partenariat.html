@@ -1,217 +1,418 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="theme-cream">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Espace Partenariat &amp; Location de Postes — 11 Secrets de Beauté · Renens</title>
-  <meta name="description" content="Location de places de travail pour professionnels indépendants à Renens : coiffure, manucure et soins corporels. Emplacement premium à 1 min de la gare CFF.">
-  <meta name="theme-color" content="#F5EFEB">
+  <meta name="description" content="Location de places et postes de travail pour professionnelles indépendantes à Renens : coiffure, onglerie et cabines de soins. Adresse de prestige à 1 min de la gare CFF.">
+  <meta name="theme-color" content="#F1ECE0">
+  <link rel="canonical" href="https://11secretsdebeaute.ch/partenariat.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F1ECE0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%233F412F'%3E11%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/variables.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/components.css">
-  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/editorial.css">
 </head>
-<body>
+<body class="theme-cream">
 
-  <a href="#contenu-principal" class="skip-to-content">Aller au contenu principal</a>
-  <div id="site-header-mount"></div>
+<a class="skip" href="#partenariat-content">Aller au contenu</a>
 
-  <main id="contenu-principal">
+<!-- Curseur éditorial (desktop) -->
+<div id="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><span class="cursor-label"></span></div>
+</div>
 
-    <!-- En-tête Partenariat -->
-    <header class="section" style="padding-top: calc(80px + var(--space-2xl)); padding-bottom: var(--space-xl); background: radial-gradient(circle at 50% 0%, var(--color-cream-deep) 0%, var(--color-cream-light) 70%); text-align: center;">
-      <div class="container-narrow">
-        <span class="section-eyebrow">Opportunité Professionnelle</span>
-        <h1 class="section-title" style="font-size: var(--text-hero); margin-bottom: 1.25rem;">
-          Espace <span class="script-accent">Partenariat</span>
-        </h1>
-        <p class="section-subtitle" style="font-size: var(--text-lg); line-height: 1.8;">
-          Notre institut a fait peau neuve. Développez votre activité indépendante au sein d'un écrin lumineux et raffiné au cœur de Renens.
-        </p>
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="index.html" aria-label="11 Secrets de Beauté — accueil">
+    <span class="nl-11">11</span><span class="nl-rest">Secrets de beauté</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="institut.html">L'institut</a></li>
+    <li><a href="soins.html">Soins</a></li>
+    <li><a href="onglerie.html">Onglerie</a></li>
+    <li><a href="tarifs.html">Tarifs</a></li>
+    <li><a href="marques.html">Marques</a></li>
+    <li><a href="partenariat.html" class="is-active">Partenariat</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button type="button" class="nav-cta open-booking-btn" data-soin="" id="navCtaBtn" aria-label="Prendre rendez-vous en ligne">
+    Prendre rendez-vous
+  </button>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- Menu overlay — plein écran -->
+<nav class="menu" id="menu" aria-hidden="true">
+  <span class="oframe oframe--lg menu-frame" aria-hidden="true"></span>
+  <ul class="menu-links">
+    <li><a href="index.html"><span class="m-idx">01</span>Accueil</a></li>
+    <li><a href="institut.html"><span class="m-idx">02</span>L'institut</a></li>
+    <li><a href="index.html#secrets"><span class="m-idx">03</span>Les 11 Secrets</a></li>
+    <li><a href="soins.html"><span class="m-idx">04</span>Soins &amp; Rituels</a></li>
+    <li><a href="onglerie.html"><span class="m-idx">05</span>Onglerie &amp; Mains</a></li>
+    <li><a href="tarifs.html"><span class="m-idx">06</span>Grille des Tarifs (CHF)</a></li>
+    <li><a href="marques.html"><span class="m-idx">07</span>Marques Partenaires</a></li>
+    <li><a href="partenariat.html"><span class="m-idx">08</span>Espace Partenariat</a></li>
+    <li><a href="index.html#galerie"><span class="m-idx">09</span>Galerie Photos</a></li>
+    <li><a href="contact.html"><span class="m-idx">10</span>Contact &amp; Accès</a></li>
+  </ul>
+  <button type="button" class="menu-cta open-booking-btn" data-soin="" id="menuCtaBtn" aria-label="Prendre rendez-vous">
+    prendre rendez-vous
+  </button>
+  <div class="menu-foot">
+    Rue de Lausanne 11 — 1020 Renens, Suisse<br>
+    Tél. <a href="tel:+41766606026" style="color:inherit;text-decoration:underline;">+41 76 660 60 26</a> · Mar. – Sam. 9h00 – 19h00
+  </div>
+</nav>
+
+<main id="partenariat-content">
+
+  <!-- ============ SUBPAGE HERO ============ -->
+  <header class="sub-hero">
+    <div class="sub-hero-inner">
+      <div class="sub-hero-tagline" data-reveal="fade">
+        <span>Opportunité Professionnelle · Suisse Romande</span><span class="dot"></span><span>Gare de Renens</span>
       </div>
-    </header>
+      <h1 class="sub-hero-title" data-reveal="fade">
+        Espace <span class="script">Partenariat</span>
+      </h1>
+      <p class="sub-hero-desc" data-reveal="fade">
+        Développez votre activité indépendante dans un écrin feutré et prestigieux au cœur de Renens. Coiffure, onglerie ou soins corporels : rejoignez une adresse reconnue, bénéficiez de postes entièrement équipés et d'une synergie client exceptionnelle.
+      </p>
+      <div class="sub-hero-actions" data-reveal="fade">
+        <a href="#candidature-form" class="btn-champagne">
+          Déposer une candidature
+        </a>
+        <a href="tel:+41766606026" class="btn-outline">
+          Échanger par téléphone →
+        </a>
+      </div>
+    </div>
+    <div class="sub-hero-frame">
+      <div class="media-inner">
+        <img src="public/images/salon/ambiance-3.jpg" alt="Postes de travail lumineux et spacieux à Renens" width="400" height="500">
+      </div>
+      <span class="oframe"></span>
+    </div>
+  </header>
 
-    <!-- Présentation de l'offre de location -->
-    <section class="section">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl); align-items: center;">
-          
+  <!-- ============================================================
+       01. POSTES CLÉS EN MAIN
+       ============================================================ -->
+  <section class="pricing-category-block theme-cream" style="padding-top: 10vh; padding-bottom: 10vh;">
+    <div class="pricing-block-inner">
+      <header class="sec-head">
+        <span class="sec-index">( 01 )</span><span class="sec-tick"></span>
+        <span class="sec-name">Espaces &amp; Postes Clés en Main</span><span class="sec-rule" data-draw></span>
+      </header>
+
+      <div class="spaces-cards-grid">
+
+        <!-- 1. Poste Coiffure -->
+        <article class="ed-space-card" data-reveal="fade">
+          <span class="oframe"></span>
           <div>
-            <span class="section-eyebrow">Postes Clés en Main</span>
-            <h2 class="section-title">
-              Rejoignez une adresse d'exception à <span class="script-accent">Renens</span>
-            </h2>
-            <p style="color: var(--color-ink-soft); line-height: 1.8; margin-bottom: 1.25rem;">
-              Vous êtes professionnelle indépendante dans le domaine de la <strong>coiffure</strong>, de la <strong>manucure / prothésie ongulaire</strong> ou des <strong>soins corporels &amp; massages</strong> ? Notre institut propose la location de places et postes de travail parfaitement équipés, dans un cadre prestigieux et chaleureux.
-            </p>
-            <p style="color: var(--color-muted); line-height: 1.8; margin-bottom: 2rem;">
-              Bénéficiez d'une synergie positive avec notre clientèle fidèle, tout en exerçant votre activité en totale liberté d'organisation.
-            </p>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-              <div style="padding: 1.25rem; background: var(--color-cream); border-radius: var(--radius-sm); border: 1px solid var(--color-border);">
-                <strong style="color: var(--color-ink); display: block; font-size: 1rem; margin-bottom: 0.25rem;">Poste Coiffure</strong>
-                <span style="font-size: var(--text-xs); color: var(--color-muted);">Fauteuil, miroir &amp; bac de lavage</span>
-              </div>
-              <div style="padding: 1.25rem; background: var(--color-cream); border-radius: var(--radius-sm); border: 1px solid var(--color-border);">
-                <strong style="color: var(--color-ink); display: block; font-size: 1rem; margin-bottom: 0.25rem;">Poste Onglerie</strong>
-                <span style="font-size: var(--text-xs); color: var(--color-muted);">Table manucure &amp; rangements</span>
-              </div>
-              <div style="padding: 1.25rem; background: var(--color-cream); border-radius: var(--radius-sm); border: 1px solid var(--color-border);">
-                <strong style="color: var(--color-ink); display: block; font-size: 1rem; margin-bottom: 0.25rem;">Cabine de Soins</strong>
-                <span style="font-size: var(--text-xs); color: var(--color-muted);">Table de massage &amp; esthétique</span>
-              </div>
+            <div style="font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">
+              Stylisme Capillaire
             </div>
-
-            <a href="tel:+41766606026" class="btn btn-champagne">
-              Nous contacter au +41 76 660 60 26
+            <h3 class="ed-space-title">Poste Coiffure</h3>
+            <p class="ed-space-desc">
+              Fauteuil ergonomique grand confort, grand miroir mural rétroéclairé avec tablette marbrée et accès direct aux bacs de lavage relaxants.
+            </p>
+            <ul class="ed-space-features">
+              <li>Fauteuil professionnel inclinable</li>
+              <li>Bacs de lavage massants dernière génération</li>
+              <li>Rangements privatisés sous clé pour votre matériel</li>
+              <li>Accès au laboratoire technique pour mélanges couleurs</li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.12);">
+            <a href="#candidature-form" class="btn-outline btn-sm" style="width: 100%;">
+              Postuler pour ce poste
             </a>
           </div>
+        </article>
 
-          <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-lg); aspect-ratio: 4/3;">
-            <img src="public/images/salon/ambiance-3.jpg" alt="Postes de travail lumineux à l'institut 11 Secrets de Beauté" width="600" height="450" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- 2. Poste Onglerie -->
+        <article class="ed-space-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div style="font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">
+              Prothésie Ongulaire
+            </div>
+            <h3 class="ed-space-title">Poste Onglerie</h3>
+            <p class="ed-space-desc">
+              Table manucure design avec aspiration intégrée pour un travail sain, lampes articulées lumière du jour et étagères pour vos vernis d'art.
+            </p>
+            <ul class="ed-space-features">
+              <li>Table avec aspiration professionnelle intégrée</li>
+              <li>Double fauteuil cliente et praticienne grand confort</li>
+              <li>Présentoir chromatique pour vernis et poudres</li>
+              <li>Élimination soignée des poussières et odeurs</li>
+            </ul>
           </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.12);">
+            <a href="#candidature-form" class="btn-outline btn-sm" style="width: 100%;">
+              Postuler pour ce poste
+            </a>
+          </div>
+        </article>
 
-        </div>
+        <!-- 3. Cabine Esthétique / Massages -->
+        <article class="ed-space-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div style="font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">
+              Bien-Être &amp; Dermo-Esthétique
+            </div>
+            <h3 class="ed-space-title">Cabine Privative</h3>
+            <p class="ed-space-desc">
+              Pièce isolée phoniquement, ambiance tamisée, table de massage chauffante et mobilier raffiné pour vos consultations en toute discrétion.
+            </p>
+            <ul class="ed-space-features">
+              <li>Table de massage électrique multifonctions</li>
+              <li>Point d'eau privatif et chauffe-serviettes</li>
+              <li>Lumière à intensité variable et sonorisation douce</li>
+              <li>Idéale pour massages, dermo-esthétique et regard</li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.12);">
+            <a href="#candidature-form" class="btn-outline btn-sm" style="width: 100%;">
+              Postuler pour ce poste
+            </a>
+          </div>
+        </article>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Avantages de l'emplacement -->
-    <section class="section" style="background-color: var(--color-cream-deep);">
-      <div class="container">
+  <!-- ============================================================
+       02. ATOUTS STRATÉGIQUES DE L'ADRESSE
+       ============================================================ -->
+  <section class="theme-cream2" style="padding: 12vh 5vw;">
+    <div class="pricing-block-inner">
+      <header class="sec-head">
+        <span class="sec-index">( 02 )</span><span class="sec-tick"></span>
+        <span class="sec-name">Un Emplacement d'Exception</span><span class="sec-rule" data-draw></span>
+      </header>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 40px;">
         
-        <div class="section-header">
-          <span class="section-eyebrow">Atouts Stratégiques</span>
-          <h2 class="section-title">
-            Un emplacement idéal pour accueillir votre <span class="script-accent">clientèle</span>
-          </h2>
-          <p class="section-subtitle">
-            Situé au 11 Rue de Lausanne, l'institut bénéficie d'une accessibilité remarquable au carrefour de la région lausannoise.
+        <div class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div class="ed-card-head">
+            <h3 class="ed-card-title">À 60 secondes de la Gare CFF</h3>
+            <span class="ed-card-badge">Connexion Totale</span>
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.8; color: #5C5C48;">
+            La gare de Renens est l'un des nœuds ferroviaires majeurs de Suisse romande (lignes directes Lausanne, Genève, Morges, Yverdon et métro M1). Vos clientes accèdent à votre salon en 1 minute chrono à pied.
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem;">
-          
-          <div class="card-frame" style="padding: 2.25rem; background: #FFFFFF;">
-            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.75rem;">À 1 min à pied de la gare</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-ink-soft); line-height: 1.7;">
-              La gare CFF de Renens se trouve à seulement 60 secondes de marche, connectée en permanence à Lausanne, Genève, Morges et tout le canton de Vaud.
-            </p>
+        <div class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div class="ed-card-head">
+            <h3 class="ed-card-title">Parkings Immédiats Coop &amp; Migros</h3>
+            <span class="ed-card-badge">Stationnement</span>
           </div>
+          <p style="font-size: 13.5px; line-height: 1.8; color: #5C5C48;">
+            Plus aucun stress de stationnement : deux vastes parkings couverts se situent face à l'institut, offrant une fluidité parfaite pour l'accueil de votre clientèle automobile.
+          </p>
+        </div>
 
-          <div class="card-frame" style="padding: 2.25rem; background: #FFFFFF;">
-            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.75rem;">Parkings immédiats Coop &amp; Migros</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-ink-soft); line-height: 1.7;">
-              Vos clientes peuvent se garer en toute sérénité dans les grands parkings publics situés juste en face de l'institut.
-            </p>
+        <div class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div class="ed-card-head">
+            <h3 class="ed-card-title">Synergie &amp; Image Haut de Gamme</h3>
+            <span class="ed-card-badge">Standing Suisse</span>
           </div>
-
-          <div class="card-frame" style="padding: 2.25rem; background: #FFFFFF;">
-            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.75rem;">Espace rénové &amp; valorisant</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-ink-soft); line-height: 1.7;">
-              Un environnement professionnel digne des plus beaux instituts suisses, apportant une valeur perçue maximale à vos prestations.
-            </p>
-          </div>
-
+          <p style="font-size: 13.5px; line-height: 1.8; color: #5C5C48;">
+            Bénéficiez de la notoriété de 11 Secrets de Beauté et de notre clientèle fidèle en quête d'excellence. Évoluez dans un univers propre, élégant et chaleureux qui sublime immédiatement votre image de marque.
+          </p>
         </div>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Formulaire de Candidature & Prise de Contact Partenaire -->
-    <section class="section">
-      <div class="container-narrow">
+  <!-- ============================================================
+       03. FORMULAIRE DE CANDIDATURE & CONTACT PARTENAIRE
+       ============================================================ -->
+  <section class="theme-cream" id="candidature-form" style="padding: 12vh 5vw;">
+    <div style="max-width: 680px; margin: 0 auto; position: relative;">
+      
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="sec-index">( 03 ) CANDIDATURE CONFIDENTIELLE</span>
+        <h2 style="font-family: var(--serif); font-size: clamp(28px, 4vw, 44px); font-weight: 350; margin-top: 12px; margin-bottom: 12px; color: var(--ink);" data-reveal="words">
+          Échangeons sur votre <span class="script" style="font-family: var(--script); font-size: 1.4em; color: var(--gold); line-height: 0;">projet</span>
+        </h2>
+        <p style="font-size: 14px; line-height: 1.8; color: #5C5C48;" data-reveal="fade">
+          Transmettez-nous vos coordonnées en toute discrétion. Notre direction vous contactera sous 24 à 48 heures ouvrées pour organiser une visite privée de l'institut et discuter des modalités.
+        </p>
+      </div>
+
+      <div style="position: relative; background: var(--cream2); padding: clamp(28px, 5vw, 44px); border: 1px solid rgba(38,38,31,.18);" data-reveal="fade">
+        <span class="oframe"></span>
         
-        <div class="contact-form-card">
-          <div style="text-align: center; margin-bottom: 2rem;">
-            <span class="section-eyebrow">Demande d'Informations</span>
-            <h2 class="section-title" style="font-size: 1.9rem;">
-              Échangeons sur votre projet <span class="script-accent">professionnel</span>
-            </h2>
-            <p style="color: var(--color-muted); font-size: var(--text-sm); max-width: 500px; margin-inline: auto;">
-              Remplissez ce formulaire confidentiel pour connaître nos disponibilités et conditions de location.
-            </p>
-          </div>
-
-          <form id="partenariatForm">
-            <div class="form-grid">
-              
-              <div class="form-group">
-                <label for="partNom" class="form-label">Nom et Prénom <span class="req">*</span></label>
-                <input type="text" id="partNom" name="nom" required class="form-control" placeholder="Votre nom complet">
-              </div>
-
-              <div class="form-group">
-                <label for="partTel" class="form-label">Téléphone <span class="req">*</span></label>
-                <input type="tel" id="partTel" name="telephone" required class="form-control" placeholder="+41 79 000 00 00">
-              </div>
-
-              <div class="form-group">
-                <label for="partEmail" class="form-label">E-mail <span class="req">*</span></label>
-                <input type="email" id="partEmail" name="email" required class="form-control" placeholder="votre@email.ch">
-              </div>
-
-              <div class="form-group">
-                <label for="partActivite" class="form-label">Votre domaine d'activité <span class="req">*</span></label>
-                <select id="partActivite" name="activite" required class="form-control">
-                  <option value="">Sélectionnez votre activité...</option>
-                  <option value="Coiffure">Coiffure &amp; Stylisme capillaire</option>
-                  <option value="Onglerie">Onglerie &amp; Prothésie ongulaire</option>
-                  <option value="Soins corporels & Massages">Soins corporels &amp; Massages</option>
-                  <option value="Esthétique & Maquillage">Esthétique &amp; Maquillage</option>
-                  <option value="Autre">Autre activité bien-être</option>
-                </select>
-              </div>
-
-              <div class="form-group form-grid-full">
-                <label for="partMessage" class="form-label">Présentation de votre activité &amp; disponibilités souhaitées</label>
-                <textarea id="partMessage" name="message" class="form-control" placeholder="Précisez votre expérience, vos besoins en matériel et la date de démarrage envisagée..."></textarea>
-              </div>
-
-              <div class="form-grid-full">
-                <button type="submit" class="btn btn-champagne btn-lg" style="width: 100%;">
-                  Envoyer ma demande de partenariat
-                </button>
-              </div>
-
+        <form id="partenariatForm" novalidate>
+          <div class="form-grid">
+            
+            <div class="form-group">
+              <label for="partNom" class="form-label">Nom et Prénom <span class="req">*</span></label>
+              <input type="text" id="partNom" name="nom" required class="form-control" placeholder="Votre nom complet">
             </div>
-          </form>
 
-          <div id="partenariatSuccess" style="display: none; text-align: center; padding: 2rem 1rem;">
-            <h4 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-ink); margin-bottom: 0.5rem;">
-              Demande transmise avec succès
-            </h4>
-            <p style="color: var(--color-muted); font-size: var(--text-sm);">
-              Nous vous remercions pour votre intérêt. Notre direction prendra contact avec vous dans les 48 heures ouvrées pour convenir d'une visite de l'institut.
-            </p>
+            <div class="form-group">
+              <label for="partTel" class="form-label">Téléphone <span class="req">*</span></label>
+              <input type="tel" id="partTel" name="telephone" required class="form-control" placeholder="+41 79 000 00 00">
+            </div>
+
+            <div class="form-group">
+              <label for="partEmail" class="form-label">E-mail <span class="req">*</span></label>
+              <input type="email" id="partEmail" name="email" required class="form-control" placeholder="votre@email.ch">
+            </div>
+
+            <div class="form-group">
+              <label for="partActivite" class="form-label">Votre univers d'activité <span class="req">*</span></label>
+              <select id="partActivite" name="activite" required class="form-control">
+                <option value="">Sélectionnez votre univers...</option>
+                <option value="Coiffure">Coiffure &amp; Stylisme capillaire</option>
+                <option value="Onglerie">Onglerie &amp; Prothésie ongulaire</option>
+                <option value="Soins corporels & Massages">Soins corporels &amp; Massages</option>
+                <option value="Esthétique & Regard">Esthétique, Regard &amp; Maquillage</option>
+                <option value="Autre">Autre activité bien-être / santé</option>
+              </select>
+            </div>
+
+            <div class="form-group form-grid-full">
+              <label for="partMessage" class="form-label">Présentation de votre parcours &amp; date envisagée</label>
+              <textarea id="partMessage" name="message" class="form-control" placeholder="Dites-nous quelques mots sur votre expérience, votre clientèle actuelle et vos attentes..."></textarea>
+            </div>
+
+            <div class="form-grid-full" style="margin-top: 8px;">
+              <button type="submit" class="btn-champagne" style="width: 100%;">
+                Envoyer ma demande de partenariat
+              </button>
+            </div>
+
           </div>
+        </form>
 
+        <div id="partenariatSuccess" style="display: none; text-align: center; padding: 32px 16px;">
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--ink); display: block; margin-bottom: 10px;">
+            Demande bien reçue
+          </span>
+          <p style="font-size: 14px; line-height: 1.8; color: #5C5C48;">
+            Merci pour votre intérêt. Nous prendrons contact avec vous très rapidement pour fixer un rendez-vous d'échange et vous faire découvrir les espaces.
+          </p>
         </div>
 
       </div>
-    </section>
 
-  </main>
+    </div>
+  </section>
 
-  <div id="site-footer-mount"></div>
-  <div id="booking-modal-mount"></div>
-  <script type="module" src="js/main.js"></script>
-  <script>
-    const partForm = document.getElementById('partenariatForm');
-    const partSuccess = document.getElementById('partenariatSuccess');
-    if (partForm && partSuccess) {
-      partForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        partForm.style.display = 'none';
-        partSuccess.style.display = 'block';
-      });
-    }
-  </script>
+  <!-- ============================================================
+       LE RENDEZ-VOUS — CTA ÉDITORIAL HAUTE COUTURE
+       ============================================================ -->
+  <section id="rdv" class="theme-cream">
+    <a href="tel:+41766606026" class="rdv-link" aria-label="Appeler l'institut directement">
+      <span class="oframe oframe--lg rdv-frame" aria-hidden="true"></span>
+      <span class="rdv-top">Visiter l'institut à Renens</span>
+      <span class="rdv-script">sur rendez-vous</span>
+      <svg class="rdv-arrow" viewBox="0 0 140 24" aria-hidden="true">
+        <line x1="0" y1="12" x2="128" y2="12"></line>
+        <path d="M120 4 L128 12 L120 20"></path>
+      </svg>
+    </a>
+    <p class="rdv-note">Ligne directe direction : +41 76 660 60 26</p>
+    <div class="rdv-meta">
+      <span>Rue de Lausanne 11, 1020 Renens</span>
+      <a href="mailto:info@11secretsdebeaute.ch">info@11secretsdebeaute.ch</a>
+      <a href="contact.html">Accès &amp; Plan</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER HAUTE COUTURE
+     ============================================================ -->
+<footer class="footer">
+  <div class="f-head">
+    <div class="f-title">
+      <span class="f-11">11</span>
+      <span class="f-script">Secrets de beauté</span>
+    </div>
+    <div class="f-cols">
+      <div class="f-col">
+        <h4>L'institut</h4>
+        <address>Rue de Lausanne 11<br>1020 Renens (VD)<br>Suisse</address>
+        <a href="tel:+41766606026">+41 76 660 60 26</a>
+      </div>
+      <div class="f-col">
+        <h4>Horaires</h4>
+        <p>Mardi — Vendredi<br>09h00 – 19h00</p>
+        <p style="margin-top: 8px;">Samedi<br>09h00 – 17h00</p>
+      </div>
+      <div class="f-col">
+        <h4>Navigation</h4>
+        <p><a href="soins.html">Soins &amp; Rituels</a></p>
+        <p><a href="onglerie.html">Onglerie</a></p>
+        <p><a href="tarifs.html">Grille des Tarifs</a></p>
+        <p><a href="marques.html">Marques Partenaires</a></p>
+        <p><a href="partenariat.html">Espace Partenariat</a></p>
+        <p><a href="contact.html">Contact &amp; Accès</a></p>
+      </div>
+      <div class="f-col">
+        <h4>Réservations</h4>
+        <p><button type="button" class="open-booking-btn" style="background: none; border: none; padding: 0; color: inherit; font: inherit; cursor: pointer; text-decoration: underline;">Prendre rendez-vous en ligne</button></p>
+        <p style="margin-top: 6px;"><a href="https://wa.me/41766606026" target="_blank" rel="noopener">WhatsApp Direct</a></p>
+      </div>
+    </div>
+  </div>
+
+  <p class="f-line">« Onze secrets, un seul institut — <span class="script">l'élégance</span> à fleur de peau »</p>
+
+  <div class="f-legal">
+    <span>© 11 Secrets de Beauté</span>
+    <span>Renens — Suisse</span>
+    <span><a href="contact.html" style="color:inherit;text-decoration:none;">Contact direct</a></span>
+  </div>
+</footer>
+
+<!-- Point de montage Modale de Réservation Universelle -->
+<div id="booking-modal-mount"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="module" src="js/editorial.js"></script>
+
+<script>
+  const partForm = document.getElementById('partenariatForm');
+  const partSuccess = document.getElementById('partenariatSuccess');
+  if (partForm && partSuccess) {
+    partForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!partForm.checkValidity()) {
+        partForm.reportValidity();
+        return;
+      }
+      partForm.style.display = 'none';
+      partSuccess.style.display = 'block';
+    });
+  }
+</script>
 
 </body>
 </html>

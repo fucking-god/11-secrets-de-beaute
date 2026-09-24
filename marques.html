@@ -1,198 +1,344 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="theme-cream">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nos Marques Partenaires — 11 Secrets de Beauté · Renens</title>
-  <meta name="description" content="Découvrez les marques d'exception utilisées à l'institut 11 Secrets de Beauté : Ella Baché, Ybera Paris, Peggy Sage, ContrAge et Kiara Sky.">
-  <meta name="theme-color" content="#F5EFEB">
+  <meta name="description" content="Découvrez les marques d'exception utilisées à l'institut 11 Secrets de Beauté à Renens : Ella Baché Paris, Ybera Paris, Peggy Sage, ContrAge et Kiara Sky.">
+  <meta name="theme-color" content="#F1ECE0">
+  <link rel="canonical" href="https://11secretsdebeaute.ch/marques.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F1ECE0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%233F412F'%3E11%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/variables.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/components.css">
-  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/editorial.css">
 </head>
-<body>
+<body class="theme-cream">
 
-  <a href="#contenu-principal" class="skip-to-content">Aller au contenu principal</a>
-  <div id="site-header-mount"></div>
+<a class="skip" href="#marques-content">Aller au contenu</a>
 
-  <main id="contenu-principal">
+<!-- Curseur éditorial (desktop) -->
+<div id="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><span class="cursor-label"></span></div>
+</div>
 
-    <!-- En-tête Marques -->
-    <header class="section" style="padding-top: calc(80px + var(--space-2xl)); padding-bottom: var(--space-xl); background: radial-gradient(circle at 50% 0%, var(--color-cream-deep) 0%, var(--color-cream-light) 70%); text-align: center;">
-      <div class="container-narrow">
-        <span class="section-eyebrow">Exigence &amp; Qualité Certifiée</span>
-        <h1 class="section-title" style="font-size: var(--text-hero); margin-bottom: 1.25rem;">
-          Nos Marques <span class="script-accent">Partenaires</span>
-        </h1>
-        <p class="section-subtitle" style="font-size: var(--text-lg); line-height: 1.8;">
-          Nous sélectionnons exclusivement des laboratoires et fabricants renommés pour leur intégrité scientifique, l'innocuité de leurs composants et la puissance de leurs résultats.
-        </p>
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="index.html" aria-label="11 Secrets de Beauté — accueil">
+    <span class="nl-11">11</span><span class="nl-rest">Secrets de beauté</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="institut.html">L'institut</a></li>
+    <li><a href="soins.html">Soins</a></li>
+    <li><a href="onglerie.html">Onglerie</a></li>
+    <li><a href="tarifs.html">Tarifs</a></li>
+    <li><a href="marques.html" class="is-active">Marques</a></li>
+    <li><a href="partenariat.html">Partenariat</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button type="button" class="nav-cta open-booking-btn" data-soin="" id="navCtaBtn" aria-label="Prendre rendez-vous en ligne">
+    Prendre rendez-vous
+  </button>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- Menu overlay — plein écran -->
+<nav class="menu" id="menu" aria-hidden="true">
+  <span class="oframe oframe--lg menu-frame" aria-hidden="true"></span>
+  <ul class="menu-links">
+    <li><a href="index.html"><span class="m-idx">01</span>Accueil</a></li>
+    <li><a href="institut.html"><span class="m-idx">02</span>L'institut</a></li>
+    <li><a href="index.html#secrets"><span class="m-idx">03</span>Les 11 Secrets</a></li>
+    <li><a href="soins.html"><span class="m-idx">04</span>Soins &amp; Rituels</a></li>
+    <li><a href="onglerie.html"><span class="m-idx">05</span>Onglerie &amp; Mains</a></li>
+    <li><a href="tarifs.html"><span class="m-idx">06</span>Grille des Tarifs (CHF)</a></li>
+    <li><a href="marques.html"><span class="m-idx">07</span>Marques Partenaires</a></li>
+    <li><a href="partenariat.html"><span class="m-idx">08</span>Espace Partenariat</a></li>
+    <li><a href="index.html#galerie"><span class="m-idx">09</span>Galerie Photos</a></li>
+    <li><a href="contact.html"><span class="m-idx">10</span>Contact &amp; Accès</a></li>
+  </ul>
+  <button type="button" class="menu-cta open-booking-btn" data-soin="" id="menuCtaBtn" aria-label="Prendre rendez-vous">
+    prendre rendez-vous
+  </button>
+  <div class="menu-foot">
+    Rue de Lausanne 11 — 1020 Renens, Suisse<br>
+    Tél. <a href="tel:+41766606026" style="color:inherit;text-decoration:underline;">+41 76 660 60 26</a> · Mar. – Sam. 9h00 – 19h00
+  </div>
+</nav>
+
+<main id="marques-content">
+
+  <!-- ============ SUBPAGE HERO ============ -->
+  <header class="sub-hero">
+    <div class="sub-hero-inner">
+      <div class="sub-hero-tagline" data-reveal="fade">
+        <span>Exigence &amp; Intégrité Scientifique</span><span class="dot"></span><span>Sélection Institut</span>
       </div>
-    </header>
+      <h1 class="sub-hero-title" data-reveal="fade">
+        Les Maisons <span class="script">Partenaires</span>
+      </h1>
+      <p class="sub-hero-desc" data-reveal="fade">
+        Nous ne laissons aucune place au compromis. Chaque formule appliquée sur votre peau, vos cheveux ou vos ongles provient de manufactures de renom international, choisies pour leur biocompatibilité, la pureté de leurs actifs et l'efficacité visible de leurs résultats.
+      </p>
+      <div class="sub-hero-actions" data-reveal="fade">
+        <button type="button" class="btn-champagne open-booking-btn" data-soin="">
+          Prendre rendez-vous
+        </button>
+        <a href="#marques-grille" class="btn-outline">
+          Découvrir les marques ↓
+        </a>
+      </div>
+    </div>
+    <div class="sub-hero-frame">
+      <div class="media-inner">
+        <img src="public/images/salon/ambiance-2.jpg" alt="Flacons et produits prestigieux à l'institut 11 Secrets de Beauté" width="400" height="500">
+      </div>
+      <span class="oframe"></span>
+    </div>
+  </header>
 
-    <!-- Grille des Marques Détaillées -->
-    <section class="section">
-      <div class="container">
+  <!-- ============================================================
+       GRILLE DES MARQUES PARTENAIRES
+       ============================================================ -->
+  <section class="pricing-category-block theme-cream" id="marques-grille" style="padding-top: 10vh; padding-bottom: 12vh;">
+    <div class="pricing-block-inner">
+      <header class="sec-head">
+        <span class="sec-index">( 01 )</span><span class="sec-tick"></span>
+        <span class="sec-name">Laboratoires &amp; Formulations D'Excellence</span><span class="sec-rule" data-draw></span>
+      </header>
 
-        <div class="marques-grid">
+      <div class="marques-editorial-grid">
 
-          <!-- 1. ELLA BACHÉ -->
-          <article class="marque-card">
-            <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-md); margin-bottom: 1.5rem; aspect-ratio: 16/9;">
-              <img src="public/images/marques/ella-bache.jpg" alt="Ella Baché Paris - Dermo-esthétique à Renens" width="500" height="280" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- 1. ELLA BACHÉ -->
+        <article class="ed-marque-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-marque-img-wrap">
+              <img src="public/images/marques/ella-bache.jpg" alt="Ella Baché Paris - Dermo-esthétique à Renens" width="500" height="312" loading="lazy">
             </div>
-            <div class="marque-header">
-              <h2 class="marque-title">Ella Baché</h2>
-              <span class="marque-origin">Paris · 1936</span>
+            <div class="ed-marque-header">
+              <h2 class="ed-marque-name">Ella Baché</h2>
+              <span class="ed-marque-origin">Paris · 1936</span>
             </div>
-            <p class="marque-tagline">Pionnière de la beauté connectée &amp; dermo-esthétique</p>
-            <p class="marque-desc">
-              Donner aux femmes les moyens de développer leur potentiel beauté et de rendre leur peau belle au naturel, sans artifices : Ella Baché est l'histoire de cet engagement. Avec une vision profonde de la peau, la marque recherche constamment des solutions novatrices. Son laboratoire fait entrer le soin dans l'ère de la beauté connectée en mettant au point des technologies révolutionnaires de diagnostic et de soin ciblés.
+            <p class="ed-marque-tagline">Pionnière de la beauté connectée &amp; dermo-esthétique</p>
+            <p class="ed-marque-desc">
+              Donner aux femmes les moyens de développer leur potentiel beauté et de rendre leur peau éclatante au naturel, sans artifice : telle est la vocation d'Ella Baché depuis 1936. Pionnière dans la dermo-nutrition cellulaire, la maison développe des protocoles personnalisés hautement concentrés en nutriments purs.
             </p>
-            <div class="marque-specialties-wrap">
-              <span class="specialty-pill">Crème Tomate Originale</span>
-              <span class="specialty-pill">Hydra-Hyaluronique</span>
-              <span class="specialty-pill">Green Rides Fermeté</span>
-              <span class="specialty-pill">Sal-Exfo Peeling</span>
+            <div class="ed-pills-wrap">
+              <span class="ed-pill">Crème Tomate Originale</span>
+              <span class="ed-pill">Hydra-Hyaluronique</span>
+              <span class="ed-pill">Green Rides Fermeté</span>
+              <span class="ed-pill">Sal-Exfo Peeling</span>
             </div>
-            <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: var(--text-xs); color: var(--color-muted);">Soins visage en cabine</span>
-              <a href="tarifs.html#esthetique" class="btn btn-outline btn-sm">Voir les rituels</a>
-            </div>
-          </article>
+          </div>
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(38,38,31,.12); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: var(--mut);">Soins visage en cabine</span>
+            <a href="tarifs.html#visage-sec" class="btn-outline btn-sm">Voir les rituels →</a>
+          </div>
+        </article>
 
-          <!-- 2. YBERA PARIS -->
-          <article class="marque-card">
-            <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-md); margin-bottom: 1.5rem; aspect-ratio: 16/9;">
-              <img src="public/images/marques/ybera.jpg" alt="Ybera Paris - Lissages et botox capillaire sans formol" width="500" height="280" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- 2. YBERA PARIS -->
+        <article class="ed-marque-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-marque-img-wrap">
+              <img src="public/images/marques/ybera.jpg" alt="Ybera Paris - Lissages et botox capillaire sans formol" width="500" height="312" loading="lazy">
             </div>
-            <div class="marque-header">
-              <h2 class="marque-title">Ybera Paris</h2>
-              <span class="marque-origin">Brésil / France · 2005</span>
+            <div class="ed-marque-header">
+              <h2 class="ed-marque-name">Ybera Paris</h2>
+              <span class="ed-marque-origin">Brésil / France · 2005</span>
             </div>
-            <p class="marque-tagline">Haute technologie capillaire sans formol</p>
-            <p class="marque-desc">
-              Ybera a trouvé sa source au Brésil où la beauté est un vrai culte. Fondée en 2005, la maison allie haute technologie, qualité irréprochable et innovation continue pour la santé du cheveu. Leader incontournable en innovations des produits capillaires pour les professionnels en Amérique du Sud et en Europe grâce à ses lissages et soins capillaires entièrement formulés sans formol et à base de composants naturels.
+            <p class="ed-marque-tagline">Haute technologie capillaire sans formol</p>
+            <p class="ed-marque-desc">
+              Née au Brésil où le soin des cheveux est érigé en rituel sacré, Ybera allie molécules végétales nobles et nanotechnologie pour reconstruire la fibre capillaire de l'intérieur. Ses lissages brésiliens et botox profonds offrent une brillance miroir et une discipline sans aucun danger respiratoire.
             </p>
-            <div class="marque-specialties-wrap">
-              <span class="specialty-pill">Lissage Brésilien Pur</span>
-              <span class="specialty-pill">Botox Express &amp; Profond</span>
-              <span class="specialty-pill">Soin Vapeur Réparateur</span>
-              <span class="specialty-pill">Formules Sans Formol</span>
+            <div class="ed-pills-wrap">
+              <span class="ed-pill">Lissage Brésilien Pur</span>
+              <span class="ed-pill">Botox Express &amp; Profond</span>
+              <span class="ed-pill">Soin Vapeur Réparateur</span>
+              <span class="ed-pill">Formules 100% Sans Formol</span>
             </div>
-            <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: var(--text-xs); color: var(--color-muted);">Rituels capillaires</span>
-              <a href="tarifs.html#coiffure" class="btn btn-outline btn-sm">Voir les tarifs Ybera</a>
-            </div>
-          </article>
+          </div>
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(38,38,31,.12); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: var(--mut);">Rituels capillaires</span>
+            <a href="tarifs.html#coiffure-sec" class="btn-outline btn-sm">Tarifs Ybera →</a>
+          </div>
+        </article>
 
-          <!-- 3. PEGGY SAGE -->
-          <article class="marque-card">
-            <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-md); margin-bottom: 1.5rem; aspect-ratio: 16/9; background: var(--color-nude); display: flex; align-items: center; justify-content: center;">
-              <div style="text-align: center; padding: 2rem;">
-                <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-ink); letter-spacing: 0.05em;">PEGGY SAGE</span>
-                <span style="display: block; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-gold-deep); margin-top: 4px;">Paris · Depuis 1925</span>
+        <!-- 3. PEGGY SAGE -->
+        <article class="ed-marque-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-marque-img-wrap" style="background: var(--cream); display: flex; align-items: center; justify-content: center;">
+              <div style="text-align: center; padding: 24px;">
+                <span style="font-family: var(--serif); font-size: 26px; color: var(--ink); letter-spacing: .08em; display: block;">PEGGY SAGE</span>
+                <span style="font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-top: 6px; display: block;">Paris · Depuis 1925</span>
               </div>
             </div>
-            <div class="marque-header">
-              <h2 class="marque-title">Peggy Sage</h2>
-              <span class="marque-origin">Paris · 1925</span>
+            <div class="ed-marque-header">
+              <h2 class="ed-marque-name">Peggy Sage</h2>
+              <span class="ed-marque-origin">Paris · 1925</span>
             </div>
-            <p class="marque-tagline">Un siècle de référence en onglerie &amp; maquillage</p>
-            <p class="marque-desc">
-              La marque porte fièrement le nom de son ingénieuse créatrice depuis près de 100 ans ! Connus aujourd'hui dans le monde entier, les produits Peggy Sage ont conquis le cœur de toutes les femmes et hommes amoureux de la beauté, des nuances délicates et de la qualité professionnelle. Leur philosophie est basée sur la longévité de leurs formules et le respect absolu de l'ongle naturel.
+            <p class="ed-marque-tagline">Un siècle d'élégance en onglerie &amp; maquillage</p>
+            <p class="ed-marque-desc">
+              Véritable légende parisienne de la manucure professionnelle depuis près de 100 ans. Peggy Sage séduit par son nuancier chromatique intemporel, sa couvrance parfaite et son engagement constant pour la santé des cuticules et des ongles fragiles.
             </p>
-            <div class="marque-specialties-wrap">
-              <span class="specialty-pill">Vernis Semi-Permanent</span>
-              <span class="specialty-pill">Manucure Brésilienne</span>
-              <span class="specialty-pill">Bains de Paraffine</span>
-              <span class="specialty-pill">Soins Fortifiants</span>
+            <div class="ed-pills-wrap">
+              <span class="ed-pill">Vernis Semi-Permanent</span>
+              <span class="ed-pill">Manucure Brésilienne</span>
+              <span class="ed-pill">Bains de Paraffine</span>
+              <span class="ed-pill">Soins Fortifiants</span>
             </div>
-            <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: var(--text-xs); color: var(--color-muted);">Onglerie &amp; Manucure</span>
-              <a href="onglerie.html" class="btn btn-outline btn-sm">Découvrir l'onglerie</a>
-            </div>
-          </article>
+          </div>
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(38,38,31,.12); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: var(--mut);">Onglerie &amp; Manucure</span>
+            <a href="onglerie.html" class="btn-outline btn-sm">Carte Onglerie →</a>
+          </div>
+        </article>
 
-          <!-- 4. CONTRAGE -->
-          <article class="marque-card">
-            <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-md); margin-bottom: 1.5rem; aspect-ratio: 16/9;">
-              <img src="public/images/marques/contrage.png" alt="ContrAge - Soins anti-âge et dermo-cosmétique avancée" width="500" height="280" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- 4. CONTRAGE -->
+        <article class="ed-marque-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-marque-img-wrap">
+              <img src="public/images/marques/contrage.png" alt="ContrAge - Soins anti-âge et dermo-cosmétique avancée" width="500" height="312" loading="lazy">
             </div>
-            <div class="marque-header">
-              <h2 class="marque-title">ContrAge</h2>
-              <span class="marque-origin">Dermatologie Avancée</span>
+            <div class="ed-marque-header">
+              <h2 class="ed-marque-name">ContrAge</h2>
+              <span class="ed-marque-origin">Dermatologie Avancée</span>
             </div>
-            <p class="marque-tagline">Haute régénération cutanée anti-âge</p>
-            <p class="marque-desc">
-              Les laboratoires ContrAge développent des formules ciblées pour corriger et freiner les manifestations du vieillissement de la peau. Utilisée en complément de nos protocoles de radiofréquence et de mésothérapie, la gamme stimule le renouvellement cellulaire et renforce la matrice cutanée pour un visage lissé et redensifié.
+            <p class="ed-marque-tagline">Haute régénération cutanée anti-âge</p>
+            <p class="ed-marque-desc">
+              Développée par des médecins et biochimistes spécialisés en longévité cutanée, la gamme ContrAge cible directement la glycation des fibres de collagène. Synergisée avec nos technologies de radiofréquence, elle raffermit visiblement l'ovale du visage.
             </p>
-            <div class="marque-specialties-wrap">
-              <span class="specialty-pill">Anti-Glycation</span>
-              <span class="specialty-pill">Complément Radiofréquence</span>
-              <span class="specialty-pill">Sérums Haute Concentration</span>
+            <div class="ed-pills-wrap">
+              <span class="ed-pill">Anti-Glycation Cutanée</span>
+              <span class="ed-pill">Complément Radiofréquence</span>
+              <span class="ed-pill">Sérums Haute Concentration</span>
+              <span class="ed-pill">Régénération Profonde</span>
             </div>
-            <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: var(--text-xs); color: var(--color-muted);">Technologie anti-âge</span>
-              <a href="tarifs.html#esthetique" class="btn btn-outline btn-sm">Voir les protocoles</a>
-            </div>
-          </article>
+          </div>
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(38,38,31,.12); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: var(--mut);">Protocoles anti-âge</span>
+            <a href="tarifs.html#visage-sec" class="btn-outline btn-sm">Technologies Visage →</a>
+          </div>
+        </article>
 
-          <!-- 5. KIARA SKY -->
-          <article class="marque-card">
-            <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-md); margin-bottom: 1.5rem; aspect-ratio: 16/9;">
-              <img src="public/images/marques/kiara-sky.jpg" alt="Kiara Sky - Porcelaine dip powder et prothésie ongulaire" width="500" height="280" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- 5. KIARA SKY -->
+        <article class="ed-marque-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-marque-img-wrap">
+              <img src="public/images/marques/kiara-sky.jpg" alt="Kiara Sky - Porcelaine dip powder et prothésie ongulaire" width="500" height="312" loading="lazy">
             </div>
-            <div class="marque-header">
-              <h2 class="marque-title">Kiara Sky</h2>
-              <span class="marque-origin">Californie, USA</span>
+            <div class="ed-marque-header">
+              <h2 class="ed-marque-name">Kiara Sky</h2>
+              <span class="ed-marque-origin">Californie, USA</span>
             </div>
-            <p class="marque-tagline">L'art de la porcelaine dipping sans UV</p>
-            <p class="marque-desc">
-              Pionnière incontestée du système Dip Powder porcelaine, Kiara Sky offre une alternative saine et durable aux techniques conventionnelles. Sans monomère fort, sans lampe UV agressive, enrichie en vitamines et calcium, elle garantit une résistance exceptionnelle et une brillance miroir durant plus de 3 semaines.
+            <p class="ed-marque-tagline">L'art de la porcelaine dipping sans agression UV</p>
+            <p class="ed-marque-desc">
+              Référence mondiale du système Dip Powder porcelaine, Kiara Sky propose une révolution sans monomère nocif, sans odeur entêtante et sans passage sous lampe UV. Formulée avec du calcium et de la vitamine E pour fortifier l'ongle en continu pendant plus de 3 semaines.
             </p>
-            <div class="marque-specialties-wrap">
-              <span class="specialty-pill">Poudre Porcelaine Dipping</span>
-              <span class="specialty-pill">Sans Odeur Nocive</span>
-              <span class="specialty-pill">Enrichi en Calcium</span>
-              <span class="specialty-pill">Tenue 3+ Semaines</span>
+            <div class="ed-pills-wrap">
+              <span class="ed-pill">Poudre Porcelaine Dipping</span>
+              <span class="ed-pill">Sans Lampe UV</span>
+              <span class="ed-pill">Enrichi en Calcium &amp; Vit. E</span>
+              <span class="ed-pill">Tenue Supérieure 3 Semaines</span>
             </div>
-            <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: var(--text-xs); color: var(--color-muted);">Ongles Porcelaine</span>
-              <a href="onglerie.html" class="btn btn-outline btn-sm">Tarifs Porcelaine</a>
-            </div>
-          </article>
-
-        </div>
+          </div>
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(38,38,31,.12); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: var(--mut);">Porcelaine dipping</span>
+            <a href="onglerie.html" class="btn-outline btn-sm">Tarifs Porcelaine →</a>
+          </div>
+        </article>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Bannière de contact -->
-    <section class="section" style="background-color: var(--color-cream-deep);">
-      <div class="container-narrow" style="text-align: center;">
-        <span class="section-eyebrow">Conseil Personnalisé</span>
-        <h2 class="section-title">Besoin d'un conseil sur nos <span class="script-accent">produits</span> ?</h2>
-        <p style="color: var(--color-muted); font-size: var(--text-base); margin-bottom: 2rem;">
-          Nos professionnelles vous guident vers les textures et les rituels les mieux adaptés à vos objectifs beauté lors de votre visite.
-        </p>
-        <button type="button" class="btn btn-champagne btn-lg open-booking-btn" data-soin="">
-          Prendre rendez-vous à l'institut
-        </button>
+  <!-- ============================================================
+       LE RENDEZ-VOUS — CTA ÉDITORIAL HAUTE COUTURE
+       ============================================================ -->
+  <section id="rdv" class="theme-cream2">
+    <button type="button" class="rdv-link open-booking-btn" data-soin="" aria-label="Prendre rendez-vous" style="background: none; border: none; font-family: inherit;">
+      <span class="oframe oframe--lg rdv-frame" aria-hidden="true"></span>
+      <span class="rdv-top">Découvrez ces rituels en cabine</span>
+      <span class="rdv-script">sur-mesure</span>
+      <svg class="rdv-arrow" viewBox="0 0 140 24" aria-hidden="true">
+        <line x1="0" y1="12" x2="128" y2="12"></line>
+        <path d="M120 4 L128 12 L120 20"></path>
+      </svg>
+    </button>
+    <p class="rdv-note">Du mardi au samedi — diagnostic personnalisé inclus à chaque visite.</p>
+    <div class="rdv-meta">
+      <span>Rue de Lausanne 11, Renens</span>
+      <a href="tel:+41766606026">+41 76 660 60 26</a>
+      <a href="contact.html">Nous contacter</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER HAUTE COUTURE
+     ============================================================ -->
+<footer class="footer">
+  <div class="f-head">
+    <div class="f-title">
+      <span class="f-11">11</span>
+      <span class="f-script">Secrets de beauté</span>
+    </div>
+    <div class="f-cols">
+      <div class="f-col">
+        <h4>L'institut</h4>
+        <address>Rue de Lausanne 11<br>1020 Renens (VD)<br>Suisse</address>
+        <a href="tel:+41766606026">+41 76 660 60 26</a>
       </div>
-    </section>
+      <div class="f-col">
+        <h4>Horaires</h4>
+        <p>Mardi — Vendredi<br>09h00 – 19h00</p>
+        <p style="margin-top: 8px;">Samedi<br>09h00 – 17h00</p>
+      </div>
+      <div class="f-col">
+        <h4>Navigation</h4>
+        <p><a href="soins.html">Soins &amp; Rituels</a></p>
+        <p><a href="onglerie.html">Onglerie</a></p>
+        <p><a href="tarifs.html">Grille des Tarifs</a></p>
+        <p><a href="marques.html">Marques Partenaires</a></p>
+        <p><a href="partenariat.html">Espace Partenariat</a></p>
+        <p><a href="contact.html">Contact &amp; Accès</a></p>
+      </div>
+      <div class="f-col">
+        <h4>Réservations</h4>
+        <p><button type="button" class="open-booking-btn" style="background: none; border: none; padding: 0; color: inherit; font: inherit; cursor: pointer; text-decoration: underline;">Prendre rendez-vous en ligne</button></p>
+        <p style="margin-top: 6px;"><a href="https://wa.me/41766606026" target="_blank" rel="noopener">WhatsApp Direct</a></p>
+      </div>
+    </div>
+  </div>
 
-  </main>
+  <p class="f-line">« Onze secrets, un seul institut — <span class="script">l'élégance</span> à fleur de peau »</p>
 
-  <div id="site-footer-mount"></div>
-  <div id="booking-modal-mount"></div>
-  <script type="module" src="js/main.js"></script>
+  <div class="f-legal">
+    <span>© 11 Secrets de Beauté</span>
+    <span>Renens — Suisse</span>
+    <span><a href="contact.html" style="color:inherit;text-decoration:none;">Contact direct</a></span>
+  </div>
+</footer>
+
+<!-- Point de montage Modale de Réservation Universelle -->
+<div id="booking-modal-mount"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="module" src="js/editorial.js"></script>
 
 </body>
 </html>

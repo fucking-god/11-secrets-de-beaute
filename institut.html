@@ -1,204 +1,307 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="theme-cream">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>L'Institut — 11 Secrets de Beauté · Renens (Lausanne)</title>
   <meta name="description" content="Découvrez l'histoire, la philosophie et l'univers raffiné de l'institut 11 Secrets de Beauté à Renens. Un espace bien-être conçu comme un salon privé d'exception.">
-  <meta name="theme-color" content="#F5EFEB">
+  <meta name="theme-color" content="#F1ECE0">
+  <link rel="canonical" href="https://11secretsdebeaute.ch/institut.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F1ECE0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%233F412F'%3E11%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/variables.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/components.css">
-  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/editorial.css">
 </head>
-<body>
+<body class="theme-cream">
 
-  <a href="#contenu-principal" class="skip-to-content">Aller au contenu principal</a>
-  <div id="site-header-mount"></div>
+<a class="skip" href="#institut-content">Aller au contenu</a>
 
-  <main id="contenu-principal">
+<!-- Curseur éditorial (desktop) -->
+<div id="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><span class="cursor-label"></span></div>
+</div>
 
-    <!-- En-tête de page éditorial -->
-    <header class="section" style="padding-top: calc(80px + var(--space-2xl)); padding-bottom: var(--space-xl); background: radial-gradient(circle at 50% 0%, var(--color-cream-deep) 0%, var(--color-cream-light) 70%); text-align: center;">
-      <div class="container-narrow">
-        <span class="section-eyebrow">Maison de Beauté Confidentielle</span>
-        <h1 class="section-title" style="font-size: var(--text-hero); margin-bottom: 1.5rem;">
-          L'Institut &amp; son <span class="script-accent">histoire</span>
-        </h1>
-        <p class="section-subtitle" style="font-size: var(--text-lg); line-height: 1.8;">
-          Plus qu'un salon, une bulle feutrée au cœur de Renens dédiée à la régénération de votre corps et au rayonnement de votre beauté naturelle.
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="index.html" aria-label="11 Secrets de Beauté — accueil">
+    <span class="nl-11">11</span><span class="nl-rest">Secrets de beauté</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="institut.html" class="is-active">L'institut</a></li>
+    <li><a href="soins.html">Soins</a></li>
+    <li><a href="onglerie.html">Onglerie</a></li>
+    <li><a href="tarifs.html">Tarifs</a></li>
+    <li><a href="marques.html">Marques</a></li>
+    <li><a href="partenariat.html">Partenariat</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button type="button" class="nav-cta open-booking-btn" data-soin="" id="navCtaBtn" aria-label="Prendre rendez-vous en ligne">
+    Prendre rendez-vous
+  </button>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- Menu overlay — plein écran -->
+<nav class="menu" id="menu" aria-hidden="true">
+  <span class="oframe oframe--lg menu-frame" aria-hidden="true"></span>
+  <ul class="menu-links">
+    <li><a href="index.html"><span class="m-idx">01</span>Accueil</a></li>
+    <li><a href="institut.html"><span class="m-idx">02</span>L'institut</a></li>
+    <li><a href="index.html#secrets"><span class="m-idx">03</span>Les 11 Secrets</a></li>
+    <li><a href="soins.html"><span class="m-idx">04</span>Soins &amp; Rituels</a></li>
+    <li><a href="onglerie.html"><span class="m-idx">05</span>Onglerie &amp; Mains</a></li>
+    <li><a href="tarifs.html"><span class="m-idx">06</span>Grille des Tarifs (CHF)</a></li>
+    <li><a href="marques.html"><span class="m-idx">07</span>Marques Partenaires</a></li>
+    <li><a href="partenariat.html"><span class="m-idx">08</span>Espace Partenariat</a></li>
+    <li><a href="index.html#galerie"><span class="m-idx">09</span>Galerie Photos</a></li>
+    <li><a href="contact.html"><span class="m-idx">10</span>Contact &amp; Accès</a></li>
+  </ul>
+  <button type="button" class="menu-cta open-booking-btn" data-soin="" id="menuCtaBtn" aria-label="Prendre rendez-vous">
+    prendre rendez-vous
+  </button>
+  <div class="menu-foot">
+    Rue de Lausanne 11 — 1020 Renens, Suisse<br>
+    Tél. <a href="tel:+41766606026" style="color:inherit;text-decoration:underline;">+41 76 660 60 26</a> · Mar. – Sam. 9h00 – 19h00
+  </div>
+</nav>
+
+<main id="institut-content">
+
+  <!-- ============ SUBPAGE HERO ============ -->
+  <header class="sub-hero">
+    <div class="sub-hero-inner">
+      <div class="sub-hero-tagline" data-reveal="fade">
+        <span>Maison de Beauté Confidentielle</span><span class="dot"></span><span>Renens · Suisse</span>
+      </div>
+      <h1 class="sub-hero-title" data-reveal="fade">
+        L'Institut &amp; son <span class="script">Histoire</span>
+      </h1>
+      <p class="sub-hero-desc" data-reveal="fade">
+        Plus qu'un salon, une bulle feutrée au cœur de Renens pensée comme un salon privé d'exception. Un étage de lumière dédié à l'écoute, à la régénération et au rayonnement de votre beauté naturelle.
+      </p>
+      <div class="sub-hero-actions" data-reveal="fade">
+        <button type="button" class="btn-champagne open-booking-btn" data-soin="">
+          Prendre rendez-vous
+        </button>
+        <a href="#vocation" class="btn-outline">
+          Découvrir notre philosophie ↓
+        </a>
+      </div>
+    </div>
+    <div class="sub-hero-frame">
+      <div class="media-inner">
+        <img src="public/images/salon/ambiance-2.jpg" alt="Atmosphère chaleureuse de l'institut 11 Secrets de Beauté" width="400" height="500">
+      </div>
+      <span class="oframe"></span>
+    </div>
+  </header>
+
+  <!-- ============ NOTRE VOCATION ============ -->
+  <section class="theme-cream2" id="vocation" style="padding: 12vh 5vw;">
+    <div class="onglerie-duo-grid">
+      <div class="onglerie-col-img" data-reveal="clip">
+        <div class="media">
+          <div class="media-inner" style="aspect-ratio: 3/4;">
+            <img src="public/images/salon/ambiance-1.jpg" alt="Salon privé 11 Secrets de Beauté" width="600" height="800">
+          </div>
+          <span class="oframe"></span>
+          <figcaption>Rue de Lausanne 11 — <em>Renens, Suisse</em></figcaption>
+        </div>
+      </div>
+      <div class="onglerie-col-text">
+        <header class="sec-head" style="padding: 0; margin-bottom: 24px;">
+          <span class="sec-index">( 01 )</span><span class="sec-tick"></span>
+          <span class="sec-name">Notre Vocation</span>
+        </header>
+        <h2 style="font-family: var(--serif); font-size: clamp(26px, 3.5vw, 44px); font-weight: 350; line-height: 1.25; margin-bottom: 24px; color: var(--ink);" data-reveal="words">
+          L'excellence du geste, le <span class="script" style="font-family: var(--script); font-size: 1.4em; color: var(--gold); line-height: 0;">calme</span> du lieu.
+        </h2>
+        <p style="font-size: 14.5px; line-height: 1.85; color: #5C5C48; margin-bottom: 18px;" data-reveal="fade">
+          Fondé sur la conviction que la beauté authentique ne s'impose jamais mais se révèle dans le calme, <strong>11 Secrets de Beauté</strong> réunit sous un même toit les compétences complémentaires de la coiffure haute précision, de l'onglerie d'art et des soins médico-esthétiques.
         </p>
-      </div>
-    </header>
-
-    <!-- Philosophie & Histoire -->
-    <section class="section">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl); align-items: center;">
-          
-          <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-lg);">
-            <img src="public/images/salon/ambiance-2.jpg" alt="Espace privatisé et soigné de l'institut 11 Secrets de Beauté" width="600" height="750" style="width: 100%; height: auto; object-fit: cover;">
-          </div>
-
-          <div>
-            <span class="section-eyebrow">Notre Vocation</span>
-            <h2 class="section-title">
-              L'excellence du geste, <span class="script-accent">le calme du lieu</span>
-            </h2>
-            <p style="color: var(--color-ink-soft); line-height: 1.8; margin-bottom: 1.25rem;">
-              Fondé sur la conviction que la beauté authentique ne s'impose jamais mais se révèle dans le calme, <strong>11 Secrets de Beauté</strong> accueille chaque visiteur avec une attention exclusive. Situé au 11 Rue de Lausanne à Renens, l'institut réunit sous un même toit les compétences complémentaires de la coiffure haute précision, de l'onglerie d'art et des soins médico-esthétiques.
-            </p>
-            <p style="color: var(--color-muted); line-height: 1.8; margin-bottom: 1.5rem;">
-              Dans un décor chaleureux aux teintes nude, lin et champagne, le temps ralentit. Nos praticiennes prennent le temps d'échanger avec vous, d'observer votre peau et la texture de vos cheveux, afin de composer un protocole entièrement personnalisé.
-            </p>
-            
-            <div style="padding: 1.5rem; background: var(--color-cream); border-left: 3px solid var(--color-gold); border-radius: var(--radius-sm); margin-bottom: 2rem;">
-              <p style="font-family: var(--font-serif); font-style: italic; color: var(--color-ink); font-size: 1.05rem; margin-bottom: 0;">
-                « Ici, aucune routine précipitée : nous soignons lentement, sérieusement, avec des actifs nobles et un savoir-faire éprouvé. »
-              </p>
-            </div>
-
-            <button type="button" class="btn btn-champagne open-booking-btn" data-soin="">
-              Prendre rendez-vous avec notre équipe
-            </button>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Le Manifeste des 11 Secrets -->
-    <section class="section" style="background-color: var(--color-dark-bg); color: var(--color-dark-text);">
-      <div class="container">
-        
-        <div class="section-header">
-          <span class="section-eyebrow" style="color: var(--color-champagne-light);">Le Manifeste</span>
-          <h2 class="section-title" style="color: var(--color-dark-text);">
-            Les Onze Secrets qui guident nos <span class="script-accent" style="color: var(--color-champagne);">attentions</span>
-          </h2>
-          <p class="section-subtitle" style="color: var(--color-dark-muted);">
-            Chaque soin réalisé dans notre institut est le reflet de onze engagements fondamentaux.
+        <p style="font-size: 14.5px; line-height: 1.85; color: #5C5C48; margin-bottom: 28px;" data-reveal="fade">
+          Dans un décor chaleureux aux teintes nude, lin et champagne, le temps ralentit. Nos praticiennes prennent le temps d'échanger avec vous, d'observer votre peau et la texture de vos cheveux, afin de composer un protocole entièrement personnalisé.
+        </p>
+        <div style="padding: 22px 26px; background: rgba(156,130,80,.1); border-left: 2px solid var(--gold); margin-bottom: 28px;" data-reveal="fade">
+          <p style="font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--ink); margin-bottom: 0;">
+            « Ici, aucune routine précipitée : nous soignons lentement, sérieusement, avec des actifs nobles et un savoir-faire éprouvé. »
           </p>
         </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
-          
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">01</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">Le Soin</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Prendre soin véritablement, en profondeur et sans aucune précipitation.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">02</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">La Beauté</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Celle qui vous ressemble et vous sublime, jamais celle qu'on vous impose.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">03</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">Le Geste</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Un toucher d'experte, mesuré, précis et répété avec minutie.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">04</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">La Peau</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Nous l'écoutons attentivement pour lui apporter exactement ce qu'elle réclame.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">05</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">Les Mains</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Des mains soignées et des ongles nets révèlent l'élégance du quotidien.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">06</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">Les Cheveux</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Sublimer leur texture, c'est sculpter la lumière autour de votre visage.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">07</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">Le Regard</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Un regard reposé, des cils soignés et une ligne de sourcils impeccable.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">08</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">Le Corps</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Il garde l'empreinte de chaque bienfait et retrouve toute son énergie.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">09</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">Le Temps</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Ici, le temps ne fuit pas : on le savoure et on le respire sereinement.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: var(--color-dark-card); border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.06);">
-            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-champagne); display: block; line-height: 1; margin-bottom: 0.5rem;">10</span>
-            <h4 style="font-family: var(--font-serif); color: var(--color-dark-text); margin-bottom: 0.5rem;">Le Détail</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-dark-muted); line-height: 1.6;">Celui que l'on ne remarque pas immédiatement, mais que l'on ressent profondément.</p>
-          </div>
-
-          <div style="padding: 1.75rem; background: linear-gradient(135deg, #413C2E 0%, #2F3124 100%); border-radius: var(--radius-md); border: 1px solid var(--color-champagne);">
-            <span style="font-family: var(--font-script); font-size: 2.2rem; color: var(--color-champagne-light); display: block; line-height: 1; margin-bottom: 0.5rem;">Vous</span>
-            <h4 style="font-family: var(--font-serif); color: #FFFFFF; margin-bottom: 0.5rem;">Le Onzième Secret</h4>
-            <p style="font-size: var(--text-xs); color: var(--color-champagne-light); line-height: 1.6;">Le secret le plus précieux de notre institut, c'est vous.</p>
-          </div>
-
-        </div>
-
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Galerie Visuelle de l'Ambiance -->
-    <section class="section">
-      <div class="container">
+  <!-- ============ LE MANIFESTE DES 11 SECRETS ============ -->
+  <section class="theme-dark" style="padding: 14vh 5vw;">
+    <div class="pricing-block-inner">
+      <header class="sec-head" style="margin-bottom: 8vh;">
+        <span class="sec-index">( 02 )</span><span class="sec-tick"></span>
+        <span class="sec-name">Le Manifeste des 11 Secrets</span><span class="sec-rule" data-draw></span>
+      </header>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
         
-        <div class="section-header">
-          <span class="section-eyebrow">Immersion Visuelle</span>
-          <h2 class="section-title">
-            L'atmosphère de notre <span class="script-accent">salon</span>
-          </h2>
-          <p class="section-subtitle">
-            Un aperçu de notre espace rénové, pensé pour offrir un confort absolu à chaque étape de votre visite.
-          </p>
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">01</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">Le Soin</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Prendre soin véritablement, en profondeur et sans aucune précipitation.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-          <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-md); aspect-ratio: 4/3;">
-            <img src="public/images/salon/ambiance-1.jpg" alt="Espace esthétique et soin du visage" width="500" height="375" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-md); aspect-ratio: 4/3;">
-            <img src="public/images/salon/ambiance-3.jpg" alt="Détail manucure et matières douces" width="500" height="375" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-md); aspect-ratio: 4/3;">
-            <img src="public/images/salon/slider-hero.jpg" alt="Accueil et convivialité à Renens" width="500" height="375" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">02</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">La Beauté</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Celle qui vous ressemble et vous sublime, jamais celle qu'on vous impose.</p>
         </div>
 
-        <div style="text-align: center; margin-top: 3rem;">
-          <button type="button" class="btn btn-champagne btn-lg open-booking-btn" data-soin="">
-            Prendre rendez-vous
-          </button>
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">03</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">Le Geste</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Un toucher d'experte, mesuré, précis et répété avec minutie.</p>
+        </div>
+
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">04</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">La Peau</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Nous l'écoutons attentivement pour lui apporter exactement ce qu'elle réclame.</p>
+        </div>
+
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">05</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">Les Mains</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Des mains soignées et des ongles nets révèlent l'élégance du quotidien.</p>
+        </div>
+
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">06</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">Les Cheveux</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Sublimer leur texture, c'est sculpter la lumière autour de votre visage.</p>
+        </div>
+
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">07</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">Le Regard</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Un regard reposé, des cils soignés et une ligne de sourcils impeccable.</p>
+        </div>
+
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">08</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">Le Corps</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Il garde l'empreinte de chaque bienfait et retrouve toute son énergie.</p>
+        </div>
+
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">09</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">Le Temps</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Ici, le temps ne fuit pas : on le savoure et on le respire sereinement.</p>
+        </div>
+
+        <div class="ed-pricing-card" style="background: rgba(35,35,30,.8); border-color: rgba(241,236,224,.18); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--serif); font-size: 26px; color: var(--gold-l); display: block; margin-bottom: 8px;">10</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">Le Détail</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: var(--mut);">Celui que l'on ne remarque pas immédiatement, mais que l'on ressent profondément.</p>
+        </div>
+
+        <div class="ed-pricing-card" style="background: rgba(156,130,80,.2); border-color: var(--gold); color: #F1ECE0;" data-reveal="fade">
+          <span class="oframe"></span>
+          <span style="font-family: var(--script); font-size: 32px; color: var(--gold-l); display: block; margin-bottom: 6px;">Vous</span>
+          <h4 style="font-family: var(--serif); font-size: 18px; color: #F1ECE0; margin-bottom: 8px;">Le Onzième Secret</h4>
+          <p style="font-size: 13px; line-height: 1.7; color: #F1ECE0;">Le secret le plus précieux de notre institut, c'est vous.</p>
         </div>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- ============ LE RENDEZ-VOUS ============ -->
+  <section id="rdv" class="theme-cream">
+    <button type="button" class="rdv-link open-booking-btn" data-soin="" aria-label="Prendre rendez-vous" style="background: none; border: none; font-family: inherit;">
+      <span class="oframe oframe--lg rdv-frame" aria-hidden="true"></span>
+      <span class="rdv-top">Visiter l'institut</span>
+      <span class="rdv-script">à Renens</span>
+      <svg class="rdv-arrow" viewBox="0 0 140 24" aria-hidden="true">
+        <line x1="0" y1="12" x2="128" y2="12"></line>
+        <path d="M120 4 L128 12 L120 20"></path>
+      </svg>
+    </button>
+    <p class="rdv-note">Rue de Lausanne 11, 1020 Renens — Sur rendez-vous.</p>
+    <div class="rdv-meta">
+      <span>Tél. +41 76 660 60 26</span>
+      <a href="tarifs.html">Consulter les tarifs</a>
+      <a href="contact.html">Accès &amp; Plan</a>
+    </div>
+  </section>
 
-  <div id="site-footer-mount"></div>
-  <div id="booking-modal-mount"></div>
-  <script type="module" src="js/main.js"></script>
+</main>
+
+<!-- ============ FOOTER HAUTE COUTURE ============ -->
+<footer class="footer">
+  <div class="f-head">
+    <div class="f-title">
+      <span class="f-11">11</span>
+      <span class="f-script">Secrets de beauté</span>
+    </div>
+    <div class="f-cols">
+      <div class="f-col">
+        <h4>L'institut</h4>
+        <address>Rue de Lausanne 11<br>1020 Renens (VD)<br>Suisse</address>
+        <a href="tel:+41766606026">+41 76 660 60 26</a>
+      </div>
+      <div class="f-col">
+        <h4>Horaires</h4>
+        <p>Mardi — Vendredi<br>09h00 – 19h00</p>
+        <p style="margin-top: 8px;">Samedi<br>09h00 – 17h00</p>
+      </div>
+      <div class="f-col">
+        <h4>Navigation</h4>
+        <p><a href="soins.html">Soins &amp; Rituels</a></p>
+        <p><a href="onglerie.html">Onglerie</a></p>
+        <p><a href="tarifs.html">Grille des Tarifs</a></p>
+        <p><a href="marques.html">Marques Partenaires</a></p>
+        <p><a href="partenariat.html">Espace Partenariat</a></p>
+        <p><a href="contact.html">Contact &amp; Accès</a></p>
+      </div>
+      <div class="f-col">
+        <h4>Réservations</h4>
+        <p><button type="button" class="open-booking-btn" style="background: none; border: none; padding: 0; color: inherit; font: inherit; cursor: pointer; text-decoration: underline;">Prendre rendez-vous en ligne</button></p>
+        <p style="margin-top: 6px;"><a href="https://wa.me/41766606026" target="_blank" rel="noopener">WhatsApp Direct</a></p>
+      </div>
+    </div>
+  </div>
+
+  <p class="f-line">« Onze secrets, un seul institut — <span class="script">l'élégance</span> à fleur de peau »</p>
+
+  <div class="f-legal">
+    <span>© 11 Secrets de Beauté</span>
+    <span>Renens — Suisse</span>
+    <span><a href="contact.html" style="color:inherit;text-decoration:none;">Contact direct</a></span>
+  </div>
+</footer>
+
+<!-- Point de montage Modale de Réservation Universelle -->
+<div id="booking-modal-mount"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="module" src="js/editorial.js"></script>
 
 </body>
 </html>

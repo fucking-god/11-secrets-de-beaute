@@ -654,10 +654,10 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
   <ul class="nav-links">
     <li><a href="#institut">L'institut</a></li>
     <li><a href="#soins">Soins</a></li>
-    <li><a href="tarifs.html">Tarifs</a></li>
     <li><a href="onglerie.html">Onglerie</a></li>
-    <li><a href="#secrets">Beauté</a></li>
-    <li><a href="#galerie">Galerie</a></li>
+    <li><a href="tarifs.html">Tarifs</a></li>
+    <li><a href="marques.html">Marques</a></li>
+    <li><a href="partenariat.html">Partenariat</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <button type="button" class="nav-cta open-booking-btn" data-soin="" id="navCtaBtn" aria-label="Prendre rendez-vous en ligne">
@@ -672,14 +672,16 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
 <nav class="menu" id="menu" aria-hidden="true">
   <span class="oframe oframe--lg menu-frame" aria-hidden="true"></span>
   <ul class="menu-links">
-    <li><a href="#institut"><span class="m-idx">01</span>L'institut</a></li>
-    <li><a href="#secrets"><span class="m-idx">02</span>Beauté (11 Secrets)</a></li>
-    <li><a href="#soins"><span class="m-idx">03</span>Soins &amp; Rituels</a></li>
-    <li><a href="tarifs.html"><span class="m-idx">04</span>Grille des Tarifs (CHF)</a></li>
+    <li><a href="index.html"><span class="m-idx">01</span>Accueil</a></li>
+    <li><a href="#institut"><span class="m-idx">02</span>L'institut</a></li>
+    <li><a href="#secrets"><span class="m-idx">03</span>Les 11 Secrets</a></li>
+    <li><a href="#soins"><span class="m-idx">04</span>Soins &amp; Rituels</a></li>
     <li><a href="onglerie.html"><span class="m-idx">05</span>Onglerie &amp; Mains</a></li>
-    <li><a href="marques.html"><span class="m-idx">06</span>Marques Partenaires</a></li>
-    <li><a href="#galerie"><span class="m-idx">07</span>Galerie Photos</a></li>
-    <li><a href="contact.html"><span class="m-idx">08</span>Contact &amp; Accès</a></li>
+    <li><a href="tarifs.html"><span class="m-idx">06</span>Grille des Tarifs (CHF)</a></li>
+    <li><a href="marques.html"><span class="m-idx">07</span>Marques Partenaires</a></li>
+    <li><a href="partenariat.html"><span class="m-idx">08</span>Espace Partenariat</a></li>
+    <li><a href="#galerie"><span class="m-idx">09</span>Galerie Photos</a></li>
+    <li><a href="contact.html"><span class="m-idx">10</span>Contact &amp; Accès</a></li>
   </ul>
   <button type="button" class="menu-cta open-booking-btn" data-soin="" id="menuCtaBtn" aria-label="Prendre rendez-vous">
     prendre rendez-vous
@@ -1176,6 +1178,17 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
       else target.scrollIntoView({ behavior: motionOK ? 'smooth' : 'auto' });
     });
   });
+
+  // Défilement automatique si l'URL contient une ancre (#)
+  if (window.location.hash && window.location.hash.length > 1) {
+    const hashTarget = document.querySelector(window.location.hash);
+    if (hashTarget) {
+      setTimeout(() => {
+        if (lenis) lenis.scrollTo(hashTarget, { offset: -60, immediate: true });
+        else hashTarget.scrollIntoView();
+      }, 350);
+    }
+  }
 
   /* ---------- Navigation: états (fonctionne aussi en mouvement réduit) ---------- */
   window.addEventListener('scroll', () => {

@@ -1,389 +1,526 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="theme-cream">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Onglerie &amp; Beauté des Mains — 11 Secrets de Beauté · Renens (Prix en CHF)</title>
-  <meta name="description" content="Découvrez notre carte dédiée à l'onglerie et beauté des mains/pieds à Renens : pose en gel, acrygel, porcelaine dipping Kiara Sky, vernis semi-permanent et Calluspeeling.">
-  <meta name="theme-color" content="#F5EFEB">
+  <title>Onglerie &amp; Beauté des Mains — 11 Secrets de Beauté · Renens</title>
+  <meta name="description" content="Découvrez notre salon d'onglerie d'art à Renens : pose en gel, acrygel, porcelaine dipping Kiara Sky, vernis semi-permanent Peggy Sage et rituel Calluspeeling.">
+  <meta name="theme-color" content="#F1ECE0">
+  <link rel="canonical" href="https://11secretsdebeaute.ch/onglerie.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F1ECE0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%233F412F'%3E11%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/variables.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/components.css">
-  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/editorial.css">
 </head>
-<body>
+<body class="theme-cream">
 
-  <a href="#contenu-principal" class="skip-to-content">Aller au contenu principal</a>
-  <div id="site-header-mount"></div>
+<a class="skip" href="#onglerie-content">Aller au contenu</a>
 
-  <main id="contenu-principal">
+<!-- Curseur éditorial (desktop) -->
+<div id="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><span class="cursor-label"></span></div>
+</div>
 
-    <!-- En-tête Onglerie -->
-    <header class="section" style="padding-top: calc(80px + var(--space-2xl)); padding-bottom: var(--space-xl); background: radial-gradient(circle at 50% 0%, var(--color-powder-rose) 0%, var(--color-cream-light) 70%); text-align: center;">
-      <div class="container-narrow">
-        <span class="section-eyebrow">Haute Onglerie &amp; Soins</span>
-        <h1 class="section-title" style="font-size: var(--text-hero); margin-bottom: 1.25rem;">
-          L'Atelier <span class="script-accent">Onglerie</span>
-        </h1>
-        <p class="section-subtitle" style="font-size: var(--text-lg); line-height: 1.8;">
-          L'art de sublimer vos mains et vos pieds avec précision, élégance et tenue irréprochable. Découvrez l'intégralité de nos tarifs officiels en CHF.
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="index.html" aria-label="11 Secrets de Beauté — accueil">
+    <span class="nl-11">11</span><span class="nl-rest">Secrets de beauté</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="institut.html">L'institut</a></li>
+    <li><a href="soins.html">Soins</a></li>
+    <li><a href="onglerie.html" class="is-active">Onglerie</a></li>
+    <li><a href="tarifs.html">Tarifs</a></li>
+    <li><a href="marques.html">Marques</a></li>
+    <li><a href="partenariat.html">Partenariat</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button type="button" class="nav-cta open-booking-btn" data-soin="Onglerie" id="navCtaBtn" aria-label="Prendre rendez-vous onglerie">
+    Prendre rendez-vous
+  </button>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- Menu overlay — plein écran -->
+<nav class="menu" id="menu" aria-hidden="true">
+  <span class="oframe oframe--lg menu-frame" aria-hidden="true"></span>
+  <ul class="menu-links">
+    <li><a href="index.html"><span class="m-idx">01</span>Accueil</a></li>
+    <li><a href="institut.html"><span class="m-idx">02</span>L'institut</a></li>
+    <li><a href="index.html#secrets"><span class="m-idx">03</span>Les 11 Secrets</a></li>
+    <li><a href="soins.html"><span class="m-idx">04</span>Soins &amp; Rituels</a></li>
+    <li><a href="onglerie.html"><span class="m-idx">05</span>Onglerie &amp; Mains</a></li>
+    <li><a href="tarifs.html"><span class="m-idx">06</span>Grille des Tarifs (CHF)</a></li>
+    <li><a href="marques.html"><span class="m-idx">07</span>Marques Partenaires</a></li>
+    <li><a href="partenariat.html"><span class="m-idx">08</span>Espace Partenariat</a></li>
+    <li><a href="index.html#galerie"><span class="m-idx">09</span>Galerie Photos</a></li>
+    <li><a href="contact.html"><span class="m-idx">10</span>Contact &amp; Accès</a></li>
+  </ul>
+  <button type="button" class="menu-cta open-booking-btn" data-soin="Onglerie" id="menuCtaBtn" aria-label="Prendre rendez-vous">
+    prendre rendez-vous
+  </button>
+  <div class="menu-foot">
+    Rue de Lausanne 11 — 1020 Renens, Suisse<br>
+    Tél. <a href="tel:+41766606026" style="color:inherit;text-decoration:underline;">+41 76 660 60 26</a> · Mar. – Sam. 9h00 – 19h00
+  </div>
+</nav>
+
+<main id="onglerie-content">
+
+  <!-- ============ SUBPAGE HERO ============ -->
+  <header class="sub-hero">
+    <div class="sub-hero-inner">
+      <div class="sub-hero-tagline" data-reveal="fade">
+        <span>Haute Onglerie &amp; Soins</span><span class="dot"></span><span>Atelier Renens</span>
+      </div>
+      <h1 class="sub-hero-title" data-reveal="fade">
+        L'Art de <span class="script">l'Onglerie</span>
+      </h1>
+      <p class="sub-hero-desc" data-reveal="fade">
+        Sublimer vos mains et vos pieds dans le respect absolu de la plaque naturelle. Porcelaine dipping sans odeur, gel chablon architectural, manucure tiède et soins Calluspeeling : découvrez l'excellence d'un geste minutieux.
+      </p>
+      <div class="sub-hero-actions" data-reveal="fade">
+        <button type="button" class="btn-champagne open-booking-btn" data-soin="Onglerie">
+          Réserver votre pose
+        </button>
+        <a href="#onglerie-grille" class="btn-outline">
+          Consulter les tarifs ↓
+        </a>
+      </div>
+    </div>
+    <div class="sub-hero-frame">
+      <div class="media-inner">
+        <img src="public/images/soins/onglerie-luxe.jpg" alt="Pose d'ongles élégante et manucure nude" width="400" height="500">
+      </div>
+      <span class="oframe"></span>
+    </div>
+  </header>
+
+  <!-- ============ SAVOIR-FAIRE & MATIÈRES NOBLES ============ -->
+  <section class="theme-cream2" style="padding: 12vh 5vw; position: relative;">
+    <div class="onglerie-duo-grid">
+      <div class="onglerie-col-img" data-reveal="clip">
+        <div class="media">
+          <div class="media-inner" style="aspect-ratio: 4/5;">
+            <img src="public/images/salon/ambiance-3.jpg" alt="Détail des matières et de la précision d'onglerie" width="600" height="750">
+          </div>
+          <span class="oframe"></span>
+          <figcaption>Rue de Lausanne 11 — <em>Atelier Onglerie</em></figcaption>
+        </div>
+      </div>
+      <div class="onglerie-col-text">
+        <header class="sec-head" style="padding: 0; margin-bottom: 3vh;">
+          <span class="sec-index">( PHILOSOPHIE )</span><span class="sec-tick"></span>
+          <span class="sec-name">La santé de l'ongle avant tout</span>
+        </header>
+        <h2 style="font-family: var(--serif); font-size: clamp(24px, 3.2vw, 42px); line-height: 1.2; font-weight: 350; margin-bottom: 24px; color: var(--ink);" data-reveal="words">
+          Des matières nobles pour un fini <span class="script" style="font-family: var(--script); font-size: 1.4em; color: var(--gold); line-height: 0;">soyeux</span> &amp; durable.
+        </h2>
+        <p style="font-size: 14.5px; line-height: 1.85; color: #5C5C48; margin-bottom: 18px;" data-reveal="fade">
+          Dans notre institut de Renens, nous accordons une importance primordiale à l'intégrité de vos ongles naturels. Que vous choisissiez la robustesse du gel chablon sculpté sur-mesure, la légèreté novatrice de l'acrygel ou la pureté de la porcelaine dipping Kiara Sky sans lampe UV agressive, chaque pose est réalisée avec une précision d'orfèvre.
         </p>
-        <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-          <button type="button" class="btn btn-champagne btn-lg open-booking-btn" data-soin="Onglerie">
-            Prendre rendez-vous onglerie
-          </button>
+        <p style="font-size: 14.5px; line-height: 1.85; color: #5C5C48; margin-bottom: 32px;" data-reveal="fade">
+          Pour vos pieds, notre rituel signature <strong>Calluspeeling</strong> élimine les callosités et les peaux mortes sans lame ni abrasion violente, redonnant à la peau une douceur infinie en une seule séance de 30 minutes.
+        </p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;" data-reveal="fade">
+          <span class="ed-pill">Porcelaine Kiara Sky</span>
+          <span class="ed-pill">Gel Chablon</span>
+          <span class="ed-pill">Acrygel Polygel</span>
+          <span class="ed-pill">Calluspeeling Suisse</span>
+          <span class="ed-pill">Peggy Sage Paris</span>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- Présentation visuelle & technique -->
-    <section class="section-sm">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: center;">
-          <div class="card-frame" style="overflow: hidden; border-radius: var(--radius-lg); aspect-ratio: 16/10;">
-            <img src="public/images/soins/onglerie-luxe.jpg" alt="Manucure nude et soins des ongles à Renens" width="640" height="400" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
+  <!-- ============================================================
+       GRILLE TARIFAIRE DÉTAILLÉE DE L'ONGLERIE
+       ============================================================ -->
+  <section class="pricing-category-block theme-cream" id="onglerie-grille">
+    <div class="pricing-block-inner">
+      <header class="sec-head">
+        <span class="sec-index">( 01 )</span><span class="sec-tick"></span>
+        <span class="sec-name">La Carte Officielle Onglerie (CHF)</span><span class="sec-rule" data-draw></span>
+      </header>
+
+      <div class="pricing-cards-grid">
+
+        <!-- 1. Ongles en Gel -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
           <div>
-            <span class="section-eyebrow">Savoir-Faire &amp; Produits</span>
-            <h2 class="section-title" style="font-size: 1.9rem;">
-              Des matières nobles, <span class="script-accent">un fini soyeux</span>
-            </h2>
-            <p style="color: var(--color-ink-soft); line-height: 1.7; margin-bottom: 1rem;">
-              Dans notre institut de Renens, nous accordons une importance primordiale à la santé de la plaque unguéale naturelle. Que vous optiez pour la robustesse du gel chablon, la finesse de l'acrygel ou la douceur de la porcelaine dipping Kiara Sky sans odeur agressive, chaque pose est réalisée avec une minutie chirurgicale.
-            </p>
-            <p style="color: var(--color-muted); line-height: 1.7;">
-              Pour vos pieds, notre soin signature <strong>Calluspeeling</strong> élimine les callosités sans utilisation de lame agressive, redonnant à la peau toute sa souplesse en une seule séance de 30 minutes.
-            </p>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Ongles en Gel</h3>
+              <span class="ed-card-badge">Gel UV</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Supplément longueur</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">10<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec chablon</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">120<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec tips</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">109<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Renforcement ongles naturels</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">79<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Remplissage gel</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">69<span class="cur">CHF</span></span>
+              </li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Grilles Tarifaires Détaillées de l'Onglerie -->
-    <section class="section" style="background-color: var(--color-cream);">
-      <div class="container">
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 2.25rem;">
-
-          <!-- SECTION 1 : ONGLES EN GEL -->
-          <div class="pricing-card">
-            <div class="pricing-card-header">
-              <div>
-                <h3 class="pricing-card-title">Ongles en gel</h3>
-                <p style="font-size: 0.75rem; color: var(--color-muted); margin-top: 2px;">Solidité, brillance et galbe sur mesure</p>
-              </div>
-              <span class="specialty-pill">Gel UV</span>
-            </div>
-            <div class="pricing-list">
-              <div class="pricing-row">
-                <span class="pricing-item-name">Supplément longueur</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">10 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Pose complète avec chablon</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">120 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Pose complète avec tips</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">109 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Renforcement ongles naturels</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">79 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Remplissage</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">69 <span class="pricing-currency">CHF</span></span>
-              </div>
-            </div>
-            <div style="margin-top: 1.5rem; text-align: right;">
-              <button type="button" class="btn btn-outline btn-sm open-booking-btn" data-soin="Ongles en gel">Réserver cette pose</button>
-            </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Ongles en gel" style="width: 100%;">
+              Réserver cette pose
+            </button>
           </div>
+        </article>
 
-          <!-- SECTION 2 : ONGLES EN ACRYGEL -->
-          <div class="pricing-card">
-            <div class="pricing-card-header">
-              <div>
-                <h3 class="pricing-card-title">Ongles en acrygel</h3>
-                <p style="font-size: 0.75rem; color: var(--color-muted); margin-top: 2px;">Alliance de la flexibilité du gel et de la résistance de l'acrylique</p>
-              </div>
-              <span class="specialty-pill">Polygel</span>
+        <!-- 2. Ongles en Acrygel -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Ongles en Acrygel</h3>
+              <span class="ed-card-badge">Polygel</span>
             </div>
-            <div class="pricing-list">
-              <div class="pricing-row">
-                <span class="pricing-item-name">Pose complète avec chablon</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">120 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Pose complète avec tips</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">109 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Renforcement ongles naturels</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">79 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Remplissage</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">69 <span class="pricing-currency">CHF</span></span>
-              </div>
-            </div>
-            <div style="margin-top: 1.5rem; text-align: right;">
-              <button type="button" class="btn btn-outline btn-sm open-booking-btn" data-soin="Ongles en acrygel">Réserver cette pose</button>
-            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec chablon</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">120<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec tips</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">109<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Renforcement ongles naturels</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">79<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Remplissage acrygel</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">69<span class="cur">CHF</span></span>
+              </li>
+            </ul>
           </div>
-
-          <!-- SECTION 3 : ONGLES PORCELAINE -->
-          <div class="pricing-card">
-            <div class="pricing-card-header">
-              <div>
-                <h3 class="pricing-card-title">Ongles porcelaine</h3>
-                <p style="font-size: 0.75rem; color: var(--color-muted); margin-top: 2px;">Dipping Powder Kiara Sky · Sans agression UV</p>
-              </div>
-              <span class="specialty-pill">Porcelaine</span>
-            </div>
-            <div class="pricing-list">
-              <div class="pricing-row">
-                <span class="pricing-item-name">Pose complète avec tips</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">89 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Renforcement ongles naturels</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">65 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Remplissage</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">75 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Réparation par ongle</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">8 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Strass et Paillettes (plus de 3)</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">1 <span class="pricing-currency">CHF</span></span>
-              </div>
-            </div>
-            <div style="margin-top: 1.5rem; text-align: right;">
-              <button type="button" class="btn btn-outline btn-sm open-booking-btn" data-soin="Ongles porcelaine">Réserver cette pose</button>
-            </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Ongles en acrygel" style="width: 100%;">
+              Réserver cette pose
+            </button>
           </div>
+        </article>
 
-          <!-- SECTION 4 : SOINS DES MAINS -->
-          <div class="pricing-card">
-            <div class="pricing-card-header">
-              <div>
-                <h3 class="pricing-card-title">Soins des mains</h3>
-                <p style="font-size: 0.75rem; color: var(--color-muted); margin-top: 2px;">Déposes soignées, manucure tiède &amp; vernis semi-permanent</p>
-              </div>
-              <span class="specialty-pill">Mains</span>
+        <!-- 3. Ongles Porcelaine (Kiara Sky) -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Porcelaine Dipping</h3>
+              <span class="ed-card-badge">Kiara Sky</span>
             </div>
-            <div class="pricing-list">
-              <div class="pricing-row">
-                <span class="pricing-item-name">Dépose : Gel, Acryl</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">25 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Dépose + manucure express</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Vernis semi-permanent + manucure</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">59 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Vernis semi-permanent</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">39 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Dépose : Gel, Porcelaine, Acryl</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">15 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Dépose + pose vernis semi-permanent</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">49 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Dépose semi-permanent</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">10 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Manucure express</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">25 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Manucure brésilienne ou à l'eau</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">35 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Manucure tiède</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">45 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Bain de paraffine mains</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">19 <span class="pricing-currency">CHF</span></span>
-              </div>
-            </div>
-            <div style="margin-top: 1.5rem; text-align: right;">
-              <button type="button" class="btn btn-outline btn-sm open-booking-btn" data-soin="Soins des mains">Réserver un soin mains</button>
-            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose complète avec tips</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">89<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Renforcement ongles naturels</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">65<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Remplissage porcelaine</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">75<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Réparation par ongle</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">8<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Strass &amp; Paillettes (dès 3 ongles)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">1<span class="cur">CHF</span></span>
+              </li>
+            </ul>
           </div>
-
-          <!-- SECTION 5 : SOINS DES PIEDS -->
-          <div class="pricing-card">
-            <div class="pricing-card-header">
-              <div>
-                <h3 class="pricing-card-title">Soins des pieds</h3>
-                <p style="font-size: 0.75rem; color: var(--color-muted); margin-top: 2px;">Beauté des pieds, paraffine velours &amp; Calluspeeling</p>
-              </div>
-              <span class="specialty-pill">Pieds</span>
-            </div>
-            <div class="pricing-list">
-              <div class="pricing-row">
-                <span class="pricing-item-name">Bain de paraffine pieds</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">29 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Pose de gel (classique ou couleur) pour les pieds</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">59 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Pose de vernis semi-permanent</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">49 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">
-                  Beauté des pieds express
-                  <span class="pricing-item-duration">30 minutes</span>
-                </span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">69 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Calluspeeling</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">49 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Bain de paraffine</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">29 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">
-                  Beauté des pieds complète – vernis classique offert
-                  <span class="pricing-item-duration">60 minutes</span>
-                </span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">89 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Supplément vernis classique</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">15 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Supplément vernis permanent</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">39 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Supplément vernis french</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">25 <span class="pricing-currency">CHF</span></span>
-              </div>
-            </div>
-            <div style="margin-top: 1.5rem; text-align: right;">
-              <button type="button" class="btn btn-outline btn-sm open-booking-btn" data-soin="Soins des pieds">Réserver un soin pieds</button>
-            </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Ongles porcelaine dipping (Kiara Sky)" style="width: 100%;">
+              Réserver cette pose
+            </button>
           </div>
+        </article>
 
-          <!-- SECTION 6 : AUTRES PRESTATIONS -->
-          <div class="pricing-card">
-            <div class="pricing-card-header">
-              <div>
-                <h3 class="pricing-card-title">Autres prestations</h3>
-                <p style="font-size: 0.75rem; color: var(--color-muted); margin-top: 2px;">Finitions &amp; personnalisations sur mesure</p>
-              </div>
-              <span class="specialty-pill">Finition</span>
+        <!-- 4. Soins des Mains Peggy Sage -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Soins des Mains</h3>
+              <span class="ed-card-badge">Peggy Sage</span>
             </div>
-            <div class="pricing-list">
-              <div class="pricing-row">
-                <span class="pricing-item-name">Réparation d'un ongle</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">8 <span class="pricing-currency">CHF</span></span>
-              </div>
-              <div class="pricing-row">
-                <span class="pricing-item-name">Strass et paillettes (plus de 3)</span>
-                <span class="pricing-leader-dots"></span>
-                <span class="pricing-item-price">1 <span class="pricing-currency">CHF</span></span>
-              </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Dépose complète : Gel / Acryl</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">25<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Dépose + manucure express</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Vernis semi-permanent + manucure</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">59<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Vernis semi-permanent</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">39<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Dépose + pose vernis semi-permanent</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">49<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Dépose semi-permanent seule</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">10<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Manucure express</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">25<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Manucure brésilienne ou à l'eau</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">35<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Manucure tiède régénérante</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">45<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Bain de paraffine velours mains</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">19<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Vernis semi-permanent + manucure" style="width: 100%;">
+              Réserver un soin mains
+            </button>
+          </div>
+        </article>
+
+        <!-- 5. Soins des Pieds & Calluspeeling -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Pédicure &amp; Pieds</h3>
+              <span class="ed-card-badge">Pieds</span>
             </div>
-            <div style="margin-top: 2rem; padding: 1.25rem; background: var(--color-cream-light); border-radius: var(--radius-sm); border: 1px dashed var(--color-champagne);">
-              <p style="font-size: var(--text-xs); color: var(--color-ink-soft); line-height: 1.6; margin-bottom: 0;">
-                💡 <strong>Conseil d'entretien :</strong> Nous recommandons un remplissage toutes les 3 à 4 semaines pour préserver la santé et l'architecture de vos ongles naturels.
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Bain de paraffine pieds</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">29<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose de gel classique ou couleur (pieds)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">59<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Pose de vernis semi-permanent pieds</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">49<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Beauté des pieds express (30 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">69<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Traitement Calluspeeling anti-callosités</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">49<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Beauté des pieds complète (vernis offert, 60 min)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">89<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Supplément vernis classique</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">15<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Supplément vernis semi-permanent</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">39<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Supplément finition french</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">25<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Beauté des pieds & Calluspeeling" style="width: 100%;">
+              Réserver un soin pieds
+            </button>
+          </div>
+        </article>
+
+        <!-- 6. Autres prestations & Conseils -->
+        <article class="ed-pricing-card" data-reveal="fade">
+          <span class="oframe"></span>
+          <div>
+            <div class="ed-card-head">
+              <h3 class="ed-card-title">Finitions &amp; Entretien</h3>
+              <span class="ed-card-badge">Conseil Pro</span>
+            </div>
+            <ul class="ed-pricing-list">
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Réparation d'un ongle</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">8<span class="cur">CHF</span></span>
+              </li>
+              <li class="ed-pricing-row">
+                <span class="ed-item-name">Strass &amp; Paillettes (plus de 3)</span>
+                <span class="ed-item-dots"></span>
+                <span class="ed-item-price">1<span class="cur">CHF</span></span>
+              </li>
+            </ul>
+            <div style="margin-top: 28px; padding: 18px; background: rgba(119,119,92,.08); border-left: 2px solid var(--gold);">
+              <p style="font-size: 12.5px; line-height: 1.7; color: #5C5C48; margin-bottom: 0;">
+                ✦ <strong>Recommandation institut :</strong> Un remplissage régulier toutes les 3 à 4 semaines permet de préserver l'équilibre morphologique de vos ongles et d'éviter tout décollement.
               </p>
             </div>
           </div>
-
-        </div>
+          <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(38,38,31,.1);">
+            <button type="button" class="btn-outline btn-sm open-booking-btn" data-soin="Onglerie" style="width: 100%;">
+              Prendre rendez-vous
+            </button>
+          </div>
+        </article>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Bannière de Réservation -->
-    <section class="section" style="background-color: var(--color-cream-deep);">
-      <div class="container-narrow" style="text-align: center;">
-        <span class="section-eyebrow">Rendez-vous Onglerie</span>
-        <h2 class="section-title">Prête pour des mains <span class="script-accent">parfaites</span> ?</h2>
-        <p style="color: var(--color-muted); font-size: var(--text-base); margin-bottom: 2rem;">
-          Nos places se remplissent vite. Réservez votre créneau dès maintenant ou contactez-nous au 
-          <a href="tel:+41766606026" style="color: var(--color-gold-deep); text-decoration: underline;">+41 76 660 60 26</a>.
-        </p>
-        <button type="button" class="btn btn-champagne btn-lg open-booking-btn" data-soin="Onglerie">
-          Prendre rendez-vous onglerie
-        </button>
+  <!-- ============================================================
+       LE RENDEZ-VOUS — CTA ÉDITORIAL HAUTE COUTURE
+       ============================================================ -->
+  <section id="rdv" class="theme-cream">
+    <button type="button" class="rdv-link open-booking-btn" data-soin="Onglerie" aria-label="Prendre rendez-vous onglerie" style="background: none; border: none; font-family: inherit;">
+      <span class="oframe oframe--lg rdv-frame" aria-hidden="true"></span>
+      <span class="rdv-top">Offrez à vos mains l'exception</span>
+      <span class="rdv-script">onglerie</span>
+      <svg class="rdv-arrow" viewBox="0 0 140 24" aria-hidden="true">
+        <line x1="0" y1="12" x2="128" y2="12"></line>
+        <path d="M120 4 L128 12 L120 20"></path>
+      </svg>
+    </button>
+    <p class="rdv-note">Rue de Lausanne 11, 1020 Renens — Sur rendez-vous du mardi au samedi.</p>
+    <div class="rdv-meta">
+      <span>Genève &amp; Suisse romande</span>
+      <a href="tel:+41766606026">+41 76 660 60 26</a>
+      <a href="tarifs.html">Tous les tarifs CHF</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER HAUTE COUTURE
+     ============================================================ -->
+<footer class="footer">
+  <div class="f-head">
+    <div class="f-title">
+      <span class="f-11">11</span>
+      <span class="f-script">Secrets de beauté</span>
+    </div>
+    <div class="f-cols">
+      <div class="f-col">
+        <h4>L'institut</h4>
+        <address>Rue de Lausanne 11<br>1020 Renens (VD)<br>Suisse</address>
+        <a href="tel:+41766606026">+41 76 660 60 26</a>
       </div>
-    </section>
+      <div class="f-col">
+        <h4>Horaires</h4>
+        <p>Mardi — Vendredi<br>09h00 – 19h00</p>
+        <p style="margin-top: 8px;">Samedi<br>09h00 – 17h00</p>
+      </div>
+      <div class="f-col">
+        <h4>Navigation</h4>
+        <p><a href="soins.html">Soins &amp; Rituels</a></p>
+        <p><a href="onglerie.html">Onglerie</a></p>
+        <p><a href="tarifs.html">Grille des Tarifs</a></p>
+        <p><a href="marques.html">Marques Partenaires</a></p>
+        <p><a href="partenariat.html">Espace Partenariat</a></p>
+        <p><a href="contact.html">Contact &amp; Accès</a></p>
+      </div>
+      <div class="f-col">
+        <h4>Réservations</h4>
+        <p><button type="button" class="open-booking-btn" data-soin="Onglerie" style="background: none; border: none; padding: 0; color: inherit; font: inherit; cursor: pointer; text-decoration: underline;">Prendre rendez-vous en ligne</button></p>
+        <p style="margin-top: 6px;"><a href="https://wa.me/41766606026" target="_blank" rel="noopener">WhatsApp Direct</a></p>
+      </div>
+    </div>
+  </div>
 
-  </main>
+  <p class="f-line">« Onze secrets, un seul institut — <span class="script">l'élégance</span> à fleur de peau »</p>
 
-  <div id="site-footer-mount"></div>
-  <div id="booking-modal-mount"></div>
-  <script type="module" src="js/main.js"></script>
+  <div class="f-legal">
+    <span>© 11 Secrets de Beauté</span>
+    <span>Renens — Suisse</span>
+    <span><a href="contact.html" style="color:inherit;text-decoration:none;">Contact direct</a></span>
+  </div>
+</footer>
+
+<!-- Point de montage Modale de Réservation Universelle -->
+<div id="booking-modal-mount"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="module" src="js/editorial.js"></script>
 
 </body>
 </html>
