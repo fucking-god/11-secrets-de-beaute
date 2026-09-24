@@ -1,17 +1,61 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>11 Secrets de Beauté — Institut de beauté &amp; bien-être · Renens</title>
-<meta name="description" content="11 Secrets de Beauté — institut de beauté et bien-être, Rue de Lausanne 11, 1020 Renens. Cheveux, ongles, soins, regard, bien-être. Sur rendez-vous.">
+<meta name="description" content="11 Secrets de Beauté — institut de beauté et bien-être, Rue de Lausanne 11, 1020 Renens. Coiffure, onglerie d'art, soins visage Ella Baché, regard, massages. Sur rendez-vous.">
 <meta name="theme-color" content="#F1ECE0">
+<link rel="canonical" href="https://11secretsdebeaute.ch/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F1ECE0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' text-anchor='middle' fill='%233F412F'%3E11%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph / Meta Réseaux -->
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="11 Secrets de Beauté — Institut de Beauté &amp; Bien-être à Renens">
+<meta property="og:description" content="Découvrez notre havre de beauté et bien-être à Renens : coiffure haute précision, onglerie porcelaine/gel, dermo-esthétique et massages sur-mesure.">
+<meta property="og:url" content="https://11secretsdebeaute.ch/">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Script: Arizonia — esprit «Brittany», trait plus lisible -->
 <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+
+<!-- Schema.org JSON-LD Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "11 Secrets de Beauté",
+  "image": "https://11secretsdebeaute.ch/wp-content/uploads/2021/03/cropped-11secretsBeaute_Logo-1.png",
+  "@id": "https://11secretsdebeaute.ch",
+  "url": "https://11secretsdebeaute.ch",
+  "telephone": "+41766606026",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rue de Lausanne 11",
+    "addressLocality": "Renens",
+    "postalCode": "1020",
+    "addressRegion": "VD",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:30",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:30",
+      "closes": "17:00"
+    }
+  ]
+}
+</script>
 
 <style>
 /* ============================================================
@@ -122,7 +166,7 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
 .nav-logo{ display:flex; align-items:baseline; gap:10px; text-decoration:none; }
 .nl-11{ font-family:var(--serif); font-weight:560; font-size:21px; letter-spacing:.01em; }
 .nl-rest{ font-family:var(--script); font-size:28px; color:var(--olive); transition:color .55s; }
-.nav-links{ display:flex; gap:clamp(18px,2.4vw,42px); list-style:none;
+.nav-links{ display:flex; gap:clamp(16px,2vw,36px); list-style:none;
   font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase;
   opacity:0; transform:translateY(-8px); transition:opacity .6s .1s, transform .6s .1s; }
 .nav-links a{ text-decoration:none; opacity:.78; transition:opacity .3s; position:relative; }
@@ -132,6 +176,7 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
 .nav-links a:hover::after{ transform:scaleX(1); transform-origin:left; }
 .nav-cta{ text-decoration:none; font-size:11px; font-weight:600; letter-spacing:.24em;
   text-transform:uppercase; position:relative; padding-bottom:5px;
+  background:none; border:none; cursor:pointer; font-family:inherit; color:inherit;
   opacity:0; transform:translateY(-8px); transition:opacity .6s .15s, transform .6s .15s; }
 .nav-cta::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:1px; background:currentColor;
   transform:scaleX(0); transform-origin:right; transition:transform .5s cubic-bezier(.22,1,.36,1); }
@@ -145,7 +190,7 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
 /* Menu ouvert: le nav devient transparent clair sur le menu sombre plein écran */
 .nav.menu-open{ background:transparent; color:#F1ECE0; border-bottom-color:transparent; padding:24px 5vw; }
 .nav.menu-open .nl-rest{ color:var(--gold-l); }
-.burger{ display:none; background:none; border:0; width:38px; height:26px; position:relative; z-index:1700; color:inherit; }
+.burger{ display:none; background:none; border:0; width:38px; height:26px; position:relative; z-index:1700; color:inherit; cursor:pointer; }
 .burger span{ position:absolute; left:4px; right:4px; height:1px; background:currentColor;
   transition:transform .45s cubic-bezier(.22,1,.36,1), top .45s; }
 .burger span:nth-child(1){ top:9px; } .burger span:nth-child(2){ top:17px; }
@@ -166,24 +211,28 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
 .menu-frame i:nth-child(even){ transform:scaleY(0); }
 .menu.is-open .menu-frame i:nth-child(odd){ transform:scaleX(1); }
 .menu.is-open .menu-frame i:nth-child(even){ transform:scaleY(1); }
-.menu-links{ list-style:none; display:flex; flex-direction:column; gap:2.6vh; position:relative; z-index:1; }
+.menu-links{ list-style:none; display:flex; flex-direction:column; gap:2.2vh; position:relative; z-index:1; }
 .menu-links a{ display:flex; align-items:baseline; gap:18px; text-decoration:none;
-  font-family:var(--serif); font-weight:340; font-size:clamp(34px,9vw,58px); line-height:1.1;
+  font-family:var(--serif); font-weight:340; font-size:clamp(28px,7.5vw,52px); line-height:1.1;
   color:#F1ECE0; opacity:0; transform:translateY(28px);
   transition:opacity .6s, transform .6s cubic-bezier(.22,1,.36,1), color .35s; }
 .menu-links a:hover{ color:var(--gold-l); }
 .menu.is-open .menu-links a{ opacity:1; transform:none; }
-.menu.is-open .menu-links li:nth-child(1) a{ transition-delay:.18s; }
-.menu.is-open .menu-links li:nth-child(2) a{ transition-delay:.24s; }
-.menu.is-open .menu-links li:nth-child(3) a{ transition-delay:.30s; }
-.menu.is-open .menu-links li:nth-child(4) a{ transition-delay:.36s; }
-.menu.is-open .menu-links li:nth-child(5) a{ transition-delay:.42s; }
+.menu.is-open .menu-links li:nth-child(1) a{ transition-delay:.16s; }
+.menu.is-open .menu-links li:nth-child(2) a{ transition-delay:.20s; }
+.menu.is-open .menu-links li:nth-child(3) a{ transition-delay:.24s; }
+.menu.is-open .menu-links li:nth-child(4) a{ transition-delay:.28s; }
+.menu.is-open .menu-links li:nth-child(5) a{ transition-delay:.32s; }
+.menu.is-open .menu-links li:nth-child(6) a{ transition-delay:.36s; }
+.menu.is-open .menu-links li:nth-child(7) a{ transition-delay:.40s; }
+.menu.is-open .menu-links li:nth-child(8) a{ transition-delay:.44s; }
 .m-idx{ font-family:var(--sans); font-size:11px; letter-spacing:.3em; color:var(--gold-l); }
 .menu-cta{ font-family:var(--script); font-size:clamp(40px,9vw,64px); color:var(--gold-l);
-  margin-top:5vh; transform:rotate(-2deg); position:relative; z-index:1;
+  margin-top:4vh; transform:rotate(-2deg); position:relative; z-index:1;
+  background:none; border:none; cursor:pointer; text-align:left; display:inline-block; padding:0;
   opacity:0; translate:0 14px; transition:opacity .6s .5s, translate .6s .5s; }
 .menu.is-open .menu-cta{ opacity:1; translate:0 0; }
-.menu-foot{ margin-top:8vh; font-size:10px; letter-spacing:.22em; text-transform:uppercase;
+.menu-foot{ margin-top:5vh; font-size:10px; letter-spacing:.22em; text-transform:uppercase;
   color:rgba(241,236,224,.55); line-height:2; position:relative; z-index:1;
   opacity:0; translate:0 14px; transition:opacity .6s .58s, translate .6s .58s; }
 .menu.is-open .menu-foot{ opacity:1; translate:0 0; }
@@ -312,7 +361,7 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
 .soins-note{ margin-top:18px; font-size:10px; letter-spacing:.26em; text-transform:uppercase;
   color:var(--mut); }
 .soins-list{ list-style:none; margin-top:9vh; position:relative; }
-.s-item{ position:relative; padding:4.2vh 0; border-top:1px solid var(--line); }
+.s-item{ position:relative; padding:4.2vh 0; border-top:1px solid var(--line); cursor:pointer; }
 .s-item:last-child{ border-bottom:1px solid var(--line); }
 .s-item-inner{ display:flex; align-items:baseline; gap:26px; flex-wrap:wrap; }
 .s-word{ font-family:var(--serif); font-weight:365; line-height:.95; color:var(--ink);
@@ -320,9 +369,8 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
 .s-item:hover .s-word{ color:var(--olive); }
 .s-sub{ font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--mut);
   opacity:.7; transition:opacity .5s, transform .5s; transform:translateX(0); }
-.s-item:hover .s-sub{ opacity:1; transform:translateX(6px); }
+.s-item:hover .s-sub{ opacity:1; transform:translateX(6px); color:var(--olive-deep); }
 .s-word--xl{ font-size:clamp(58px,10.5vw,178px); font-variation-settings:'opsz' 144; }
-/* script: JAMAIS en majuscules, JAMAIS de tracking */
 .s-word--xs{ font-family:var(--script); font-weight:400; text-transform:none;
   letter-spacing:0; font-size:clamp(46px,5.4vw,88px); }
 .s-word--md{ font-size:clamp(30px,4.2vw,72px); font-variation-settings:'opsz' 144; }
@@ -376,7 +424,7 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
 #rdv{ background:var(--cream); padding:22vh 5vw 20vh; display:flex; flex-direction:column;
   align-items:center; }
 .rdv-link{ position:relative; display:flex; flex-direction:column; align-items:center;
-  gap:1.5vh; padding:10vh 9vw; text-decoration:none; color:var(--ink); text-align:center; }
+  gap:1.5vh; padding:10vh 9vw; text-decoration:none; color:var(--ink); text-align:center; cursor:pointer; }
 .rdv-frame{ inset:0; --len:clamp(44px,7vw,84px); --gap:clamp(22px,3.4vw,44px);
   --oc:rgba(119,119,92,.85); transition:transform .8s cubic-bezier(.22,1,.36,1); }
 .rdv-link:hover .rdv-frame{ transform:scale(1.03); }
@@ -391,7 +439,7 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
 .rdv-arrow line{ stroke:var(--ink); stroke-width:1; }
 .rdv-arrow path{ stroke:var(--ink); stroke-width:1; fill:none; }
 .rdv-note{ margin-top:6vh; font-family:var(--serif); font-style:italic; font-weight:330;
-  font-size:clamp(15px,1.5vw,20px); color:#5C5C48; }
+  font-size:clamp(15px,1.5vw,20px); color:#5C5C48; text-align:center; }
 .rdv-meta{ margin-top:26px; display:flex; flex-wrap:wrap; justify-content:center; gap:12px 0;
   align-items:center; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
   color:var(--mut); text-align:center; }
@@ -416,8 +464,8 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
   color:var(--gold-l); margin-bottom:18px; }
 .f-col, .f-col a{ font-size:13px; line-height:2.1; color:#B9B49B; text-decoration:none;
   font-style:normal; }
-.f-col address{ font-style:normal; }
-.f-col a{ position:relative; transition:color .35s; }
+.f-col address{ font-style:normal; margin-bottom:10px; }
+.f-col a{ position:relative; transition:color .35s; display:inline-block; }
 .f-col a:hover{ color:#EFEAD9; }
 .f-col a::after{ content:''; position:absolute; left:0; right:0; bottom:2px; height:1px;
   background:currentColor; transform:scaleX(0); transform-origin:right;
@@ -432,6 +480,85 @@ figcaption em{ font-style:normal; opacity:0; transition:opacity .5s; }
   color:var(--gold-l); line-height:0; padding:0 .1em; }
 .f-legal{ margin-top:9vh; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
   font-size:9px; letter-spacing:.26em; text-transform:uppercase; color:rgba(239,234,217,.4); }
+
+/* ============================================================
+   MODALE DE RÉSERVATION ÉDITORIALE (Haute couture & universelle)
+   ============================================================ */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 3500;
+  background-color: rgba(35, 35, 30, 0.82);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(16px, 3.5vw, 36px);
+  opacity: 0; visibility: hidden;
+  transition: opacity .4s cubic-bezier(.16,1,.3,1), visibility .4s;
+}
+.modal-overlay.is-open { opacity: 1; visibility: visible; }
+.modal-window {
+  background: var(--cream); color: var(--ink);
+  border: 1px solid var(--olive);
+  box-shadow: 0 35px 70px -15px rgba(0,0,0,.5);
+  max-width: 640px; width: 100%;
+  max-height: 90vh; overflow-y: auto; overscroll-behavior: contain;
+  position: relative;
+  padding: clamp(26px, 4vw, 44px);
+  transform: translateY(22px) scale(0.97);
+  transition: transform .4s cubic-bezier(.16,1,.3,1);
+}
+.modal-overlay, .modal-window, .modal-window * { cursor: auto !important; }
+.modal-window button, .modal-window select, .modal-window input, .modal-window a { cursor: pointer !important; }
+.modal-overlay.is-open .modal-window { transform: translateY(0) scale(1); }
+.modal-close-btn {
+  position: absolute; top: 18px; right: 18px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: transparent; border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink); transition: background .3s, transform .3s;
+}
+.modal-close-btn:hover { background: var(--ink); color: var(--cream); transform: rotate(90deg); }
+.section-eyebrow {
+  font-size: 10px; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--mut); display: block; margin-bottom: 6px;
+}
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 22px; }
+@media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } }
+.form-grid-full { grid-column: 1 / -1; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label {
+  font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 600; color: var(--ink);
+}
+.form-label span.req { color: var(--gold); }
+.form-control {
+  width: 100%; padding: 12px 14px;
+  font-family: var(--sans); font-size: 14px; color: var(--ink);
+  background-color: var(--cream2); border: 1px solid var(--line);
+  border-radius: 0; transition: border-color .25s, background-color .25s, box-shadow .25s;
+}
+.form-control:focus {
+  outline: none; background-color: #FFFFFF;
+  border-color: var(--gold); box-shadow: 0 0 0 2px rgba(156,130,80,.25);
+}
+textarea.form-control { min-height: 90px; resize: vertical; }
+.btn-champagne {
+  background: var(--olive-deep); color: #F1ECE0;
+  border: 1px solid var(--gold); font-family: var(--sans);
+  font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase;
+  padding: 15px 30px; transition: all .35s cubic-bezier(.22,1,.36,1);
+}
+.btn-champagne:hover { background: var(--ink); border-color: var(--gold-l); }
+.btn-outline {
+  background: transparent; color: var(--ink); border: 1px solid var(--line);
+  font-family: var(--sans); font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+  padding: 12px 24px; transition: all .3s;
+}
+.btn-outline:hover { background: var(--ink); color: var(--cream); }
+.btn-primary {
+  background: var(--gold); color: #FFFFFF; border: 1px solid var(--gold);
+  font-family: var(--sans); font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+  padding: 12px 24px; text-decoration: none; display: inline-block; transition: all .3s;
+}
+.btn-primary:hover { background: var(--olive-deep); border-color: var(--olive-deep); }
 
 /* ============================================================
    RESPONSIVE — recomposición, no reducción
@@ -527,11 +654,15 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
   <ul class="nav-links">
     <li><a href="#institut">L'institut</a></li>
     <li><a href="#soins">Soins</a></li>
+    <li><a href="tarifs.html">Tarifs</a></li>
+    <li><a href="onglerie.html">Onglerie</a></li>
     <li><a href="#secrets">Beauté</a></li>
     <li><a href="#galerie">Galerie</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a class="nav-cta" href="#rdv">Prendre rendez-vous</a>
+  <button type="button" class="nav-cta open-booking-btn" data-soin="" id="navCtaBtn" aria-label="Prendre rendez-vous en ligne">
+    Prendre rendez-vous
+  </button>
   <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
     <span></span><span></span>
   </button>
@@ -542,15 +673,20 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
   <span class="oframe oframe--lg menu-frame" aria-hidden="true"></span>
   <ul class="menu-links">
     <li><a href="#institut"><span class="m-idx">01</span>L'institut</a></li>
-    <li><a href="#secrets"><span class="m-idx">02</span>Beauté</a></li>
-    <li><a href="#soins"><span class="m-idx">03</span>Soins</a></li>
-    <li><a href="#galerie"><span class="m-idx">04</span>Galerie</a></li>
-    <li><a href="#contact"><span class="m-idx">05</span>Contact</a></li>
+    <li><a href="#secrets"><span class="m-idx">02</span>Beauté (11 Secrets)</a></li>
+    <li><a href="#soins"><span class="m-idx">03</span>Soins &amp; Rituels</a></li>
+    <li><a href="tarifs.html"><span class="m-idx">04</span>Grille des Tarifs (CHF)</a></li>
+    <li><a href="onglerie.html"><span class="m-idx">05</span>Onglerie &amp; Mains</a></li>
+    <li><a href="marques.html"><span class="m-idx">06</span>Marques Partenaires</a></li>
+    <li><a href="#galerie"><span class="m-idx">07</span>Galerie Photos</a></li>
+    <li><a href="contact.html"><span class="m-idx">08</span>Contact &amp; Accès</a></li>
   </ul>
-  <p class="menu-cta">prendre rendez-vous</p>
+  <button type="button" class="menu-cta open-booking-btn" data-soin="" id="menuCtaBtn" aria-label="Prendre rendez-vous">
+    prendre rendez-vous
+  </button>
   <div class="menu-foot">
     Rue de Lausanne 11 — 1020 Renens, Suisse<br>
-    Tél. +41 76 660 60 26
+    Tél. <a href="tel:+41766606026" style="color:inherit;text-decoration:underline;">+41 76 660 60 26</a> · Mar. – Sam. 9h00 – 19h00
   </div>
 </nav>
 
@@ -610,6 +746,7 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
         <p class="small-note" data-reveal="fade">Un étage de lumière, des matières naturelles, des rituels écrits pour vous seule. Ici, aucune routine toute faite&nbsp;: nous écoutons la peau, les cheveux, le temps qu'il vous faut. Puis nous soignons — lentement, sérieusement.</p>
         <div class="institut-meta" data-reveal="fade">
           <span>Mar. — Sam.</span><span>9h00 – 19h00</span><span>Sur rendez-vous</span>
+          <span><a href="institut.html" style="text-decoration:underline;color:inherit;font-weight:600;">Découvrir l'histoire &amp; l'équipe →</a></span>
         </div>
       </div>
       <span class="vert-note" aria-hidden="true">l'institut — renens, suisse</span>
@@ -728,45 +865,61 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
       <span class="sec-name">Les soins</span><span class="sec-rule" data-draw></span>
     </header>
     <p class="soins-intro" data-reveal="words">Cinq familles de soins, une même <span class="script">exigence</span>.</p>
-    <p class="soins-note" data-reveal="fade">Survolez — ou laissez défiler.</p>
+    <p class="soins-note" data-reveal="fade">Survolez un soin pour le découvrir — ou cliquez pour réserver.</p>
 
     <ul class="soins-list">
-      <li class="s-item" data-img="https://picsum.photos/seed/11sec-cheveux/480/600.jpg">
+      <li class="s-item open-booking-btn" data-soin="Coiffure & Rituels Capillaires" data-img="https://picsum.photos/seed/11sec-cheveux/480/600.jpg" title="Cliquer pour réserver ce rituel">
         <div class="s-item-inner">
           <span class="s-thumb"><img src="https://picsum.photos/seed/11sec-cheveux/480/600.jpg" alt="Cheveux — coupe et couleur" width="480" height="600" loading="lazy" decoding="async"></span>
           <h3 class="s-word s-word--xl" data-reveal="words">Cheveux</h3>
-          <span class="s-sub" data-reveal="fade">— coupe, couleur, coiffage</span>
+          <span class="s-sub" data-reveal="fade">— coupe, couleur, coiffage · Réserver</span>
         </div>
       </li>
-      <li class="s-item" data-img="https://picsum.photos/seed/11sec-ongles/480/600.jpg">
+      <li class="s-item open-booking-btn" data-soin="Onglerie & Beauté des Mains / Pieds" data-img="https://picsum.photos/seed/11sec-ongles/480/600.jpg" title="Cliquer pour réserver ce rituel">
         <div class="s-item-inner">
           <span class="s-thumb"><img src="https://picsum.photos/seed/11sec-ongles/480/600.jpg" alt="Ongles — manucure" width="480" height="600" loading="lazy" decoding="async"></span>
           <h3 class="s-word s-word--xs" data-reveal="words">ongles</h3>
-          <span class="s-sub" data-reveal="fade">— manucure &amp; pédicure</span>
+          <span class="s-sub" data-reveal="fade">— manucure &amp; pédicure · Réserver</span>
         </div>
       </li>
-      <li class="s-item" data-img="https://picsum.photos/seed/11sec-visage/480/600.jpg">
+      <li class="s-item open-booking-btn" data-soin="Soins Visage & Dermo-Esthétique" data-img="https://picsum.photos/seed/11sec-visage/480/600.jpg" title="Cliquer pour réserver ce rituel">
         <div class="s-item-inner">
           <span class="s-thumb"><img src="https://picsum.photos/seed/11sec-visage/480/600.jpg" alt="Soins du visage — rituel" width="480" height="600" loading="lazy" decoding="async"></span>
           <h3 class="s-word s-word--md" data-reveal="words">Soins du visage</h3>
-          <span class="s-sub" data-reveal="fade">— rituels sur mesure</span>
+          <span class="s-sub" data-reveal="fade">— rituels sur mesure · Réserver</span>
         </div>
       </li>
-      <li class="s-item s-item--vert" data-img="https://picsum.photos/seed/11sec-regard/480/600.jpg">
+      <li class="s-item s-item--vert open-booking-btn" data-soin="Regard & Épilation" data-img="https://picsum.photos/seed/11sec-regard/480/600.jpg" title="Cliquer pour réserver ce rituel">
         <div class="s-item-inner">
           <span class="s-thumb"><img src="https://picsum.photos/seed/11sec-regard/480/600.jpg" alt="Regard — cils et sourcils" width="480" height="600" loading="lazy" decoding="async"></span>
           <h3 class="s-word s-word--vert" data-reveal="words">Regard</h3>
-          <span class="s-sub" data-reveal="fade">— cils &amp; sourcils</span>
+          <span class="s-sub" data-reveal="fade">— cils &amp; sourcils · Réserver</span>
         </div>
       </li>
-      <li class="s-item" data-img="https://picsum.photos/seed/11sec-bienetre/480/600.jpg">
+      <li class="s-item open-booking-btn" data-soin="Massages & Bien-être" data-img="https://picsum.photos/seed/11sec-bienetre/480/600.jpg" title="Cliquer pour réserver ce rituel">
         <div class="s-item-inner">
           <span class="s-thumb"><img src="https://picsum.photos/seed/11sec-bienetre/480/600.jpg" alt="Bien-être — massage" width="480" height="600" loading="lazy" decoding="async"></span>
           <h3 class="s-word s-word--xl" data-reveal="words">Bien-être</h3>
-          <span class="s-sub" data-reveal="fade">— massage &amp; détente</span>
+          <span class="s-sub" data-reveal="fade">— massage &amp; détente · Réserver</span>
         </div>
       </li>
     </ul>
+
+    <!-- Ligne fonctionnelle : Tarifs & Onglerie -->
+    <div style="margin-top: 6vh; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 3.5vh;">
+      <a href="tarifs.html" style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 4px;">
+        Consulter la carte complète des tarifs (CHF) →
+      </a>
+      <div style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center;">
+        <a href="onglerie.html" style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mut); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 4px;">
+          Espace Onglerie &amp; Dipping →
+        </a>
+        <button type="button" class="open-booking-btn" data-soin="" style="background: none; border: 1px solid var(--frame); padding: 10px 22px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink); cursor: pointer; transition: all 0.3s;">
+          Réserver un rituel
+        </button>
+      </div>
+    </div>
+
     <!-- Polaroid flottant (desktop, hover uniquement) -->
     <div class="soins-float" aria-hidden="true">
       <img src="https://picsum.photos/seed/11sec-cheveux/480/600.jpg" alt="" width="480" height="600">
@@ -842,7 +995,7 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
       <span class="sec-index">( 05 )</span><span class="sec-tick"></span>
       <span class="sec-name">Le rendez-vous</span><span class="sec-rule" data-draw></span>
     </header>
-    <a class="rdv-link" href="tel:+41766606026">
+    <a class="rdv-link open-booking-btn" href="#bookingModal" data-soin="" title="Ouvrir le formulaire de réservation en ligne">
       <span class="rdv-frame oframe" aria-hidden="true"></span>
       <span class="rdv-top" data-reveal="words">Prendre</span>
       <span class="rdv-script" data-reveal="fade">rendez-vous</span>
@@ -851,11 +1004,12 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
         <path d="M104 1.5 L117 7 L104 12.5"/>
       </svg>
     </a>
-    <p class="rdv-note" data-reveal="fade">Un appel, un mot — nous nous occupons du reste.</p>
+    <p class="rdv-note" data-reveal="fade">Réservez en ligne en quelques clics ou contactez-nous directement par téléphone.</p>
     <div class="rdv-meta" data-reveal="fade">
       <a href="tel:+41766606026">Tél. +41 76 660 60 26</a>
       <span>Rue de Lausanne 11 — 1020 Renens</span>
       <span>Mar. – Sam. · 9h – 19h</span>
+      <a href="tarifs.html">Consulter les tarifs</a>
     </div>
   </section>
 
@@ -872,16 +1026,22 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
       <div class="f-col">
         <h4>L'institut</h4>
         <address>Rue de Lausanne 11<br>1020 Renens — Suisse</address>
+        <a href="institut.html">Philosophie &amp; Équipe</a><br>
+        <a href="marques.html">Marques dermo-esthétiques</a><br>
+        <a href="partenariat.html">Espace partenariat</a>
       </div>
       <div class="f-col">
-        <h4>Contact</h4>
+        <h4>Prestations &amp; Tarifs</h4>
+        <a href="tarifs.html">Grille des tarifs en CHF</a><br>
+        <a href="onglerie.html">Onglerie &amp; Manucure</a><br>
+        <a href="soins.html">Catalogue des soins</a><br>
+        <a href="contact.html">Plan d'accès &amp; Horaires</a>
+      </div>
+      <div class="f-col">
+        <h4>Rendez-vous</h4>
         <a href="tel:+41766606026">+41 76 660 60 26</a><br>
-        <a href="https://www.11secretsdebeaute.ch" rel="noopener">11secretsdebeaute.ch</a>
-      </div>
-      <div class="f-col">
-        <h4>Suivre</h4>
         <a href="https://www.instagram.com/11secretsdebeaute" rel="noopener" target="_blank">Instagram</a><br>
-        <a href="#rdv">Prendre rendez-vous</a>
+        <button type="button" class="open-booking-btn" data-soin="" style="background:none;border:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;">Prendre rendez-vous en ligne</button>
       </div>
     </div>
   </div>
@@ -889,12 +1049,22 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
   <div class="f-legal">
     <span>© 11 Secrets de Beauté</span>
     <span>Renens — Suisse</span>
+    <span><a href="contact.html" style="color:inherit;text-decoration:none;">Contact direct</a></span>
   </div>
 </footer>
+
+<!-- Point de montage Modale de Réservation Universelle -->
+<div id="booking-modal-mount"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script type="module">
+  import { initBookingModal } from './js/components/booking-modal.js';
+  initBookingModal();
+</script>
+
 <script>
 /* ============================================================
    11 SECRETS DE BEAUTÉ — direction d'interaction
@@ -987,10 +1157,18 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
   window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMenu(); });
 
+  // Fermer le menu lors du clic sur un bouton de réservation à l'intérieur
+  document.querySelectorAll('.open-booking-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
       if (id.length < 2) return;
+      if (id === '#bookingModal' || a.classList.contains('open-booking-btn')) return;
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault(); closeMenu();
@@ -1111,10 +1289,7 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
   });
 
   /* ============================================================
-     LES SOINS — « polaroid » qui suit le pointeur.
-     Robuste : un seul pointermove sur la section décide de tout.
-     Plus d'état collé : cache au sortie de section, au scroll
-     hors de #soins, et avec un léger délai anti-scintillement.
+     LES SOINS — « polaroid » qui suit le pointeur
      ============================================================ */
   if (finePointer && desktop()) {
     const section = document.getElementById('soins');
@@ -1149,7 +1324,6 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
 
       section.addEventListener('pointermove', (e) => {
         if (e.pointerType && e.pointerType !== 'mouse') return;
-        // Position: à côté du curseur, clampée au viewport
         const w = Math.max(150, Math.min(230, innerWidth * .14));
         const h = w * 1.25;
         let tx = e.clientX + 36;
@@ -1157,17 +1331,14 @@ html:not(.anim) .s-progress, html:not(.anim) .s-hint{ display:none; }
         let ty = e.clientY - h - 26;
         if (ty < 84) ty = e.clientY + 30;
         xTo(tx); yTo(ty);
-        // Rotation subtile selon la vitesse du pointeur
         if (lastX !== null) rTo(gsap.utils.clamp(-9, 9, (e.clientX - lastX) * .55));
         lastX = e.clientX;
-        // Visible uniquement au-dessus d'un soin
         const item = e.target.closest('.s-item');
         if (item) showFloat(item);
         else { clearTimeout(hideT); hideT = setTimeout(hideFloat, 160); }
       }, { passive: true });
 
       section.addEventListener('pointerleave', hideFloat);
-      // Garde anti-« image collée » : cache dès que #soins quitte l'écran
       ScrollTrigger.create({
         trigger: '#soins', start: 'top bottom', end: 'bottom top',
         onLeave: hideFloat, onLeaveBack: hideFloat
