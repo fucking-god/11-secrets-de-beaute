@@ -1,6 +1,5 @@
 {
-  "version": 2,
-  "name": "11-secrets-de-beaute",
+  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
