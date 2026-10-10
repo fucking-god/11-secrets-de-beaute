@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>11 Secrets de Beauté — Revue Éditoriale Carrousel (1080×1350)</title>
+<meta name="description" content="Revue éditoriale haute couture pour TikTok et Instagram — 11 Secrets de Beauté (Renens).">
+
+<!-- Polices de prestige : Playfair Display, Cinzel, Plus Jakarta Sans, Instrument Serif -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
+
+<!-- html2canvas pour capture PNG HD 300 DPI -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<style>
+/* ============================================================
+   DIRECTION ARTISTIQUE REVUE D'ART & ÉDITORIAL LUXE
+   Palette : Papier Crème Chaud (#FAF7F2), Vert Sauge Profond (#1E2D24), Or Champagne (#C5A880)
+   AUCUN CONTENEUR DE TEXTE · TEXTES SUELTOS LIBRES & ÉLÉGANTS
+   AUCUN EMOJI · ICONOGRAPHIE VECTORIELLE PRO & CODE QR SCANNABLE RÉEL
+   ============================================================ */
+:root {
+  --paper-bg:        #FAF7F2;  /* Fond papier crème chaud d'art */
+  --sage-block:      #1E2D24;  /* Bloc déchiré vert forêt profond */
+  --ink:             #1E2D24;  /* Typographie principale */
+  --ink-soft:        #3B4E41;  /* Typographie secondaire */
+  --ink-muted:       #67796D;
+  --gold:            #C5A880;  /* Or champagne / bronze */
+  --gold-deep:       #A38357;
+  --circle-badge:    #1E2D24;  /* Badge circulaire de revue */
+  
+  --font-serif:      'Playfair Display', Georgia, serif;
+  --font-display:    'Cinzel', serif;
+  --font-editorial:  'Instrument Serif', Georgia, serif;
+  --font-sans:       'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:       'Special Elite', monospace;
+  
+  --slide-w:         1080px;
+  --slide-h:         1350px;
+  --current-scale:   0.55;
+  --studio-bg:       #121412;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--studio-bg);
+  color: #F0EDE6;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   STUDIO TOPBAR (BARRE D'OUTILS)
+   ============================================================ */
+.studio-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(18, 20, 18, 0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.studio-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-monogram {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--sage-block);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.brand-text h1 {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.brand-text p {
+  font-size: 11px;
+  color: #9D9D90;
+  letter-spacing: 0.05em;
+}
+
+.studio-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.studio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: #EDEDE8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.studio-btn:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: var(--gold);
+  color: #FFF;
+}
+
+.studio-btn.active {
+  background: var(--gold);
+  color: var(--sage-block);
+  border-color: var(--gold);
+  font-weight: 700;
+}
+
+.studio-btn-gold {
+  background: linear-gradient(135deg, #D4B98E 0%, #AF8D5B 100%);
+  color: var(--sage-block);
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(197, 168, 128, 0.4);
+}
+
+.studio-btn-gold:hover {
+  filter: brightness(1.08);
+}
+
+.zoom-select {
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: #1B1E1B;
+  color: #FFF;
+  cursor: pointer;
+  outline: none;
+}
+
+/* ============================================================
+   CANVAS DE PRESENTATION
+   ============================================================ */
+.studio-canvas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 34px 16px 80px;
+}
+
+.carousel-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-viewport {
+  width: calc(var(--slide-w) * var(--current-scale));
+  height: calc(var(--slide-h) * var(--current-scale));
+  position: relative;
+  transition: width 0.3s ease, height 0.3s ease;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(197, 168, 128, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--paper-bg);
+}
+
+.slide-scaler {
+  width: var(--slide-w);
+  height: var(--slide-h);
+  transform-origin: top left;
+  transform: scale(var(--current-scale));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* VUE GRILLE D'ENSEMBLE */
+.grid-view {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid-view.active {
+  display: grid;
+}
+
+.grid-card {
+  background: #181A18;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.grid-card-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.grid-viewport-mini {
+  width: calc(var(--slide-w) * 0.30);
+  height: calc(var(--slide-h) * 0.30);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.grid-scaler-mini {
+  width: var(--slide-w);
+  height: var(--slide-h);
+  transform-origin: top left;
+  transform: scale(0.30);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* BARRE NAVIGATION DU CARROUSEL */
+.nav-panel {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(24, 28, 24, 0.95);
+  backdrop-filter: blur(14px);
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(197, 168, 128, 0.35);
+  background: rgba(255,255,255,0.06);
+  color: #FFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.arrow-btn:hover {
+  background: var(--gold);
+  color: var(--sage-block);
+}
+
+.dots-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.22);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.dot-item.active {
+  width: 32px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+.page-indicator {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+}
+
+
+/* ============================================================
+   STRUCTURE COMMUNE D'UNE SLIDE CARROUSEL (1080 × 1350 px)
+   STYLE REVUE D'ART IMPRIMÉE
+   ============================================================ */
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background-color: var(--paper-bg);
+  position: relative;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: var(--ink);
+  user-select: none;
+}
+
+.slide.active {
+  display: flex;
+}
+
+/* Texture physique de grain de papier d'art */
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  opacity: 0.95;
+  mix-blend-mode: multiply;
+}
+
+/* ============================================================
+   BANDE SUPÉRIEURE DÉCOUPÉE AVEC BORD PAPIER DÉCHIRÉ (TORN EDGE)
+   ============================================================ */
+.torn-header-block {
+  position: relative;
+  background: var(--sage-block);
+  color: #FAF7F2;
+  padding: 48px 64px 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.torn-paper-edge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -28px;
+  width: 100%;
+  height: 30px;
+  pointer-events: none;
+  z-index: 11;
+  transform: rotate(180deg);
+}
+
+.torn-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mag-title-main {
+  font-family: var(--font-display);
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.mag-title-main span {
+  color: var(--gold);
+}
+
+.mag-title-sub {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(250, 247, 242, 0.75);
+}
+
+.torn-header-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mag-issue-badge {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+
+.mag-meta-line {
+  font-size: 11px;
+  color: rgba(250, 247, 242, 0.65);
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+}
+
+/* ============================================================
+   STICKER CIRCULAIRE EMBLÉMATIQUE (STYLE CON A DE ANIMACIÓN)
+   ============================================================ */
+.circle-sticker {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: var(--circle-badge);
+  color: #FAF7F2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(30, 45, 36, 0.25), inset 0 0 0 2px rgba(197, 168, 128, 0.4);
+  z-index: 30;
+  padding: 16px;
+  transform: rotate(-6deg);
+}
+
+.circle-sticker .sticker-num {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 0.95;
+  color: var(--gold);
+}
+
+.circle-sticker .sticker-text {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.25;
+  margin-top: 4px;
+  color: #FAF7F2;
+}
+
+/* ============================================================
+   PIED DE PAGE : CODE QR SCANNABLE RÉEL (VERS 11SECRETSDEBEAUTE.CH)
+   ============================================================ */
+.mag-bottom-bar {
+  padding: 0 64px 44px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.qr-code-zone {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.qr-img-frame {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(30, 45, 36, 0.25);
+  background: #FFF;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.qr-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.qr-legend-title {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.qr-legend-url {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.bottom-folio {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.folio-page {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+.folio-coords {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   ESPACE BLANC INTENTIONNEL & TEXTES SUELTOS (SANS CONTENEURS)
+   ============================================================ */
+.editorial-canvas-space {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 44px 64px 20px;
+}
+
+.loose-headline-hero {
+  font-family: var(--font-serif);
+  font-size: 76px;
+  font-weight: 900;
+  line-height: 1.04;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  margin-top: 10px;
+}
+
+.loose-headline-hero em {
+  font-style: italic;
+  font-family: var(--font-editorial);
+  font-size: 88px;
+  color: var(--gold-deep);
+  font-weight: 400;
+}
+
+.loose-subtitle {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold-deep);
+  letter-spacing: 0.02em;
+  margin-top: 14px;
+  display: inline-block;
+}
+
+.loose-body-text {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/* ============================================================
+   ICONES VECTORIELLES PROFESSIONNELLES (PAS D'EMOJIS)
+   ============================================================ */
+.pro-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.pro-icon svg {
+  stroke-width: 2.2;
+}
+
+
+/* ============================================================
+   COMPOSITION DES 6 SLIDES AVEC MODÈLES AFRO / COLORÉES
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   SLIDE 1 : COVER MAGAZINE HOOK (PORTRAIT FEMME NOIRE LUXE)
+   ------------------------------------------------------------ */
+.slide-1 .hero-subject-area {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-1 .cutout-hair-photo {
+  width: 820px;
+  height: 580px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(30, 45, 36, 0.22);
+}
+
+.slide-1 .cutout-hair-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-1 .swipe-callout-loose {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.slide-1 .swipe-arrow-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--sage-block);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ------------------------------------------------------------
+   SLIDE 2 : CURIOSITÉ 1 (CUIR CHEVELU 6X PLUS VITE)
+   ------------------------------------------------------------ */
+.slide-2 .editorial-canvas-space {
+  justify-content: space-around;
+}
+
+.slide-2 .huge-number-loose {
+  font-family: var(--font-display);
+  font-size: 180px;
+  font-weight: 900;
+  line-height: 0.85;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+}
+
+.slide-2 .huge-number-loose span {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: 140px;
+  color: var(--gold-deep);
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.slide-2 .loose-contrast-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin: 20px 0;
+}
+
+.slide-2 .loose-metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slide-2 .metric-big-time {
+  font-family: var(--font-serif);
+  font-size: 58px;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.slide-2 .metric-big-time.alert {
+  color: #B03A2E;
+}
+
+.slide-2 .metric-label-loose {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+
+.slide-2 .metric-desc-loose {
+  font-size: 19px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+
+/* ------------------------------------------------------------
+   SLIDE 3 : CURIOSITÉ 2 (MASSAGE RACINES & CUIR CHEVELU AFRO)
+   ------------------------------------------------------------ */
+.slide-3 .hero-photo-split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.slide-3 .isolated-photo-loose {
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(30, 45, 36, 0.2);
+}
+
+.slide-3 .isolated-photo-loose img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-3 .loose-quote-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.slide-3 .punchline-text-large {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.slide-3 .punchline-text-large span {
+  color: #B03A2E;
+  font-style: italic;
+}
+
+.slide-3 .handwritten-tip {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--gold-deep);
+  border-left: 3px solid var(--gold);
+  padding-left: 18px;
+}
+
+
+/* ------------------------------------------------------------
+   SLIDE 4 : CURIOSITÉ 3 (CHÉRATINE & RECONSTRUCTION)
+   ------------------------------------------------------------ */
+.slide-4 .editorial-canvas-space {
+  justify-content: space-around;
+}
+
+.slide-4 .biology-statement-loose {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+}
+
+.slide-4 .big-quote-loose {
+  font-family: var(--font-serif);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.slide-4 .big-quote-loose span {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: 66px;
+  color: var(--gold-deep);
+}
+
+.slide-4 .protocol-badge-loose {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage-block);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.slide-4 .protocol-badge-loose::before {
+  content: '✦';
+  color: var(--gold);
+  font-size: 16px;
+}
+
+
+/* ------------------------------------------------------------
+   SLIDE 5 : SOLUTION (JAPANESE HEAD SPA MODÈLE AFRO)
+   ------------------------------------------------------------ */
+.slide-5 .headspa-real-showcase {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  margin: 10px 0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 65px rgba(30, 45, 36, 0.22);
+}
+
+.slide-5 .headspa-real-showcase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-5 .loose-solution-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slide-5 .solution-features-loose {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.slide-5 .solution-features-loose span {
+  color: var(--sage-block);
+}
+
+
+/* ------------------------------------------------------------
+   SLIDE 6 : CLOSING & INFOS RÉELLES SALON (AVEC QR OFFICIEL)
+   ------------------------------------------------------------ */
+.slide-6 .facade-real-showcase {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  margin: 10px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 65px rgba(30, 45, 36, 0.22);
+}
+
+.slide-6 .facade-real-showcase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-6 .contact-details-loose {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.slide-6 .contact-row-loose {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.slide-6 .whatsapp-green {
+  color: #128C7E;
+  font-weight: 800;
+}
+
+.slide-6 .cta-save-loose {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage-block);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* ============================================================
+   MODALE DE SÉLECTION DES PHOTOS DU SALON
+   ============================================================ */
+.photo-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.photo-modal-overlay.active { display: flex; }
+.photo-modal-box {
+  background: #FAF7F2;
+  color: var(--ink);
+  border-radius: 16px;
+  max-width: 580px;
+  width: 100%;
+  padding: 36px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+}
+.photo-modal-box h3 { font-family: var(--font-display); font-size: 22px; margin-bottom: 6px; }
+.photo-modal-box p { font-size: 14px; color: var(--ink-soft); margin-bottom: 24px; }
+.file-upload-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFF;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 12px;
+}
+.file-upload-row label { font-size: 13px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- BARRE DE COMMANDE SUPÉRIEURE DU STUDIO -->
+<header class="studio-topbar">
+  <div class="studio-brand">
+    <div class="brand-monogram">11</div>
+    <div class="brand-text">
+      <h1>11 Secrets de Beauté</h1>
+      <p>Revue Carrousel TikTok / IG (1080×1350px) • Direction Artistique</p>
+    </div>
+  </div>
+
+  <div class="studio-actions">
+    <button class="studio-btn active" id="btnModeCarousel" onclick="setStudioMode('carousel')">
+      Vue Carrousel
+    </button>
+    <button class="studio-btn" id="btnModeGrid" onclick="setStudioMode('grid')">
+      Grille d'Ensemble (6 Slides)
+    </button>
+
+    <select class="zoom-select" id="zoomSelect" onchange="applyZoomChange(this.value)">
+      <option value="auto">Ajuster à l'écran</option>
+      <option value="0.45">45%</option>
+      <option value="0.55" selected>55% (Standard bureau)</option>
+      <option value="0.75">75%</option>
+      <option value="1.0">100% (Taille réelle 1080×1350)</option>
+    </select>
+
+    <button class="studio-btn" onclick="openPhotoPickerModal()">
+      Remplacer Photos
+    </button>
+
+    <button class="studio-btn studio-btn-gold" id="btnExportActive" onclick="exportActiveSlide()">
+      Télécharger Slide PNG (300 DPI)
+    </button>
+
+    <button class="studio-btn" id="btnExportAll" onclick="exportAllCarouselSlides()" style="background: rgba(197, 168, 128, 0.2); border-color: var(--gold); color: #FFF;">
+      Exporter les 6 Slides
+    </button>
+  </div>
+</header>
+
+<!-- ZONE DE VISUALISATION -->
+<main class="studio-canvas">
+
+  <!-- VUE 1 : CARROUSEL -->
+  <div class="carousel-holder" id="carouselHolder">
+    <div class="slide-viewport" id="slideViewport">
+      <div class="slide-scaler" id="slideScaler">
+
+        <!-- ============================================================
+             SLIDE 1 : COUVERTURE DE REVUE (HOOK AD ALTA CURIOSITÀ)
+             ============================================================ -->
+        <article class="slide slide-1 active" id="slide-1" data-index="1">
+          <!-- Bloc Découpé Supérieur Vert Sauge avec bord déchiré -->
+          <div class="torn-header-block">
+            <div class="torn-header-left">
+              <div class="mag-title-main">11 <span>SECRETS</span></div>
+              <div class="mag-title-sub">Revue de Beauté &amp; Soins Capillaires</div>
+            </div>
+            <div class="torn-header-right">
+              <div class="mag-issue-badge">N° 11 · 2026</div>
+              <div class="mag-meta-line">Édition Annuelle de la Maison</div>
+              <div class="mag-meta-line">Renens · Suisse Romande</div>
+            </div>
+
+            <svg class="torn-paper-edge" viewBox="0 0 1080 32" preserveAspectRatio="none">
+              <path d="M0,0 L1080,0 L1080,14 Q1040,26 995,12 T910,24 T825,10 T740,28 T650,14 T565,29 T475,11 T390,26 T300,10 T215,27 T120,13 T0,24 Z" fill="#FAF7F2" />
+            </svg>
+          </div>
+
+          <!-- Espace Blanc Intentionnel & Contenu Libre -->
+          <div class="editorial-canvas-space">
+            <div>
+              <h2 class="loose-headline-hero">
+                3 Faits surprenants<br>sur vos cheveux <em>que personne ne vous dit</em>
+              </h2>
+              <div class="loose-subtitle">
+                (Le 2ème va changer votre routine quotidienne)
+              </div>
+            </div>
+
+            <!-- Protagoniste central : Lissage & Soins Profonds en salon réel -->
+            <div class="hero-subject-area">
+              <div class="cutout-hair-photo">
+                <img id="img-slot-cover" src="public/images/social/lissage-afro-cover.jpg" alt="Lissage d'excellence et soins profonds 11 Secrets de Beauté">
+              </div>
+
+              <!-- Sticker Circulaire emblématique -->
+              <div class="circle-sticker" style="top: 24px; right: 20px;">
+                <span class="sticker-num">01</span>
+                <span class="sticker-text">Lissage &amp;<br>Soins Ybera</span>
+              </div>
+            </div>
+
+            <!-- Swipe Action Pro (Sans emoji) -->
+            <div class="swipe-callout-loose">
+              <span>Glissez pour découvrir</span>
+              <div class="swipe-arrow-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pied de Page : Code QR SCANNABLE RÉEL vers 11secretsdebeaute.ch & Folio -->
+          <footer class="mag-bottom-bar">
+            <div class="qr-code-zone">
+              <div class="qr-img-frame">
+                <img src="public/images/social/qr-11secrets.png" alt="Code QR officiel 11secretsdebeaute.ch">
+              </div>
+              <div class="qr-legend">
+                <span class="qr-legend-title">Site Officiel</span>
+                <span class="qr-legend-url">11secretsdebeaute.ch</span>
+              </div>
+            </div>
+
+            <div class="bottom-folio">
+              <span class="folio-page">01</span>
+              <span class="folio-coords">Rue de Lausanne 11 · Renens</span>
+            </div>
+          </footer>
+        </article>
+
+
+        <!-- ============================================================
+             SLIDE 2 : CURIOSITÉ 1 (CUIR CHEVELU 6X PLUS VITE)
+             ============================================================ -->
+        <article class="slide slide-2" id="slide-2" data-index="2">
+          <div class="torn-header-block">
+            <div class="torn-header-left">
+              <div class="mag-title-main">11 <span>SECRETS</span></div>
+              <div class="mag-title-sub">Dossier Biologie du Bulbe</div>
+            </div>
+            <div class="torn-header-right">
+              <div class="mag-issue-badge">N° 11 · 2026</div>
+              <div class="mag-meta-line">Physiologie &amp; Cuir Chevelu</div>
+            </div>
+
+            <svg class="torn-paper-edge" viewBox="0 0 1080 32" preserveAspectRatio="none">
+              <path d="M0,0 L1080,0 L1080,14 Q1040,26 995,12 T910,24 T825,10 T740,28 T650,14 T565,29 T475,11 T390,26 T300,10 T215,27 T120,13 T0,24 Z" fill="#FAF7F2" />
+            </svg>
+          </div>
+
+          <div class="editorial-canvas-space">
+            <div class="circle-sticker" style="top: -10px; right: 40px;">
+              <span class="sticker-num">6x</span>
+              <span class="sticker-text">Plus Vite</span>
+            </div>
+
+            <div>
+              <div class="huge-number-loose">
+                01<span>.</span>
+              </div>
+              <h2 class="loose-headline-hero" style="font-size: 64px;">
+                Votre cuir chevelu vieillit <em>6 fois plus vite</em> que la peau de votre visage
+              </h2>
+            </div>
+
+            <!-- Textes Sueltos : Pas de boîtes ni de conteneurs -->
+            <div class="loose-contrast-row">
+              <div class="loose-metric-item">
+                <span class="metric-label-loose">Visage</span>
+                <span class="metric-big-time">20 min</span>
+                <p class="metric-desc-loose">de skincare minutieuse chaque matin et soir.</p>
+              </div>
+
+              <div class="loose-metric-item">
+                <span class="metric-label-loose" style="color: #B03A2E;">Cuir Chevelu</span>
+                <span class="metric-big-time alert">30 sec</span>
+                <p class="metric-desc-loose">de lavage rapide sous la douche.</p>
+              </div>
+            </div>
+
+            <p class="loose-body-text" style="font-size: 26px;">
+              L'accumulation de résidus et de sébum étouffe directement les follicules.
+            </p>
+          </div>
+
+          <footer class="mag-bottom-bar">
+            <div class="qr-code-zone">
+              <div class="qr-img-frame">
+                <img src="public/images/social/qr-11secrets.png" alt="Code QR officiel 11secretsdebeaute.ch">
+              </div>
+              <div class="qr-legend">
+                <span class="qr-legend-title">Site Officiel</span>
+                <span class="qr-legend-url">11secretsdebeaute.ch</span>
+              </div>
+            </div>
+
+            <div class="bottom-folio">
+              <span class="folio-page">02</span>
+              <span class="folio-coords">Physiologie Capillaire</span>
+            </div>
+          </footer>
+        </article>
+
+
+        <!-- ============================================================
+             SLIDE 3 : CURIOSITÉ 2 (MASSAGE DÉLICAT CHEVEUX BOUCLÉS / AFRO)
+             ============================================================ -->
+        <article class="slide slide-3" id="slide-3" data-index="3">
+          <div class="torn-header-block">
+            <div class="torn-header-left">
+              <div class="mag-title-main">11 <span>SECRETS</span></div>
+              <div class="mag-title-sub">Dossier Gestuelle &amp; Hygiène</div>
+            </div>
+            <div class="torn-header-right">
+              <div class="mag-issue-badge">N° 11 · 2026</div>
+              <div class="mag-meta-line">L'Erreur la plus Répandue</div>
+            </div>
+
+            <svg class="torn-paper-edge" viewBox="0 0 1080 32" preserveAspectRatio="none">
+              <path d="M0,0 L1080,0 L1080,14 Q1040,26 995,12 T910,24 T825,10 T740,28 T650,14 T565,29 T475,11 T390,26 T300,10 T215,27 T120,13 T0,24 Z" fill="#FAF7F2" />
+            </svg>
+          </div>
+
+          <div class="editorial-canvas-space">
+            <div class="circle-sticker" style="top: -10px; right: 40px;">
+              <span class="sticker-num">02</span>
+              <span class="sticker-text">Geste<br>Délicat</span>
+            </div>
+
+            <h2 class="loose-headline-hero" style="font-size: 60px;">
+              2. Frotter fort ne lave pas mieux : <em>cela agresse</em> la racine
+            </h2>
+
+            <div class="hero-photo-split">
+              <!-- Photo isolée : Massage délicat aux huiles sur modèle afro -->
+              <div class="isolated-photo-loose">
+                <img id="img-slot-massage" src="public/images/social/scalp-massage.jpg" alt="Soin et massage délicat du cuir chevelu afro">
+              </div>
+
+              <!-- Textes Libres -->
+              <div class="loose-quote-area">
+                <p class="punchline-text-large">
+                  « En décapant agressivement la racine, le cuir chevelu produit <span>deux fois plus</span> de sébum pour se protéger. »
+                </p>
+                <p class="loose-body-text">
+                  Résultat : des racines asphyxiées et des longueurs déshydratées.
+                </p>
+                <div class="handwritten-tip">
+                  Le secret : Massez doucement avec la pulpe des doigts, sans jamais utiliser les ongles.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="mag-bottom-bar">
+            <div class="qr-code-zone">
+              <div class="qr-img-frame">
+                <img src="public/images/social/qr-11secrets.png" alt="Code QR officiel 11secretsdebeaute.ch">
+              </div>
+              <div class="qr-legend">
+                <span class="qr-legend-title">Site Officiel</span>
+                <span class="qr-legend-url">11secretsdebeaute.ch</span>
+              </div>
+            </div>
+
+            <div class="bottom-folio">
+              <span class="folio-page">03</span>
+              <span class="folio-coords">Gestuelle d'Exception</span>
+            </div>
+          </footer>
+        </article>
+
+
+        <!-- ============================================================
+             SLIDE 4 : CURIOSITÉ 3 (LA FIBRE NE S'AUTO-RÉPARE PAS)
+             ============================================================ -->
+        <article class="slide slide-4" id="slide-4" data-index="4">
+          <div class="torn-header-block">
+            <div class="torn-header-left">
+              <div class="mag-title-main">11 <span>SECRETS</span></div>
+              <div class="mag-title-sub">Dossier Kératine &amp; Reconstruction</div>
+            </div>
+            <div class="torn-header-right">
+              <div class="mag-issue-badge">N° 11 · 2026</div>
+              <div class="mag-meta-line">Biologie de la Matière</div>
+            </div>
+
+            <svg class="torn-paper-edge" viewBox="0 0 1080 32" preserveAspectRatio="none">
+              <path d="M0,0 L1080,0 L1080,14 Q1040,26 995,12 T910,24 T825,10 T740,28 T650,14 T565,29 T475,11 T390,26 T300,10 T215,27 T120,13 T0,24 Z" fill="#FAF7F2" />
+            </svg>
+          </div>
+
+          <div class="editorial-canvas-space">
+            <div class="circle-sticker" style="top: -10px; right: 40px;">
+              <span class="sticker-num">03</span>
+              <span class="sticker-text">Kératine<br>Inerte</span>
+            </div>
+
+            <div>
+              <div class="huge-number-loose">
+                03<span>.</span>
+              </div>
+              <h2 class="loose-headline-hero" style="font-size: 64px;">
+                3. La fibre capillaire ne s'auto-régénère <em>pas seule</em>
+              </h2>
+            </div>
+
+            <div class="biology-statement-loose">
+              <p class="big-quote-loose">
+                « Contrairement à l'épiderme, le cheveu est une matière <span>biologiquement inerte</span>. »
+              </p>
+              <p class="loose-body-text" style="font-size: 24px;">
+                Une fois les ponts de kératine rompus par la chaleur ou les agressions, ils doivent être réinjectés de l'extérieur.
+              </p>
+            </div>
+
+            <!-- Photo réelle du salon de Dominique : Postes de coiffure & Extensions -->
+            <div style="height: 380px; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 65px rgba(30, 45, 36, 0.22); margin: 10px 0;">
+              <img id="img-slot-stations" src="public/images/social/salon-styling-stations.jpg" alt="Postes de coiffure réels 11 Secrets de Beauté" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+
+            <div class="protocol-badge-loose">
+              Diagnostic &amp; Soins profonds · Rituels en Institut
+            </div>
+          </div>
+
+          <footer class="mag-bottom-bar">
+            <div class="qr-code-zone">
+              <div class="qr-img-frame">
+                <img src="public/images/social/qr-11secrets.png" alt="Code QR officiel 11secretsdebeaute.ch">
+              </div>
+              <div class="qr-legend">
+                <span class="qr-legend-title">Site Officiel</span>
+                <span class="qr-legend-url">11secretsdebeaute.ch</span>
+              </div>
+            </div>
+
+            <div class="bottom-folio">
+              <span class="folio-page">04</span>
+              <span class="folio-coords">Haute Cosmétique Capillaire</span>
+            </div>
+          </footer>
+        </article>
+
+
+        <!-- ============================================================
+             SLIDE 5 : SOLUTION (JAPANESE HEAD SPA SUR MODÈLE AFRO)
+             ============================================================ -->
+        <article class="slide slide-5" id="slide-5" data-index="5">
+          <div class="torn-header-block">
+            <div class="torn-header-left">
+              <div class="mag-title-main">11 <span>SECRETS</span></div>
+              <div class="mag-title-sub">Le Rituel Signature de la Maison</div>
+            </div>
+            <div class="torn-header-right">
+              <div class="mag-issue-badge">N° 11 · 2026</div>
+              <div class="mag-meta-line">Exclusivité Salon Renens</div>
+            </div>
+
+            <svg class="torn-paper-edge" viewBox="0 0 1080 32" preserveAspectRatio="none">
+              <path d="M0,0 L1080,0 L1080,14 Q1040,26 995,12 T910,24 T825,10 T740,28 T650,14 T565,29 T475,11 T390,26 T300,10 T215,27 T120,13 T0,24 Z" fill="#FAF7F2" />
+            </svg>
+          </div>
+
+          <div class="editorial-canvas-space">
+            <div class="circle-sticker" style="top: 20px; right: 40px; width: 210px; height: 210px;">
+              <span class="sticker-num" style="font-size: 50px;">5</span>
+              <span class="sticker-text" style="font-size: 14px;">Japanese<br>Head Spa</span>
+            </div>
+
+            <div class="loose-solution-text">
+              <h2 class="loose-headline-hero" style="font-size: 60px;">
+                La solution : Une détox profonde <em>mensuelle</em>
+              </h2>
+              <div class="solution-features-loose">
+                Vapeur purifiante <span>✦</span> Massage crânien <span>✦</span> Halo d'eau thermale
+              </div>
+            </div>
+
+            <!-- PHOTO HEAD SPA RÉEL : MODÈLE AFRO SOUS L'ARCHE D'EAU -->
+            <div class="headspa-real-showcase">
+              <img id="img-slot-headspa" src="public/images/social/headspa-real.jpg" alt="Rituel Japanese Head Spa d'exception">
+            </div>
+
+            <p class="loose-body-text" style="font-size: 24px;">
+              Notre Rituel Japanese Head Spa combine vapeur purifiante, massage crânien et halo d'eau thermale pour libérer chaque follicule et stimuler une repousse saine dès la racine.
+            </p>
+          </div>
+
+          <footer class="mag-bottom-bar">
+            <div class="qr-code-zone">
+              <div class="qr-img-frame">
+                <img src="public/images/social/qr-11secrets.png" alt="Code QR officiel 11secretsdebeaute.ch">
+              </div>
+              <div class="qr-legend">
+                <span class="qr-legend-title">Site Officiel</span>
+                <span class="qr-legend-url">11secretsdebeaute.ch</span>
+              </div>
+            </div>
+
+            <div class="bottom-folio">
+              <span class="folio-page">05</span>
+              <span class="folio-coords">Le Head Spa de Renens</span>
+            </div>
+          </footer>
+        </article>
+
+
+        <!-- ============================================================
+             SLIDE 6 : CLOSING & INFOS RÉELLES DU SALON (FAÇADE RÉELLE + QR)
+             ============================================================ -->
+        <article class="slide slide-6" id="slide-6" data-index="6">
+          <div class="torn-header-block">
+            <div class="torn-header-left">
+              <div class="mag-title-main">11 <span>SECRETS</span></div>
+              <div class="mag-title-sub">Maison de Beauté &amp; Haute Coiffure</div>
+            </div>
+            <div class="torn-header-right">
+              <div class="mag-issue-badge">N° 11 · 2026</div>
+              <div class="mag-meta-line">Votre Rendez-Vous Privé</div>
+            </div>
+
+            <svg class="torn-paper-edge" viewBox="0 0 1080 32" preserveAspectRatio="none">
+              <path d="M0,0 L1080,0 L1080,14 Q1040,26 995,12 T910,24 T825,10 T740,28 T650,14 T565,29 T475,11 T390,26 T300,10 T215,27 T120,13 T0,24 Z" fill="#FAF7F2" />
+            </svg>
+          </div>
+
+          <div class="editorial-canvas-space">
+            <div class="circle-sticker" style="top: 20px; right: 40px; width: 210px; height: 210px;">
+              <span class="sticker-num" style="font-size: 48px;">6</span>
+              <span class="sticker-text" style="font-size: 13px;">Prendre<br>Rendez-Vous</span>
+            </div>
+
+            <div>
+              <h2 class="loose-headline-hero" style="font-size: 60px;">
+                Offrez à votre chevelure un <em>nouveau départ</em>
+              </h2>
+            </div>
+
+            <!-- PHOTO RÉELLE DE LA FAÇADE (RUE DE LAUSANNE 11, RENENS) -->
+            <div class="facade-real-showcase">
+              <img id="img-slot-facade" src="public/images/social/salon-facade-sunny.jpg" alt="Façade réelle de 11 Secrets de Beauté Renens">
+            </div>
+
+            <!-- Coordonnées Libres avec Icônes Vectorielles Pro (Sans emojis) -->
+            <div class="contact-details-loose">
+              <div class="contact-row-loose">
+                <span class="pro-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <span>Rue de Lausanne 11, 1020 Renens</span>
+              </div>
+
+              <div class="contact-row-loose">
+                <span class="pro-icon" style="color: #128C7E;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </span>
+                <span>WhatsApp : <span class="whatsapp-green">076 660 60 26</span></span>
+              </div>
+            </div>
+
+            <div class="cta-save-loose">
+              <span class="pro-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </span>
+              <span>Abonnez-vous &amp; Enregistrez ce post pour votre prochaine routine</span>
+            </div>
+          </div>
+
+          <!-- Pied de page avec le grand Code QR Scannable -->
+          <footer class="mag-bottom-bar">
+            <div class="qr-code-zone">
+              <div class="qr-img-frame" style="width: 84px; height: 84px;">
+                <img src="public/images/social/qr-11secrets.png" alt="Code QR officiel 11secretsdebeaute.ch">
+              </div>
+              <div class="qr-legend">
+                <span class="qr-legend-title" style="font-size: 13px;">Scannez pour réserver</span>
+                <span class="qr-legend-url">11secretsdebeaute.ch</span>
+              </div>
+            </div>
+
+            <div class="bottom-folio">
+              <span class="folio-page">06</span>
+              <span class="folio-coords">Boutique &amp; Head Spa · Renens</span>
+            </div>
+          </footer>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Navigation du Carrousel -->
+    <nav class="nav-panel">
+      <button class="arrow-btn" onclick="prevCarouselSlide()" title="Précédent (←)">←</button>
+      <div class="dots-group" id="dotsGroup">
+        <div class="dot-item active" onclick="jumpToSlide(1)"></div>
+        <div class="dot-item" onclick="jumpToSlide(2)"></div>
+        <div class="dot-item" onclick="jumpToSlide(3)"></div>
+        <div class="dot-item" onclick="jumpToSlide(4)"></div>
+        <div class="dot-item" onclick="jumpToSlide(5)"></div>
+        <div class="dot-item" onclick="jumpToSlide(6)"></div>
+      </div>
+      <button class="arrow-btn" onclick="nextCarouselSlide()" title="Suivant (→)">→</button>
+      <div class="page-indicator" id="pageIndicatorText">01 / 06</div>
+    </nav>
+  </div>
+
+  <!-- VUE 2 : GRILLE D'ENSEMBLE -->
+  <div class="grid-view" id="gridView">
+    <!-- Généré par JavaScript -->
+  </div>
+
+</main>
+
+<!-- MODALE DE PERSONNALISATION DES PHOTOS -->
+<div class="photo-modal-overlay" id="photoModal">
+  <div class="photo-modal-box">
+    <h3>Photos Réelles du Salon</h3>
+    <p>Sélectionnez les photos de votre établissement pour les intégrer instantanément :</p>
+
+    <div class="file-upload-row">
+      <label>1. Cover (Lissage / Soin réel)</label>
+      <input type="file" accept="image/*" onchange="updatePhotoSlot(event, 'img-slot-cover')">
+    </div>
+
+    <div class="file-upload-row">
+      <label>2. Japanese Head Spa Réel</label>
+      <input type="file" accept="image/*" onchange="updatePhotoSlot(event, 'img-slot-headspa')">
+    </div>
+
+    <div class="file-upload-row">
+      <label>3. Façade Réelle (Rue de Lausanne 11)</label>
+      <input type="file" accept="image/*" onchange="updatePhotoSlot(event, 'img-slot-facade')">
+    </div>
+
+    <div class="file-upload-row">
+      <label>4. Postes de Coiffure &amp; Miroirs</label>
+      <input type="file" accept="image/*" onchange="updatePhotoSlot(event, 'img-slot-stations')">
+    </div>
+
+    <div class="file-upload-row">
+      <label>5. Massage &amp; Cuir Chevelu</label>
+      <input type="file" accept="image/*" onchange="updatePhotoSlot(event, 'img-slot-massage')">
+    </div>
+
+    <div style="display:flex; justify-content:flex-end; margin-top:20px;">
+      <button class="studio-btn studio-btn-gold" onclick="closePhotoPickerModal()">Fermer &amp; Voir le Résultat</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   LOGIQUE DE NAVIGATION & EXPORT HD 300 DPI
+   ============================================================ */
+let currentActiveSlide = 1;
+const maxSlides = 6;
+let activeMode = 'carousel';
+let userZoom = 0.55;
+
+window.addEventListener('DOMContentLoaded', () => {
+  computeAutoZoom();
+  window.addEventListener('resize', () => {
+    if (document.getElementById('zoomSelect').value === 'auto') computeAutoZoom();
+  });
+  renderGridClones();
+  initKeyShortcuts();
+  initSwipeSupport();
+});
+
+function computeAutoZoom() {
+  const sel = document.getElementById('zoomSelect');
+  if (sel.value !== 'auto') {
+    userZoom = parseFloat(sel.value);
+  } else {
+    const available = window.innerHeight - 200;
+    const computed = Math.min(Math.max(available / 1350, 0.35), 0.85);
+    userZoom = Math.round(computed * 100) / 100;
+  }
+  applyZoom(userZoom);
+}
+
+function applyZoomChange(val) {
+  if (val === 'auto') computeAutoZoom();
+  else {
+    userZoom = parseFloat(val);
+    applyZoom(userZoom);
+  }
+}
+
+function applyZoom(z) {
+  document.documentElement.style.setProperty('--current-scale', z);
+  const vp = document.getElementById('slideViewport');
+  if (vp) {
+    vp.style.width = (1080 * z) + 'px';
+    vp.style.height = (1350 * z) + 'px';
+  }
+}
+
+function jumpToSlide(num) {
+  if (num < 1 || num > maxSlides) return;
+  currentActiveSlide = num;
+
+  document.querySelectorAll('.slide').forEach((s, idx) => {
+    s.classList.toggle('active', (idx + 1) === currentActiveSlide);
+  });
+
+  document.querySelectorAll('.dot-item').forEach((d, idx) => {
+    d.classList.toggle('active', (idx + 1) === currentActiveSlide);
+  });
+
+  const ind = document.getElementById('pageIndicatorText');
+  if (ind) ind.textContent = `0${currentActiveSlide} / 0${maxSlides}`;
+}
+
+function nextCarouselSlide() {
+  jumpToSlide(currentActiveSlide < maxSlides ? currentActiveSlide + 1 : 1);
+}
+
+function prevCarouselSlide() {
+  jumpToSlide(currentActiveSlide > 1 ? currentActiveSlide - 1 : maxSlides);
+}
+
+function initKeyShortcuts() {
+  document.addEventListener('keydown', (e) => {
+    if (activeMode !== 'carousel') return;
+    if (e.key === 'ArrowRight') nextCarouselSlide();
+    if (e.key === 'ArrowLeft') prevCarouselSlide();
+  });
+}
+
+function initSwipeSupport() {
+  const vp = document.getElementById('slideViewport');
+  if (!vp) return;
+  let startX = 0;
+  vp.addEventListener('touchstart', (e) => { startX = e.changedTouches[0].screenX; }, { passive: true });
+  vp.addEventListener('touchend', (e) => {
+    const diff = e.changedTouches[0].screenX - startX;
+    if (Math.abs(diff) > 40) {
+      if (diff < 0) nextCarouselSlide();
+      else prevCarouselSlide();
+    }
+  }, { passive: true });
+}
+
+function setStudioMode(m) {
+  activeMode = m;
+  const cHold = document.getElementById('carouselHolder');
+  const gView = document.getElementById('gridView');
+  const bCar = document.getElementById('btnModeCarousel');
+  const bGrd = document.getElementById('btnModeGrid');
+
+  if (m === 'carousel') {
+    cHold.style.display = 'flex';
+    gView.classList.remove('active');
+    bCar.classList.add('active');
+    bGrd.classList.remove('active');
+  } else {
+    cHold.style.display = 'none';
+    gView.classList.add('active');
+    bCar.classList.remove('active');
+    bGrd.classList.add('active');
+  }
+}
+
+function renderGridClones() {
+  const gView = document.getElementById('gridView');
+  gView.innerHTML = '';
+
+  for (let i = 1; i <= maxSlides; i++) {
+    const card = document.createElement('div');
+    card.className = 'grid-card';
+
+    const head = document.createElement('div');
+    head.className = 'grid-card-head';
+    head.innerHTML = `<span>Édition 0${i} / 06</span><button class="studio-btn" style="padding:4px 10px; font-size:11px;" onclick="exportSingleSlide(${i})">PNG</button>`;
+
+    const vp = document.createElement('div');
+    vp.className = 'grid-viewport-mini';
+
+    const sc = document.createElement('div');
+    sc.className = 'grid-scaler-mini';
+
+    const orig = document.getElementById(`slide-${i}`);
+    if (orig) {
+      const clone = orig.cloneNode(true);
+      clone.classList.add('active');
+      clone.style.display = 'flex';
+      clone.querySelectorAll('[id]').forEach(el => el.id += '-grid');
+      sc.appendChild(clone);
+    }
+
+    vp.appendChild(sc);
+    card.appendChild(head);
+    card.appendChild(vp);
+    gView.appendChild(card);
+  }
+}
+
+function openPhotoPickerModal() { document.getElementById('photoModal').classList.add('active'); }
+function closePhotoPickerModal() {
+  document.getElementById('photoModal').classList.remove('active');
+  renderGridClones();
+}
+
+function updatePhotoSlot(e, slotId) {
+  const f = e.target.files[0];
+  if (!f) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    const img = document.getElementById(slotId);
+    if (img) img.src = ev.target.result;
+  };
+  reader.readAsDataURL(f);
+}
+
+// Export HD 300 DPI (échelle x2 = 2160×2700px)
+async function exportSingleSlide(num) {
+  const target = document.getElementById(`slide-${num}`);
+  if (!target) return;
+
+  const btn = document.getElementById('btnExportActive');
+  const origText = btn ? btn.innerHTML : '';
+  if (btn) btn.innerHTML = `Rendu 0${num}...`;
+
+  try {
+    const tempHolder = document.createElement('div');
+    tempHolder.style.position = 'fixed';
+    tempHolder.style.left = '-9999px';
+    tempHolder.style.top = '0';
+    tempHolder.style.width = '1080px';
+    tempHolder.style.height = '1350px';
+    tempHolder.style.overflow = 'hidden';
+    tempHolder.style.zIndex = '99999';
+
+    const clone = target.cloneNode(true);
+    clone.style.display = 'flex';
+    clone.style.width = '1080px';
+    clone.style.height = '1350px';
+    tempHolder.appendChild(clone);
+    document.body.appendChild(tempHolder);
+
+    const canvas = await html2canvas(clone, {
+      width: 1080,
+      height: 1350,
+      scale: 2, // 2160x2700px pour netteté d'impression d'art
+      useCORS: true,
+      allowTaint: true,
+      backgroundColor: '#FAF7F2'
+    });
+
+    document.body.removeChild(tempHolder);
+
+    const link = document.createElement('a');
+    link.download = `11secrets-revue-slide-0${num}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  } catch (err) {
+    console.error('Erreur export :', err);
+    alert("Veuillez vérifier les images ou utiliser l'impression PDF.");
+  } finally {
+    if (btn) btn.innerHTML = origText;
+  }
+}
+
+function exportActiveSlide() {
+  exportSingleSlide(currentActiveSlide);
+}
+
+async function exportAllCarouselSlides() {
+  const btn = document.getElementById('btnExportAll');
+  const orig = btn ? btn.innerHTML : '';
+  if (btn) btn.innerHTML = `Exportation 1/6...`;
+
+  for (let i = 1; i <= maxSlides; i++) {
+    if (btn) btn.innerHTML = `Exportation ${i}/6...`;
+    await exportSingleSlide(i);
+    await new Promise(r => setTimeout(r, 800));
+  }
+
+  if (btn) btn.innerHTML = orig;
+}
+</script>
+
+</body>
+</html>
